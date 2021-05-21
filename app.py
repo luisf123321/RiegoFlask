@@ -1,14 +1,23 @@
 from flask import Flask, request, jsonify
 from flask_pymongo import PyMongo, ObjectId
 from flask_cors import CORS
+from flask_jwt_extended import create_access_token
+from flask_jwt_extended import current_user
+from flask_jwt_extended import jwt_required
+from flask_jwt_extended import JWTManager
+
 
 
 app = Flask(__name__)
 app.config['MONGO_URI'] = 'mongodb://localhost/riego2'
+app.config["JWT_SECRET_KEY"] = "super-secret"
 mongo = PyMongo(app)
 
-db = mongo.db.users
+CORS(app)
 
+jwt = JWTManager(app)
+db = mongo.db.users
+dbcultivo = mongo.db.cultivos
 
 @app.route('/')
 def hello_world():
@@ -31,7 +40,6 @@ def getUsers():
             "_id": str(ObjectId(user['_id'])),
             "nombre": user['nombre'],
             "apellido": user['apellido'],
-            "edad": user["edad"]
         })
     print(users)
 
@@ -60,6 +68,7 @@ def deleteUser(id):
 
 
 @app.route('/user/<id>', methods=['PUT'])
+
 def updateUser(id):
     user = db.update_one({"_id": ObjectId(id)}, {"$set": {
         "nombre": request.json['nombre'],
@@ -71,6 +80,73 @@ def updateUser(id):
             "message": "update"
         }
     )
+
+
+@app.route("/login", methods=["POST"])
+def login():
+    username = request.json.get("username", None)
+    password = request.json.get("password", None)
+
+    userfind = db.find_one({'username': username})
+    if not userfind or not userfind['password'] == password:
+        return jsonify("Wrong username or password"), 401
+    user = {
+        "id": str(ObjectId(userfind['_id'])),
+        "apellido": userfind['apellido'],
+        "nombre": userfind['nombre'],
+        "username": userfind['username']
+    }
+    access_token = create_access_token(identity=user)
+    return jsonify(access_token=access_token)
+
+
+@jwt.user_identity_loader
+def user_identity_lookup(user):
+    return user['id']
+
+
+@app.route("/who_am_i", methods=["GET"])
+@jwt_required()
+def protected():
+    # We can now access our sqlalchemy User object via `current_user`.
+    print(current_user)
+    return jsonify(
+        nombre=current_user['nombre'],
+        apellido = current_user['apellido'],
+        email = current_user['email'],
+        username = current_user['username']
+    )
+
+
+@jwt.user_lookup_loader
+def user_lookup_callback(_jwt_header, jwt_data):
+    identity = jwt_data["sub"]
+    return db.find_one({"_id": ObjectId(identity)})
+
+
+@app.route("/cultivos", methods=["GET"])
+@jwt_required()
+def getCultivos():
+    iduser = current_user['_id']
+    cultivos = []
+    for cultivo in dbcultivo.find({"iduser":iduser}):
+        cultivos.append({
+            "_id": str(ObjectId(cultivo['_id'])),
+            "cultivo":cultivo['cultivo'],
+            "fecha":cultivo['fecha']
+        })
+
+    print(iduser)
+    return jsonify({"cultivos":cultivos})
+
+@app.route("/cultivos", methods=["POST"])
+@jwt_required()
+def creatCiltivo():
+    iduser = current_user['_id']
+    cultivo = request.json
+    cultivo['iduser'] = iduser
+    cultivo = dbcultivo.insert(cultivo)
+    return  jsonify({"_id":str(ObjectId(cultivo))})
 
 
 if __name__ == '__main__':
