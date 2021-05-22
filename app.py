@@ -5,12 +5,15 @@ from flask_jwt_extended import create_access_token
 from flask_jwt_extended import current_user
 from flask_jwt_extended import jwt_required
 from flask_jwt_extended import JWTManager
+from datetime import timedelta
 
 
 
 app = Flask(__name__)
 app.config['MONGO_URI'] = 'mongodb://localhost/riego2'
 app.config["JWT_SECRET_KEY"] = "super-secret"
+app.config["JWT_ACCESS_TOKEN_EXPIRES"] = timedelta(hours=4)
+app.config["JWT_REFRESH_TOKEN_EXPIRES"] = timedelta(days=30)
 mongo = PyMongo(app)
 
 CORS(app)
@@ -18,6 +21,7 @@ CORS(app)
 jwt = JWTManager(app)
 db = mongo.db.users
 dbcultivo = mongo.db.cultivos
+dblotes = mongo.db.lotes
 
 @app.route('/')
 def hello_world():
@@ -139,6 +143,7 @@ def getCultivos():
     print(iduser)
     return jsonify({"cultivos":cultivos})
 
+
 @app.route("/cultivos", methods=["POST"])
 @jwt_required()
 def creatCiltivo():
@@ -147,6 +152,33 @@ def creatCiltivo():
     cultivo['iduser'] = iduser
     cultivo = dbcultivo.insert(cultivo)
     return  jsonify({"_id":str(ObjectId(cultivo))})
+
+
+@app.route("/Lotes", methods=["POST"])
+@jwt_required()
+def creatLote():
+    iduser = current_user['_id']
+    Lotes = request.json
+    Lotes['iduser'] = iduser
+    Lote = dblotes.insert(Lotes)
+    return  jsonify({"_id":str(ObjectId(Lote))})
+
+
+@app.route("/Lotes", methods=["GET"])
+@jwt_required()
+def getLotes():
+    iduser = current_user['_id']
+    lotes = []
+    for lote in dblotes.find({"iduser":iduser}):
+        lotes.append({
+            "_id": str(ObjectId(lote['_id'])),
+            "lote":lote['lote'],
+            "fecha":lote['fecha'],
+            "area":lote['area']
+        })
+
+    print(iduser)
+    return jsonify({"lotes":lotes})
 
 
 if __name__ == '__main__':
