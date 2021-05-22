@@ -4,3 +4,5 @@ Flask-PyMongo
 pymongo
 dnspython
 gunicorn
+flask-cors
+click
