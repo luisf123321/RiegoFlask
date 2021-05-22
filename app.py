@@ -6,23 +6,31 @@ from flask_jwt_extended import current_user
 from flask_jwt_extended import jwt_required
 from flask_jwt_extended import JWTManager
 from datetime import timedelta
+import pymongo
 
 
 
 app = Flask(__name__)
-app.config['MONGO_URI'] = 'mongodb://localhost/riego2'
+#app.config['MONGO_URI'] = 'mongodb://localhost/riego2'
+#app.config['MONGO_URI'] = 'mongodb+srv://admin:admin@neivaroutes.ymunc.mongodb.net/Riego?retryWrites=true&w=majority'
 app.config["JWT_SECRET_KEY"] = "super-secret"
 app.config["JWT_ACCESS_TOKEN_EXPIRES"] = timedelta(hours=4)
 app.config["JWT_REFRESH_TOKEN_EXPIRES"] = timedelta(days=30)
-mongo = PyMongo(app)
+
+
+client = pymongo.MongoClient("mongodb+srv://admin:admin@neivaroutes.ymunc.mongodb.net/Riego?retryWrites=true&w=majority")
+db = client.Riego.users
+
+#mongo = PyMongo(app)
 
 CORS(app)
 
 jwt = JWTManager(app)
-db = mongo.db.users
-dbcultivo = mongo.db.cultivos
-dblotes = mongo.db.lotes
-
+#db = mongo.db.users
+#dbcultivo = mongo.db.cultivos
+#dblotes = mongo.db.lotes
+dbcultivo = client.Riego.cultivos
+dblotes = client.Riego.lotes
 @app.route('/')
 def hello_world():
     return 'Hello World!'
