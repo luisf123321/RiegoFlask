@@ -31,6 +31,8 @@ jwt = JWTManager(app)
 #dblotes = mongo.db.lotes
 dbcultivo = client.Riego.cultivos
 dblotes = client.Riego.lotes
+
+
 @app.route('/')
 def hello_world():
     return 'Hello World!'
