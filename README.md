@@ -32,7 +32,13 @@ pip install flask-jwt-extended
 /Lotes
 
 ##heroku
+heroku git:remote -a riego-flask
 
+git push heroku master
 
 ##Mongo Atlas
 mongodb+srv://admin:<password>@neivaroutes.ymunc.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
+
+
+
+
