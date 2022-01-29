@@ -35,7 +35,7 @@ dblotes = client.Riego.lotes
 
 @app.route('/')
 def hello_world():
-    return 'Hello World RIEGO! luis'
+    return 'Hello World RIEGO! Blanca'
 
 
 @app.route('/users', methods = ['POST'])
