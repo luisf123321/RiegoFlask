@@ -1,8 +1,11 @@
 Flask
 flask-jwt-extended
 Flask-PyMongo
+flask-testing
 pymongo
 dnspython
 gunicorn
 flask-cors
 click
+psycopg2
+pandas
