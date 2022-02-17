@@ -7,5 +7,6 @@ dnspython
 gunicorn
 flask-cors
 click
-psycopg2
+psycopg2==2.7.7
+psycopg2-binary==2.7.7
 pandas
