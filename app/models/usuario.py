@@ -1,5 +1,7 @@
 import pandas as pd 
-from .utilites.conection import Conection
+from utilites.conection  import Conection
+
+
 import psycopg2
 
 
@@ -21,6 +23,7 @@ class Users:
         sql = "SELECT usu_numero_identificacion FROM usuario WHERE usu_numero_identificacion =  " + num_identificacion
         print(sql)
         result = pd.read_sql_query(sql, con= cur)
+        print(type(result))
         return result
 
     @staticmethod
@@ -32,6 +35,7 @@ class Users:
             cor = conn.cursor()
             cor.execute(sql,(username, apellido ,num_identificacion, num_celular, direccion ,nickname , password_hash, correo, tipo_identificacion))
             conn.commit()
+            print("Usuario registrado")
         except psycopg2.DatabaseError as error:
             print(error)
             #conn.rollback()
