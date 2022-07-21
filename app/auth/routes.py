@@ -2,7 +2,7 @@
 from . import auth
 from app.models import Users
 import pandas as pd 
-from app.utilites.conection import Conection
+from app.utilites.conexion import Conection
 from werkzeug.security import generate_password_hash
 from flask import request
 

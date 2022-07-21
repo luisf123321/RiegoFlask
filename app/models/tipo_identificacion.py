@@ -10,6 +10,7 @@ class tipo_identificacion:
     def getTipoIdentificacion():
         cor = Conection.conect()
         sql = "SELECT * FROM tipo_identificacion"
+        print(sql)
         result = pd.read_sql_query(sql, con= cor)
         print(result)
         cor.close()

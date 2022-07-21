@@ -2,7 +2,7 @@ from flask import Flask
 from .mod1 import mod1
 from .auth import auth
 from .config import Config
-from .utilites.conection import Conection
+from .utilites.conexion import Conection
 
 
 def create_app():
