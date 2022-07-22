@@ -33,3 +33,6 @@
 02:13:27 PM: DEBUG [conexion.py:41] obtener conexion, <connection object at 0x000001F52FD33EF0; dsn: 'user=onryyemf password=xxx dbname=onryyemf host=batyr.db.elephantsql.com port=5432', closed: 0>
 02:13:27 PM: DEBUG [conexion.py:47] regresar conecion al pool
 02:13:27 PM: DEBUG [conexion.py:41] obtener conexion, <connection object at 0x000001F52FD33EF0; dsn: 'user=onryyemf password=xxx dbname=onryyemf host=batyr.db.elephantsql.com port=5432', closed: 0>
+05:49:19 PM: DEBUG [cursor_pool.py:11] inicio del metodo enter
+05:49:20 PM: ERROR [conexion.py:32] error al obtener pool, connection to server at "batyr.db.elephantsql.com" (3.89.203.254), port 5432 failed: FATAL:  too many connections for role "onryyemf"
+

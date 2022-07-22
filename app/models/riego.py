@@ -86,5 +86,5 @@ class Riego:
     
     def __str__(self) -> str:
         return f'''
-            Id perfil: {self._id}, nombre: {self._nombre} , descripcion : {self._description}           
+            Id riego: {self._id}, canLiqCalendario: {self._canLiqCalendario} , canLiqCalculado : {self._canLiqCalculado}           
         '''
