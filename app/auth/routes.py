@@ -1,8 +1,8 @@
 #from flask_login import login_user, login
 from . import auth
-from app.models import Users
+from models.usuario import Users
 import pandas as pd 
-from app.utilites.conexion import Conection
+from utilites import Conexion
 from werkzeug.security import generate_password_hash
 from flask import request
 

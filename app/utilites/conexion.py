@@ -30,7 +30,7 @@ class Conexion:
                 return cls._pool
             except Exception as ex:
                 log.error(f'error al obtener pool, {ex}')
-                sys.exit()
+                #sys.exit()
         else:
             return cls._pool
 

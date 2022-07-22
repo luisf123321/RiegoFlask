@@ -3,7 +3,7 @@ import psycopg2
 import os
 import sys
 sys.path.append(os.path.abspath('..'))
-from utilites.conection import Conection
+from utilites.conexion import Conection
 
 class tipo_identificacion:
     @staticmethod
