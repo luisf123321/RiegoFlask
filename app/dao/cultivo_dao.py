@@ -31,7 +31,7 @@ class CultivoDao:
         with CursorPool() as cursor:
             valores = (cultivo.id,)
             cursor.execute(cls._DELETE, valores)
-            log.debug(f'eliminar persona, {cultivo}')
+            log.debug(f'eliminar cultivo, {cultivo}')
             return cursor.rowcount
     
     @classmethod
@@ -39,7 +39,7 @@ class CultivoDao:
         with CursorPool() as cursor:
             valores = (cultivo.cultivoNombre, cultivo.tipoCultivo, cultivo.cultivoLote,cultivo.fechaInicio,cultivo.fechaFinal,cultivo.cultivoEstado )
             cursor.execute(cls._INSERT, valores)
-            log.debug(f'insertar persona, {cultivo}')
+            log.debug(f'insertar cultivo, {cultivo}')
             return cursor.rowcount
 
     @classmethod
@@ -47,5 +47,5 @@ class CultivoDao:
         with CursorPool() as cursor:
             valores = (cultivo.cultivoNombre, cultivo.tipoCultivo, cultivo.cultivoLote,cultivo.fechaInicio,cultivo.fechaFinal,cultivo.cultivoEstado, cultivo.id )
             cursor.execute(cls._UPDATE, valores)
-            log.debug(f'actualizar persona, {cultivo}')
+            log.debug(f'actualizar cultivo, {cultivo}')
             return cursor.rowcount
