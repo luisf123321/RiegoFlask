@@ -1,5 +1,5 @@
 #import psycopg2 as db
-from logger_base import log
+from .logger_base import log
 import sys
 from psycopg2 import pool
 

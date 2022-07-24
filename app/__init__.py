@@ -1,7 +1,7 @@
 from flask import Flask
-from mod1 import mod1
-from auth import auth
-from config import Config
+#from mod1 import mod1
+from .auth import auth
+from .config import Config
 
 
 def create_app():
@@ -11,6 +11,6 @@ def create_app():
     #Conection.conect()
     #cor = Conection.conect().cursor()
     
-    app.register_blueprint(mod1)
+    #app.register_blueprint(mod1)
     app.register_blueprint(auth)
     return app

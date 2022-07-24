@@ -5,7 +5,7 @@ from flask_jwt_extended import create_access_token
 from flask_jwt_extended import current_user
 from flask_jwt_extended import jwt_required
 from flask_jwt_extended import JWTManager
-from app.models import Users
+from app.models.usuario import User
 from app.auth.routes import signup
 
 
@@ -26,9 +26,9 @@ jwt = JWTManager(app)
 @app.route('/')
 def hello_world():
     #usuario = Users.getUser(str(1022))
-    usuario = Users.getUsers()
-    print(type(jsonify(usuario.to_json(orient='columns'))))  
-    return (usuario.to_json(orient='columns'))
+    #usuario = Users.getUsers()
+    #print(type(jsonify(usuario.to_json(orient='columns'))))  
+    return jsonify("hello world")
 
 """
 @app.route("/login", methods=["POST"])

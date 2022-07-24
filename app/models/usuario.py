@@ -72,7 +72,7 @@ class User:
     def password(self):
         return self._password
     
-    @password
+    @password.setter
     def password(self, password):
         self._password = password
     

@@ -1,10 +1,13 @@
 #from flask_login import login_user, login
 from . import auth
-from models.usuario import User
+import sys
+import os
 import pandas as pd 
-from utilites import CursorPool
 from werkzeug.security import generate_password_hash
 from flask import request
+#sys.path.append(os.path.abspath('..'))
+from app.utilites import CursorPool
+from app.models.usuario import User
 
 @auth.route('/login', methods=['GET' , 'POST'])
 def login():
