@@ -1,6 +1,6 @@
 
 class User:
-    def __init__(self,id,nombre,apellido,documento, celular, direccion,user,password,correo,tipoIdentificacion) -> None:
+    def __init__(self,id=None,nombre=None,apellido=None,documento=None, celular=None, direccion=None,user=None,password=None,correo=None ,tipoIdentificacion=None) -> None:
         self._id = id
         self._nombre = nombre
         self._apellido = apellido
@@ -22,7 +22,7 @@ class User:
 
     @property
     def nombre(self):
-        return self.nombre
+        return self._nombre
 
     @nombre.setter
     def nombre(self, nombre):

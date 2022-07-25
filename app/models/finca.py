@@ -1,7 +1,7 @@
 
 
 class Finca:
-    def __init__(self,id,nombre,direccion, latitud,longitud, altitud, usuario) -> None:
+    def __init__(self,id=None,nombre=None,direccion=None, latitud=None,longitud=None, altitud=None, usuario=None) -> None:
         self._id = id
         self._nombre = nombre
         self._direccion = direccion

@@ -1,8 +1,8 @@
 
 
-from utilites.cursor_pool import CursorPool
-from models.usuario import User
-from utilites.logger_base import log
+from app.utilites.cursor_pool import CursorPool
+from app.models.usuario import User
+from app.utilites.logger_base import log
 
 class UsuarioDao:
     '''
@@ -10,8 +10,10 @@ class UsuarioDao:
     '''
 
     _SELELCT = 'SELECT * FROM usuario ORDER BY id'
-    _INSERT = 'INSERT INTO usuario (usu_nombre, usu_apellido, usu_numero_identificacion, usu_celular, usu_direccion, usu_user, usu_password,usu_correo, usu_tipo_identificacion) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s)'
-    _UPDATE = 'UPDATE usuario SET  usu_nombre=%s, usu_apellido=%s, usu_numero_identificacion=%s, usu_celular=%s, usu_direccion=%s, usu_user=%s, usu_password=%s, usu_correo=%s,usu_tipo_identificacion=%s WHERE id=%s'
+    _SELELCT_BY_DOCUMENTO = 'SELECT * FROM usuario WHERE usu_numero_identificacion = %s'
+    _SELELCT_BY_USERNAME = 'SELECT * FROM usuario WHERE usu_user = %s'
+    _INSERT = 'INSERT INTO usuario (usu_nombre, usu_apelliido, usu_numero_identificacion, usu_celular, usu_direccion, usu_user, usu_password,usu_correo, usu_tipo_identificacion) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s)'
+    _UPDATE = 'UPDATE usuario SET  usu_nombre=%s, usu_apelliido=%s, usu_numero_identificacion=%s, usu_celular=%s, usu_direccion=%s, usu_user=%s, usu_password=%s, usu_correo=%s,usu_tipo_identificacion=%s WHERE id=%s'
     _DELETE = 'DELETE FROM usuario WHERE id=%s'
 
     @classmethod
@@ -25,7 +27,32 @@ class UsuarioDao:
                 usuarios.append(usuario)
                 print(usuario)
             return usuarios
-    
+    @classmethod
+    def buscarPorDocumento(cls,usuario):
+        with CursorPool() as cursor:
+            valores = (usuario.documento,)
+            cursor.execute(cls._SELELCT_BY_DOCUMENTO,valores)
+            registro = cursor.fetchone()
+            if registro is None:
+                return None
+            else:
+                print("registro usuario ", registro)            
+                usuario = User(registro[0], registro[1], registro[2], registro[3], registro[4], registro[5], registro[6], registro[7], registro[8], registro[9])
+                print(usuario)
+                return usuario
+    @classmethod
+    def buscarUserName(cls,usuario):
+        with CursorPool() as cursor:
+            valores = (usuario.user,)
+            cursor.execute(cls._SELELCT_BY_USERNAME,valores)
+            registro = cursor.fetchone()
+            if registro is None:
+                return None
+            else:
+                print("registro usuario ", registro)            
+                usuario = User(registro[0], registro[1], registro[2], registro[3], registro[4], registro[5], registro[6], registro[7], registro[8], registro[9])
+                print(usuario)
+                return usuario
     @classmethod
     def eliminar(cls, usuario):
         with CursorPool() as cursor:
