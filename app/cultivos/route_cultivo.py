@@ -6,10 +6,9 @@ from app.dao.cultivo_dao import CultivoDao
 
 
 @cultivo.route('/id/<int:idcultivo>', methods=['POST'])
-def login():
+def buscar():
     return jsonify("cultivo")
 
 @cultivo.route('/', methods =['POST'])
-def signup():
-    
+def crear():    
     return jsonify({"code":400,"message":"El usuario ya existe"}),400

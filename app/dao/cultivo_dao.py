@@ -1,8 +1,8 @@
 
 
-from utilites.cursor_pool import CursorPool
-from models.cultivo import Cultivo
-from utilites.logger_base import log
+from app.utilites.cursor_pool import CursorPool
+from app.models.cultivo import Cultivo
+from app.utilites.logger_base import log
 
 class CultivoDao:
     '''

@@ -1,6 +1,6 @@
-from utilites.cursor_pool import CursorPool
-from models.finca import Finca
-from utilites.logger_base import log
+from app.utilites.cursor_pool import CursorPool
+from app.models.finca import Finca
+from app.utilites.logger_base import log
 import json
 
 class FincaDao:
@@ -39,7 +39,8 @@ class FincaDao:
                 fincas = []
                 for registro in registros:
                     finca = Finca(registro[0], registro[1], registro[2], registro[3], registro[4], registro[5], registro[6])
-                    fincas.append(json.dumps(finca.__dict__))
+                    finca = json.dumps(finca.__dict__)
+                    fincas.append(finca)
                     print(finca)
                 return fincas
     

@@ -1,7 +1,7 @@
 
 
 class Lote:
-    def __init__(self,id, nombre, finca, area, latitud, longitud, altitud) -> None:
+    def __init__(self,id=None, nombre=None, finca=None, area=None, latitud=None, longitud=None, altitud=None) -> None:
         self._id = id
         self._nombre = nombre
         self._finca = finca
@@ -20,7 +20,7 @@ class Lote:
     
     @property
     def nombre(self):
-        return self.nombre
+        return self._nombre
     
     @nombre.setter
     def nombre(self, nombre):

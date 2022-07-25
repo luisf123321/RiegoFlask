@@ -3,6 +3,9 @@ from flask import Flask
 from .auth import auth
 from .config import Config
 from .cultivos import cultivo
+from .finca import finca
+from .lotes import lote
+
 
 def create_app():
     app = Flask(__name__)
@@ -14,4 +17,6 @@ def create_app():
     #app.register_blueprint(mod1)
     app.register_blueprint(auth)
     app.register_blueprint(cultivo)
+    app.register_blueprint(finca)
+    app.register_blueprint(lote)
     return app

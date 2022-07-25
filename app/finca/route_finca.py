@@ -4,31 +4,34 @@ from flask import request, jsonify
 
 from app.models.finca import Finca
 from app.dao.finca_dao import FincaDao
+import json
 
-
-@finca.route('finca/<int:usuario_id>', methods=['GET'])
+@finca.route('user/<int:usuario_id>', methods=['GET'])
 def buscarPorUsuario(usuario_id):
     finca = Finca(usuario=usuario_id)
     fincas = FincaDao.buscarFincaPorUsuario(finca)
     if fincas is None:
-        return jsonify(fincas),400
+        return jsonify("no se encontro registro"),400
     else:
         print("*"*20)
         print(fincas)
-        return jsonify(fincas),200 
+        fincas_result = []
+        for finca in fincas:
+            finca = finca.replace("_","")
+            fincas_result.append(json.loads(finca))
+        return jsonify(fincas_result) ,200 
 
-@finca.route('finca/<int:id>', methods=['GET'])
+@finca.route('<int:id>', methods=['GET'])
 def buscarPorId(id):
     finca = Finca(id=id)
-    fincas = FincaDao.bus(finca)
-    if fincas is None:
-        return jsonify(fincas),400
+    finca = FincaDao.buscarFincaPorId(finca)
+    if finca is None:
+        return jsonify("no se encontro registro por id"),400
     else:
-        print("*"*20)
-        print(fincas)
-        return jsonify(fincas),200  
+        finca = finca.replace("_","")
+        return jsonify(json.loads(finca)) ,200  
 
-@finca.route('finca', methods =['POST'])
+@finca.route('', methods =['POST'])
 def crear():
     nombre = request.json.get("nombre", None)
     direccion = request.json.get("direccion", None)
