@@ -57,9 +57,6 @@ def signup():
         return jsonify({"code":200,"message":"Usuario creado"}),200
     else:
          return jsonify({"code":400,"message":"El usuario ya existe"}),400
-    
-
-
 
 @jwt.user_identity_loader
 def user_identity_lookup(user):
