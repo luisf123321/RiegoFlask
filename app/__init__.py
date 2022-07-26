@@ -5,7 +5,7 @@ from .config import Config
 from .cultivos import cultivo
 from .finca import finca
 from .lotes import lote
-
+from .extensions import jwt
 
 def create_app():
     app = Flask(__name__)
@@ -13,7 +13,7 @@ def create_app():
     #login_manager.init_app(app)
     #Conection.conect()
     #cor = Conection.conect().cursor()
-    
+    jwt.init_app(app)
     #app.register_blueprint(mod1)
     app.register_blueprint(auth)
     app.register_blueprint(cultivo)

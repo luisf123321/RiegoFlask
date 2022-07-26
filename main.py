@@ -17,7 +17,6 @@ app = create_app()
 
 CORS(app)
 
-jwt = JWTManager(app)
 
 @app.route('/')
 def hello_world():

@@ -10,9 +10,9 @@ from flask import request, jsonify
 from app.models.usuario import User
 from app.dao.usuario_dao import UsuarioDao
 from flask_jwt_extended import create_access_token
-from flask_jwt_extended import JWTManager,jwt_required
+from flask_jwt_extended import jwt_required
 from flask_jwt_extended import get_jwt_identity
-from app.config import Config
+from app.extensions import jwt
 
 
 @auth.route('login', methods=['POST'])
@@ -59,11 +59,11 @@ def signup():
          return jsonify({"code":400,"message":"El usuario ya existe"}),400
     
 
-"""
+
 
 @jwt.user_identity_loader
 def user_identity_lookup(user):
-    return user['id']
+    return user
 
 
 @auth.route("/who_am_i", methods=["GET"])
@@ -71,6 +71,8 @@ def user_identity_lookup(user):
 def protected():
     # We can now access our sqlalchemy User object via `current_user`.
     current_user = get_jwt_identity()
+    print("*"*20)
+    print("current_user")
     print(current_user)
     return jsonify(
         nombre=current_user['nombre'],
@@ -86,4 +88,3 @@ def user_lookup_callback(_jwt_header, jwt_data):
     print("*"*20)
     print(identity)
     return identity
-"""

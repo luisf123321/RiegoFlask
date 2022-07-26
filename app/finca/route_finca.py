@@ -1,5 +1,5 @@
 from . import finca
-
+from flask_jwt_extended import (create_access_token, jwt_required)
 from flask import request, jsonify
 
 from app.models.finca import Finca
@@ -7,6 +7,7 @@ from app.dao.finca_dao import FincaDao
 import json
 
 @finca.route('user/<int:usuario_id>', methods=['GET'])
+@jwt_required()
 def buscarPorUsuario(usuario_id):
     finca = Finca(usuario=usuario_id)
     fincas = FincaDao.buscarFincaPorUsuario(finca)
@@ -21,7 +22,9 @@ def buscarPorUsuario(usuario_id):
             fincas_result.append(json.loads(finca))
         return jsonify(fincas_result) ,200 
 
+
 @finca.route('<int:id>', methods=['GET'])
+@jwt_required()
 def buscarPorId(id):
     finca = Finca(id=id)
     finca = FincaDao.buscarFincaPorId(finca)
@@ -31,7 +34,9 @@ def buscarPorId(id):
         finca = finca.replace("_","")
         return jsonify(json.loads(finca)) ,200  
 
+
 @finca.route('', methods =['POST'])
+@jwt_required()
 def crear():
     nombre = request.json.get("nombre", None)
     direccion = request.json.get("direccion", None)
