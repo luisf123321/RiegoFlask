@@ -8,3 +8,8 @@ click
 psycopg2
 psycopg2-binary
 pandas
+tensorflow
+matplotlib
+ipython
+numpy
+pillow
