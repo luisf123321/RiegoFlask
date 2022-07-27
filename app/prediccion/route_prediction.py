@@ -3,6 +3,8 @@ from flask import request, jsonify
 from werkzeug.utils import secure_filename
 import os
 from .predict import predict
+
+
 @prediction.route("/upload", methods=['POST'])
 def uploader():
     if request.method == 'POST':

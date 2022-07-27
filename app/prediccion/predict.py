@@ -84,7 +84,7 @@ def predict(ruta):
         
         
         
-        model_filename = "C:\\Users\\luisf\\OneDrive\\Documents\\proyecto_code\\RiegoFlask\\app\\prediccion\\segmentation_model_" + clase + ".h5"
+        model_filename = "app/prediccion/segmentation_model_" + clase + ".h5"
         #model.save(model_filename)
         
         model = keras.models.load_model(model_filename)
