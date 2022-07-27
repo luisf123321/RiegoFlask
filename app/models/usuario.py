@@ -1,5 +1,5 @@
 import pandas as pd 
-from utilites.conection  import Conection
+from .utilites.conexion  import Conexion
 
 
 import psycopg2
