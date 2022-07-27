@@ -6,7 +6,7 @@ from .cultivos import cultivo
 from .finca import finca
 from .lotes import lote
 from .extensions import jwt
-
+from .prediccion import prediction
 def create_app():
     app = Flask(__name__)
     app.config.from_object(Config)
@@ -19,4 +19,5 @@ def create_app():
     app.register_blueprint(cultivo)
     app.register_blueprint(finca)
     app.register_blueprint(lote)
+    app.register_blueprint(prediction)
     return app
