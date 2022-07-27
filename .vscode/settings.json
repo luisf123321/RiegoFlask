@@ -1,3 +1,7 @@
 {
-    "python.pythonPath": "venvriego/bin/python"
+    "python.pythonPath": "venvriego/bin/python",
+    "python.analysis.extraPaths": [
+        "./app/utilites",
+        "./app/utilites"
+    ]
 }

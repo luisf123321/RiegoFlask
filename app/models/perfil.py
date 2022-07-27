@@ -1,10 +1,11 @@
 
-class TipoIdentificacion:
-    def __init__(self, id,nombre,descripcion ) -> None:
+
+class Perfil:
+    def __init__(self, id, nombre, descripcion) -> None:
         self._id = id
         self._nombre = nombre
         self._description = descripcion
-    
+
     @property
     def id(self):
         return self._id
@@ -31,5 +32,5 @@ class TipoIdentificacion:
 
     def __str__(self) -> str:
         return f'''
-            Id tipo identificacion: {self._id}, nombre: {self._nombre} , descripcion : {self._description}           
+            Id perfil: {self._id}, nombre: {self._nombre} , descripcion : {self._description}           
         '''

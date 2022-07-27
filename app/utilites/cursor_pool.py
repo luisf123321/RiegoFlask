@@ -1,5 +1,5 @@
-from conexion import Conexion
-from logger_base import log
+from .conexion import Conexion
+from .logger_base import log
 
 class CursorPool:
     def __init__(self) -> None:

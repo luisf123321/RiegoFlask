@@ -6,17 +6,754 @@
 09:21:11 AM: DEBUG [cursor_pool.py:17] ejecuta metodo exit
 09:21:11 AM: DEBUG [cursor_pool.py:23] commit de la transaccion
 09:21:11 AM: DEBUG [conexion.py:47] regresar conecion al pool
-11:19:14 AM: DEBUG [logger_base.py:13] Mensaje nivel debug
-11:19:14 AM: INFO [logger_base.py:14] Mensaje nivel info
-11:19:14 AM: WARNING [logger_base.py:15] Mensaje nivel warning
-11:19:14 AM: ERROR [logger_base.py:16] Mensaje nivel error
-11:19:14 AM: CRITICAL [logger_base.py:17] Mensaje nivel critico
-11:56:33 AM: DEBUG [cursor_pool.py:11] inicio del metodo enter
-11:57:48 AM: ERROR [conexion.py:32] error al obtener pool, connection to server at "batyr.db.elephantsql.com" (3.89.203.254), port 5432 failed: Operation timed out
+09:33:43 AM: ERROR [conexion.py:32] error al obtener pool, connection to server at "batyr.db.elephantsql.com" (3.89.203.254), port 5432 failed: Connection timed out (0x0000274C/10060)
 	Is the server running on that host and accepting TCP/IP connections?
 
-11:57:48 AM: DEBUG [logger_base.py:13] Mensaje nivel debug
-11:57:48 AM: INFO [logger_base.py:14] Mensaje nivel info
-11:57:48 AM: WARNING [logger_base.py:15] Mensaje nivel warning
-11:57:48 AM: ERROR [logger_base.py:16] Mensaje nivel error
-11:57:48 AM: CRITICAL [logger_base.py:17] Mensaje nivel critico
+09:34:52 AM: DEBUG [conexion.py:29] conexion exitosa, <psycopg2.pool.SimpleConnectionPool object at 0x000001C8E67628C0>
+09:34:52 AM: DEBUG [conexion.py:41] obtener conexion, <connection object at 0x000001C8E48A3EF0; dsn: 'user=onryyemf password=xxx dbname=onryyemf host=batyr.db.elephantsql.com port=5432', closed: 0>
+09:34:52 AM: DEBUG [conexion.py:47] regresar conecion al pool
+09:34:52 AM: DEBUG [conexion.py:41] obtener conexion, <connection object at 0x000001C8E48A3EF0; dsn: 'user=onryyemf password=xxx dbname=onryyemf host=batyr.db.elephantsql.com port=5432', closed: 0>
+09:35:34 AM: DEBUG [cursor_pool.py:11] inicio del metodo enter
+09:35:35 AM: DEBUG [conexion.py:29] conexion exitosa, <psycopg2.pool.SimpleConnectionPool object at 0x000001E0B1F9BDC0>
+09:35:35 AM: DEBUG [conexion.py:41] obtener conexion, <connection object at 0x000001E0B1E53EF0; dsn: 'user=onryyemf password=xxx dbname=onryyemf host=batyr.db.elephantsql.com port=5432', closed: 0>
+09:35:35 AM: DEBUG [cursor_pool.py:30] bloque with
+09:35:35 AM: DEBUG [cursor_pool.py:32] [(4, 'luis', 'enciso', 12345, 1234, 'neiva', 'luis123', 'luis123', 'enciso@assde', 1), (12, 'Blanca', 'Escobar', 1002, 314, 'La Vega', 'blp', 'pbkdf2:sha256:260000$5e2v4pabnW9ifRrF$7ae6f7e1063bbb08e59b3b5f29f850dda006fbd0f1b29d9fc7ac1c1f3184ddf6', 'correo@correo.com', 1), (13, 'Mariana', 'Escobar', 1022, 314, 'La Vega', 'blp', 'pbkdf2:sha256:260000$vnb08BhJ4RiqWyDe$a5142c240bae616461f99a2f5b2a34d89374220cae1c915054fee05d79fa677a', 'correo@correo.com', 1), (14, 'Pedro', 'Duran', 1532, 314, 'La Vega', 'blp', 'pbkdf2:sha256:260000$Y0dwgKt1XXFrLgj4$e46aae1cbd7ee853d6b2beb324618b1f0239e3f576ee550bf07f1fadfa95a085', 'correo@correo.com', 1), (15, 'Luis', 'Duran', 98, 314, 'La Vega', 'blp', 'pbkdf2:sha256:260000$1QDYUnmbOQs40FwA$befda9ba147df1dba5bf48dd271f0e3ba91f9205bda5823b4d777b89633c7c05', 'correo@correo.com', 1), (16, 'Luis', 'Duran', 2098, 314, 'La Vega', 'blp', 'pbkdf2:sha256:260000$fr1PmcrQFENEtyFX$6baba2cd81489c4dfbd80d38dacee196578a9542fd05c6b654b7ddfe7bcd59e0', 'correo@correo.com', 1), (17, 'Luis', 'Duran', 2099, 314, 'La Vega', 'blp', 'pbkdf2:sha256:260000$VM8vuYGWtZHml9Ed$e870e56128fc1042a70c6e7068362d317a5bb5a1bf9675a1f9fd2ebba3978bbd', 'correo@correo.com', 1), (18, 'Luis', 'Duran', 2099, 314, 'La Vega', 'blp', 'pbkdf2:sha256:260000$wVADz6SyEbnSGTqV$933e3164466322ad175882f70feee65938f16eb1670d1777070db8def17a65b9', 'correo@correo.com', 1), (19, 'Carlos', 'Duran', 2019, 314, 'Pitalito', 'Cd', 'pbkdf2:sha256:260000$YMVdvC493cGnrktu$a0c0228b9bcb6f488fd422b9dbc72dec71095d88a71e17c1358511860b4febc7', 'correo@correo.com', 1), (20, 'Carlos', 'Duran', 2019, 314, 'Pitalito', 'Cd', 'pbkdf2:sha256:260000$GgNB3ZVNPAkymNwU$64bd126e803593ba84cbadf4342290e6d0a4188e36649020467d111a3a5faee5', 'correo@correo.com', 1), (21, 'Carlos', 'Duran', 2016, 314, 'Pitalito', 'Cd', 'pbkdf2:sha256:260000$1OopGFkjYVLQP4SJ$0c5f0bdc870e514a5a4c6c05baf30bc58b8456f9659c8d420b6f9029d49171e7', 'correo@correo.com', 1), (22, 'Carlos', 'Duran', 2017, 314, 'Pitalito', 'Cd', 'pbkdf2:sha256:260000$ad9MI8XaW4iGKtSD$826a1b6c1436347b7ef2f1caf3b6a980909ebaf44a68eeeb6446e5e233d2b1eb', 'correo@correo.com', 1), (23, 'Carlos', 'Duran', 2018, 314, 'Pitalito', 'Cd', 'pbkdf2:sha256:260000$9aX0MgG6lHTQ7mVm$c04b7456c91f6dbb6fe0304a3357853372d7c30482d59fe1d31b50952eb52c94', 'correo@correo.com', 1)]
+09:35:35 AM: DEBUG [cursor_pool.py:17] ejecuta metodo exit
+09:35:35 AM: DEBUG [cursor_pool.py:23] commit de la transaccion
+09:35:35 AM: DEBUG [conexion.py:47] regresar conecion al pool
+11:20:19 AM: DEBUG [cursor_pool.py:11] inicio del metodo enter
+11:20:20 AM: DEBUG [conexion.py:29] conexion exitosa, <psycopg2.pool.SimpleConnectionPool object at 0x000001B28BCABDC0>
+11:20:20 AM: DEBUG [conexion.py:41] obtener conexion, <connection object at 0x000001B28BB63EF0; dsn: 'user=onryyemf password=xxx dbname=onryyemf host=batyr.db.elephantsql.com port=5432', closed: 0>
+11:20:20 AM: DEBUG [cursor_pool.py:30] bloque with
+11:20:20 AM: DEBUG [cursor_pool.py:32] [(4, 'luis', 'enciso', 12345, 1234, 'neiva', 'luis123', 'luis123', 'enciso@assde', 1), (12, 'Blanca', 'Escobar', 1002, 314, 'La Vega', 'blp', 'pbkdf2:sha256:260000$5e2v4pabnW9ifRrF$7ae6f7e1063bbb08e59b3b5f29f850dda006fbd0f1b29d9fc7ac1c1f3184ddf6', 'correo@correo.com', 1), (13, 'Mariana', 'Escobar', 1022, 314, 'La Vega', 'blp', 'pbkdf2:sha256:260000$vnb08BhJ4RiqWyDe$a5142c240bae616461f99a2f5b2a34d89374220cae1c915054fee05d79fa677a', 'correo@correo.com', 1), (14, 'Pedro', 'Duran', 1532, 314, 'La Vega', 'blp', 'pbkdf2:sha256:260000$Y0dwgKt1XXFrLgj4$e46aae1cbd7ee853d6b2beb324618b1f0239e3f576ee550bf07f1fadfa95a085', 'correo@correo.com', 1), (15, 'Luis', 'Duran', 98, 314, 'La Vega', 'blp', 'pbkdf2:sha256:260000$1QDYUnmbOQs40FwA$befda9ba147df1dba5bf48dd271f0e3ba91f9205bda5823b4d777b89633c7c05', 'correo@correo.com', 1), (16, 'Luis', 'Duran', 2098, 314, 'La Vega', 'blp', 'pbkdf2:sha256:260000$fr1PmcrQFENEtyFX$6baba2cd81489c4dfbd80d38dacee196578a9542fd05c6b654b7ddfe7bcd59e0', 'correo@correo.com', 1), (17, 'Luis', 'Duran', 2099, 314, 'La Vega', 'blp', 'pbkdf2:sha256:260000$VM8vuYGWtZHml9Ed$e870e56128fc1042a70c6e7068362d317a5bb5a1bf9675a1f9fd2ebba3978bbd', 'correo@correo.com', 1), (18, 'Luis', 'Duran', 2099, 314, 'La Vega', 'blp', 'pbkdf2:sha256:260000$wVADz6SyEbnSGTqV$933e3164466322ad175882f70feee65938f16eb1670d1777070db8def17a65b9', 'correo@correo.com', 1), (19, 'Carlos', 'Duran', 2019, 314, 'Pitalito', 'Cd', 'pbkdf2:sha256:260000$YMVdvC493cGnrktu$a0c0228b9bcb6f488fd422b9dbc72dec71095d88a71e17c1358511860b4febc7', 'correo@correo.com', 1), (20, 'Carlos', 'Duran', 2019, 314, 'Pitalito', 'Cd', 'pbkdf2:sha256:260000$GgNB3ZVNPAkymNwU$64bd126e803593ba84cbadf4342290e6d0a4188e36649020467d111a3a5faee5', 'correo@correo.com', 1), (21, 'Carlos', 'Duran', 2016, 314, 'Pitalito', 'Cd', 'pbkdf2:sha256:260000$1OopGFkjYVLQP4SJ$0c5f0bdc870e514a5a4c6c05baf30bc58b8456f9659c8d420b6f9029d49171e7', 'correo@correo.com', 1), (22, 'Carlos', 'Duran', 2017, 314, 'Pitalito', 'Cd', 'pbkdf2:sha256:260000$ad9MI8XaW4iGKtSD$826a1b6c1436347b7ef2f1caf3b6a980909ebaf44a68eeeb6446e5e233d2b1eb', 'correo@correo.com', 1), (23, 'Carlos', 'Duran', 2018, 314, 'Pitalito', 'Cd', 'pbkdf2:sha256:260000$9aX0MgG6lHTQ7mVm$c04b7456c91f6dbb6fe0304a3357853372d7c30482d59fe1d31b50952eb52c94', 'correo@correo.com', 1)]
+11:20:20 AM: DEBUG [cursor_pool.py:17] ejecuta metodo exit
+11:20:21 AM: DEBUG [cursor_pool.py:23] commit de la transaccion
+11:20:21 AM: DEBUG [conexion.py:47] regresar conecion al pool
+02:13:27 PM: DEBUG [conexion.py:29] conexion exitosa, <psycopg2.pool.SimpleConnectionPool object at 0x000001F531FC28C0>
+02:13:27 PM: DEBUG [conexion.py:41] obtener conexion, <connection object at 0x000001F52FD33EF0; dsn: 'user=onryyemf password=xxx dbname=onryyemf host=batyr.db.elephantsql.com port=5432', closed: 0>
+02:13:27 PM: DEBUG [conexion.py:47] regresar conecion al pool
+02:13:27 PM: DEBUG [conexion.py:41] obtener conexion, <connection object at 0x000001F52FD33EF0; dsn: 'user=onryyemf password=xxx dbname=onryyemf host=batyr.db.elephantsql.com port=5432', closed: 0>
+05:49:19 PM: DEBUG [cursor_pool.py:11] inicio del metodo enter
+05:49:20 PM: ERROR [conexion.py:32] error al obtener pool, connection to server at "batyr.db.elephantsql.com" (3.89.203.254), port 5432 failed: FATAL:  too many connections for role "onryyemf"
+
+04:03:11 PM: INFO [_internal.py:224]  * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+04:03:11 PM: INFO [_internal.py:224]  * Restarting with stat
+04:03:12 PM: WARNING [_internal.py:224]  * Debugger is active!
+04:03:12 PM: INFO [_internal.py:224]  * Debugger PIN: 132-172-471
+04:25:23 PM: INFO [_internal.py:224]  * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+04:25:23 PM: INFO [_internal.py:224]  * Restarting with stat
+04:25:24 PM: WARNING [_internal.py:224]  * Debugger is active!
+04:25:24 PM: INFO [_internal.py:224]  * Debugger PIN: 132-172-471
+04:25:44 PM: INFO [_internal.py:224] 127.0.0.1 - - [24/Jul/2022 16:25:44] "GET / HTTP/1.1" 200 -
+04:25:56 PM: INFO [_internal.py:224] 127.0.0.1 - - [24/Jul/2022 16:25:56] "[33mPOST /signup HTTP/1.1[0m" 404 -
+04:26:54 PM: INFO [_internal.py:224]  * Detected change in 'c:\\Users\\luisf\\OneDrive\\Documents\\proyecto_code\\RiegoFlask\\main.py', reloading
+04:26:54 PM: INFO [_internal.py:224]  * Restarting with stat
+04:26:56 PM: WARNING [_internal.py:224]  * Debugger is active!
+04:26:56 PM: INFO [_internal.py:224]  * Debugger PIN: 132-172-471
+04:28:25 PM: INFO [_internal.py:224] 127.0.0.1 - - [24/Jul/2022 16:28:25] "[33mGET /login HTTP/1.1[0m" 404 -
+04:29:57 PM: INFO [_internal.py:224] 127.0.0.1 - - [24/Jul/2022 16:29:57] "[33mGET //login HTTP/1.1[0m" 404 -
+04:30:02 PM: INFO [_internal.py:224] 127.0.0.1 - - [24/Jul/2022 16:30:02] "[33mGET /login HTTP/1.1[0m" 404 -
+04:30:09 PM: INFO [_internal.py:224]  * Detected change in 'c:\\Users\\luisf\\OneDrive\\Documents\\proyecto_code\\RiegoFlask\\app\\auth\\routes.py', reloading
+04:30:09 PM: INFO [_internal.py:224]  * Restarting with stat
+04:30:11 PM: WARNING [_internal.py:224]  * Debugger is active!
+04:30:11 PM: INFO [_internal.py:224]  * Debugger PIN: 132-172-471
+04:30:12 PM: INFO [_internal.py:224] 127.0.0.1 - - [24/Jul/2022 16:30:12] "[33mGET /login HTTP/1.1[0m" 404 -
+04:31:08 PM: INFO [_internal.py:224] 127.0.0.1 - - [24/Jul/2022 16:31:08] "GET /auth/login HTTP/1.1" 200 -
+04:31:20 PM: INFO [_internal.py:224] 127.0.0.1 - - [24/Jul/2022 16:31:20] "GET / HTTP/1.1" 200 -
+04:31:26 PM: INFO [_internal.py:224] 127.0.0.1 - - [24/Jul/2022 16:31:26] "[35m[1mPOST /auth/signup HTTP/1.1[0m" 500 -
+04:32:33 PM: INFO [_internal.py:224]  * Detected change in 'c:\\Users\\luisf\\OneDrive\\Documents\\proyecto_code\\RiegoFlask\\app\\auth\\routes.py', reloading
+04:32:33 PM: INFO [_internal.py:224]  * Restarting with stat
+04:32:35 PM: WARNING [_internal.py:224]  * Debugger is active!
+04:32:35 PM: INFO [_internal.py:224]  * Debugger PIN: 132-172-471
+04:32:37 PM: INFO [_internal.py:224] 127.0.0.1 - - [24/Jul/2022 16:32:37] "[35m[1mPOST /auth/signup HTTP/1.1[0m" 500 -
+04:34:48 PM: INFO [_internal.py:224]  * Detected change in 'c:\\Users\\luisf\\OneDrive\\Documents\\proyecto_code\\RiegoFlask\\app\\models\\usuario.py', reloading
+04:34:48 PM: INFO [_internal.py:224]  * Restarting with stat
+04:34:52 PM: WARNING [_internal.py:224]  * Debugger is active!
+04:34:52 PM: INFO [_internal.py:224]  * Debugger PIN: 132-172-471
+04:34:53 PM: DEBUG [cursor_pool.py:11] inicio del metodo enter
+04:34:55 PM: DEBUG [conexion.py:29] conexion exitosa, <psycopg2.pool.SimpleConnectionPool object at 0x000001B33D8C1C60>
+04:34:55 PM: DEBUG [conexion.py:41] obtener conexion, <connection object at 0x000001B33D56BDE0; dsn: 'user=onryyemf password=xxx dbname=onryyemf host=batyr.db.elephantsql.com port=5432', closed: 0>
+04:34:56 PM: DEBUG [cursor_pool.py:17] ejecuta metodo exit
+04:34:56 PM: ERROR [cursor_pool.py:20] error exc, 'NoneType' object is not subscriptable
+04:34:56 PM: DEBUG [conexion.py:47] regresar conecion al pool
+04:34:56 PM: INFO [_internal.py:224] 127.0.0.1 - - [24/Jul/2022 16:34:56] "[35m[1mPOST /auth/signup HTTP/1.1[0m" 500 -
+04:36:01 PM: INFO [_internal.py:224]  * Detected change in 'c:\\Users\\luisf\\OneDrive\\Documents\\proyecto_code\\RiegoFlask\\app\\dao\\usuario_dao.py', reloading
+04:36:01 PM: INFO [_internal.py:224]  * Restarting with stat
+04:36:03 PM: WARNING [_internal.py:224]  * Debugger is active!
+04:36:03 PM: INFO [_internal.py:224]  * Debugger PIN: 132-172-471
+04:36:06 PM: DEBUG [cursor_pool.py:11] inicio del metodo enter
+04:36:07 PM: DEBUG [conexion.py:29] conexion exitosa, <psycopg2.pool.SimpleConnectionPool object at 0x00000290B0FE2230>
+04:36:07 PM: DEBUG [conexion.py:41] obtener conexion, <connection object at 0x00000290B0C8BDE0; dsn: 'user=onryyemf password=xxx dbname=onryyemf host=batyr.db.elephantsql.com port=5432', closed: 0>
+04:36:07 PM: DEBUG [cursor_pool.py:17] ejecuta metodo exit
+04:36:07 PM: ERROR [cursor_pool.py:20] error exc, 'NoneType' object is not subscriptable
+04:36:07 PM: DEBUG [conexion.py:47] regresar conecion al pool
+04:36:07 PM: INFO [_internal.py:224] 127.0.0.1 - - [24/Jul/2022 16:36:07] "[35m[1mPOST /auth/signup HTTP/1.1[0m" 500 -
+04:37:35 PM: INFO [_internal.py:224]  * Detected change in 'c:\\Users\\luisf\\OneDrive\\Documents\\proyecto_code\\RiegoFlask\\app\\dao\\usuario_dao.py', reloading
+04:37:35 PM: INFO [_internal.py:224]  * Restarting with stat
+04:37:38 PM: WARNING [_internal.py:224]  * Debugger is active!
+04:37:38 PM: INFO [_internal.py:224]  * Debugger PIN: 132-172-471
+04:38:18 PM: INFO [_internal.py:224]  * Detected change in 'c:\\Users\\luisf\\OneDrive\\Documents\\proyecto_code\\RiegoFlask\\app\\auth\\routes.py', reloading
+04:38:18 PM: INFO [_internal.py:224]  * Restarting with stat
+04:38:19 PM: WARNING [_internal.py:224]  * Debugger is active!
+04:38:20 PM: INFO [_internal.py:224]  * Debugger PIN: 132-172-471
+04:38:21 PM: INFO [_internal.py:224]  * Detected change in 'c:\\Users\\luisf\\OneDrive\\Documents\\proyecto_code\\RiegoFlask\\app\\auth\\routes.py', reloading
+04:38:21 PM: INFO [_internal.py:224]  * Restarting with stat
+04:38:23 PM: WARNING [_internal.py:224]  * Debugger is active!
+04:38:23 PM: INFO [_internal.py:224]  * Debugger PIN: 132-172-471
+04:38:26 PM: INFO [_internal.py:224]  * Detected change in 'c:\\Users\\luisf\\OneDrive\\Documents\\proyecto_code\\RiegoFlask\\app\\dao\\usuario_dao.py', reloading
+04:38:26 PM: INFO [_internal.py:224]  * Restarting with stat
+04:38:28 PM: WARNING [_internal.py:224]  * Debugger is active!
+04:38:28 PM: INFO [_internal.py:224]  * Debugger PIN: 132-172-471
+04:38:31 PM: DEBUG [cursor_pool.py:11] inicio del metodo enter
+04:38:32 PM: DEBUG [conexion.py:29] conexion exitosa, <psycopg2.pool.SimpleConnectionPool object at 0x000001995CC32230>
+04:38:32 PM: DEBUG [conexion.py:41] obtener conexion, <connection object at 0x000001995C8DBDE0; dsn: 'user=onryyemf password=xxx dbname=onryyemf host=batyr.db.elephantsql.com port=5432', closed: 0>
+04:38:32 PM: DEBUG [cursor_pool.py:17] ejecuta metodo exit
+04:38:32 PM: DEBUG [cursor_pool.py:23] commit de la transaccion
+04:38:32 PM: DEBUG [conexion.py:47] regresar conecion al pool
+04:38:32 PM: INFO [_internal.py:224] 127.0.0.1 - - [24/Jul/2022 16:38:32] "POST /auth/signup HTTP/1.1" 200 -
+04:39:05 PM: INFO [_internal.py:224]  * Detected change in 'c:\\Users\\luisf\\OneDrive\\Documents\\proyecto_code\\RiegoFlask\\app\\auth\\routes.py', reloading
+04:39:05 PM: INFO [_internal.py:224]  * Restarting with stat
+04:39:07 PM: WARNING [_internal.py:224]  * Debugger is active!
+04:39:07 PM: INFO [_internal.py:224]  * Debugger PIN: 132-172-471
+04:39:10 PM: DEBUG [cursor_pool.py:11] inicio del metodo enter
+04:39:10 PM: DEBUG [conexion.py:29] conexion exitosa, <psycopg2.pool.SimpleConnectionPool object at 0x000002657D5A3E20>
+04:39:10 PM: DEBUG [conexion.py:41] obtener conexion, <connection object at 0x000002657D1FBCD0; dsn: 'user=onryyemf password=xxx dbname=onryyemf host=batyr.db.elephantsql.com port=5432', closed: 0>
+04:39:11 PM: DEBUG [cursor_pool.py:17] ejecuta metodo exit
+04:39:11 PM: DEBUG [cursor_pool.py:23] commit de la transaccion
+04:39:11 PM: DEBUG [conexion.py:47] regresar conecion al pool
+04:39:12 PM: INFO [_internal.py:224] 127.0.0.1 - - [24/Jul/2022 16:39:12] "[35m[1mPOST /auth/signup HTTP/1.1[0m" 500 -
+04:40:12 PM: INFO [_internal.py:224]  * Detected change in 'c:\\Users\\luisf\\OneDrive\\Documents\\proyecto_code\\RiegoFlask\\app\\auth\\routes.py', reloading
+04:40:12 PM: INFO [_internal.py:224]  * Restarting with stat
+04:40:14 PM: WARNING [_internal.py:224]  * Debugger is active!
+04:40:14 PM: INFO [_internal.py:224]  * Debugger PIN: 132-172-471
+04:40:16 PM: DEBUG [cursor_pool.py:11] inicio del metodo enter
+04:40:17 PM: DEBUG [conexion.py:29] conexion exitosa, <psycopg2.pool.SimpleConnectionPool object at 0x00000214A88B3E20>
+04:40:17 PM: DEBUG [conexion.py:41] obtener conexion, <connection object at 0x00000214A850BCD0; dsn: 'user=onryyemf password=xxx dbname=onryyemf host=batyr.db.elephantsql.com port=5432', closed: 0>
+04:40:17 PM: DEBUG [cursor_pool.py:17] ejecuta metodo exit
+04:40:17 PM: DEBUG [cursor_pool.py:23] commit de la transaccion
+04:40:17 PM: DEBUG [conexion.py:47] regresar conecion al pool
+04:40:18 PM: INFO [_internal.py:224] 127.0.0.1 - - [24/Jul/2022 16:40:18] "[35m[1mPOST /auth/signup HTTP/1.1[0m" 500 -
+04:43:04 PM: INFO [_internal.py:224]  * Detected change in 'c:\\Users\\luisf\\OneDrive\\Documents\\proyecto_code\\RiegoFlask\\app\\auth\\routes.py', reloading
+04:43:04 PM: INFO [_internal.py:224]  * Restarting with stat
+04:43:06 PM: WARNING [_internal.py:224]  * Debugger is active!
+04:43:06 PM: INFO [_internal.py:224]  * Debugger PIN: 132-172-471
+04:43:10 PM: DEBUG [cursor_pool.py:11] inicio del metodo enter
+04:43:10 PM: DEBUG [conexion.py:29] conexion exitosa, <psycopg2.pool.SimpleConnectionPool object at 0x000002490AF52380>
+04:43:10 PM: DEBUG [conexion.py:41] obtener conexion, <connection object at 0x000002490AE88370; dsn: 'user=onryyemf password=xxx dbname=onryyemf host=batyr.db.elephantsql.com port=5432', closed: 0>
+04:43:11 PM: DEBUG [cursor_pool.py:17] ejecuta metodo exit
+04:43:11 PM: DEBUG [cursor_pool.py:23] commit de la transaccion
+04:43:11 PM: DEBUG [conexion.py:47] regresar conecion al pool
+04:43:12 PM: INFO [_internal.py:224] 127.0.0.1 - - [24/Jul/2022 16:43:12] "[35m[1mPOST /auth/signup HTTP/1.1[0m" 500 -
+04:44:16 PM: INFO [_internal.py:224]  * Detected change in 'c:\\Users\\luisf\\OneDrive\\Documents\\proyecto_code\\RiegoFlask\\app\\auth\\routes.py', reloading
+04:44:16 PM: INFO [_internal.py:224]  * Restarting with stat
+04:44:18 PM: WARNING [_internal.py:224]  * Debugger is active!
+04:44:18 PM: INFO [_internal.py:224]  * Debugger PIN: 132-172-471
+04:44:20 PM: DEBUG [cursor_pool.py:11] inicio del metodo enter
+04:44:20 PM: DEBUG [conexion.py:29] conexion exitosa, <psycopg2.pool.SimpleConnectionPool object at 0x00000135FCB36350>
+04:44:20 PM: DEBUG [conexion.py:41] obtener conexion, <connection object at 0x00000135FCA6C370; dsn: 'user=onryyemf password=xxx dbname=onryyemf host=batyr.db.elephantsql.com port=5432', closed: 0>
+04:44:21 PM: DEBUG [cursor_pool.py:17] ejecuta metodo exit
+04:44:21 PM: DEBUG [cursor_pool.py:23] commit de la transaccion
+04:44:21 PM: DEBUG [conexion.py:47] regresar conecion al pool
+04:44:21 PM: INFO [_internal.py:224] 127.0.0.1 - - [24/Jul/2022 16:44:21] "[35m[1mPOST /auth/signup HTTP/1.1[0m" 500 -
+04:52:03 PM: INFO [_internal.py:224]  * Detected change in 'c:\\Users\\luisf\\OneDrive\\Documents\\proyecto_code\\RiegoFlask\\app\\auth\\routes.py', reloading
+04:52:04 PM: INFO [_internal.py:224]  * Restarting with stat
+04:52:05 PM: WARNING [_internal.py:224]  * Debugger is active!
+04:52:05 PM: INFO [_internal.py:224]  * Debugger PIN: 132-172-471
+04:52:08 PM: DEBUG [cursor_pool.py:11] inicio del metodo enter
+04:52:09 PM: DEBUG [conexion.py:29] conexion exitosa, <psycopg2.pool.SimpleConnectionPool object at 0x0000019BEBA26320>
+04:52:09 PM: DEBUG [conexion.py:41] obtener conexion, <connection object at 0x0000019BEB95C370; dsn: 'user=onryyemf password=xxx dbname=onryyemf host=batyr.db.elephantsql.com port=5432', closed: 0>
+04:52:09 PM: DEBUG [cursor_pool.py:17] ejecuta metodo exit
+04:52:10 PM: DEBUG [cursor_pool.py:23] commit de la transaccion
+04:52:10 PM: DEBUG [conexion.py:47] regresar conecion al pool
+04:52:10 PM: DEBUG [cursor_pool.py:11] inicio del metodo enter
+04:52:10 PM: DEBUG [conexion.py:41] obtener conexion, <connection object at 0x0000019BEB95C370; dsn: 'user=onryyemf password=xxx dbname=onryyemf host=batyr.db.elephantsql.com port=5432', closed: 0>
+04:52:10 PM: DEBUG [cursor_pool.py:17] ejecuta metodo exit
+04:52:10 PM: ERROR [cursor_pool.py:20] error exc, maximum recursion depth exceeded
+04:52:10 PM: DEBUG [conexion.py:47] regresar conecion al pool
+04:52:15 PM: INFO [_internal.py:224] 127.0.0.1 - - [24/Jul/2022 16:52:15] "[35m[1mPOST /auth/signup HTTP/1.1[0m" 500 -
+04:53:36 PM: INFO [_internal.py:224]  * Detected change in 'c:\\Users\\luisf\\OneDrive\\Documents\\proyecto_code\\RiegoFlask\\app\\models\\usuario.py', reloading
+04:53:36 PM: INFO [_internal.py:224]  * Restarting with stat
+04:53:39 PM: WARNING [_internal.py:224]  * Debugger is active!
+04:53:39 PM: INFO [_internal.py:224]  * Debugger PIN: 132-172-471
+04:53:52 PM: INFO [_internal.py:224]  * Detected change in 'c:\\Users\\luisf\\OneDrive\\Documents\\proyecto_code\\RiegoFlask\\app\\models\\usuario.py', reloading
+04:53:52 PM: INFO [_internal.py:224]  * Restarting with stat
+04:53:54 PM: WARNING [_internal.py:224]  * Debugger is active!
+04:53:54 PM: INFO [_internal.py:224]  * Debugger PIN: 132-172-471
+04:53:59 PM: DEBUG [cursor_pool.py:11] inicio del metodo enter
+04:54:00 PM: DEBUG [conexion.py:29] conexion exitosa, <psycopg2.pool.SimpleConnectionPool object at 0x000001B50D22ED10>
+04:54:00 PM: DEBUG [conexion.py:41] obtener conexion, <connection object at 0x000001B50D1A8480; dsn: 'user=onryyemf password=xxx dbname=onryyemf host=batyr.db.elephantsql.com port=5432', closed: 0>
+04:54:00 PM: DEBUG [cursor_pool.py:17] ejecuta metodo exit
+04:54:00 PM: DEBUG [cursor_pool.py:23] commit de la transaccion
+04:54:00 PM: DEBUG [conexion.py:47] regresar conecion al pool
+04:54:01 PM: DEBUG [cursor_pool.py:11] inicio del metodo enter
+04:54:01 PM: DEBUG [conexion.py:41] obtener conexion, <connection object at 0x000001B50D1A8480; dsn: 'user=onryyemf password=xxx dbname=onryyemf host=batyr.db.elephantsql.com port=5432', closed: 0>
+04:54:02 PM: DEBUG [cursor_pool.py:17] ejecuta metodo exit
+04:54:02 PM: ERROR [cursor_pool.py:20] error exc, column "usu_apellido" of relation "usuario" does not exist
+LINE 1: INSERT INTO usuario (usu_nombre, usu_apellido, usu_numero_id...
+                                         ^
+
+04:54:02 PM: DEBUG [conexion.py:47] regresar conecion al pool
+04:54:02 PM: INFO [_internal.py:224] 127.0.0.1 - - [24/Jul/2022 16:54:02] "[35m[1mPOST /auth/signup HTTP/1.1[0m" 500 -
+05:01:03 PM: INFO [_internal.py:224]  * Detected change in 'c:\\Users\\luisf\\OneDrive\\Documents\\proyecto_code\\RiegoFlask\\app\\dao\\usuario_dao.py', reloading
+05:01:04 PM: INFO [_internal.py:224]  * Restarting with stat
+05:01:07 PM: WARNING [_internal.py:224]  * Debugger is active!
+05:01:07 PM: INFO [_internal.py:224]  * Debugger PIN: 132-172-471
+05:01:16 PM: DEBUG [cursor_pool.py:11] inicio del metodo enter
+05:01:17 PM: DEBUG [conexion.py:29] conexion exitosa, <psycopg2.pool.SimpleConnectionPool object at 0x0000011A499FF340>
+05:01:17 PM: DEBUG [conexion.py:41] obtener conexion, <connection object at 0x0000011A49978480; dsn: 'user=onryyemf password=xxx dbname=onryyemf host=batyr.db.elephantsql.com port=5432', closed: 0>
+05:01:17 PM: DEBUG [cursor_pool.py:17] ejecuta metodo exit
+05:01:17 PM: DEBUG [cursor_pool.py:23] commit de la transaccion
+05:01:17 PM: DEBUG [conexion.py:47] regresar conecion al pool
+05:01:18 PM: DEBUG [cursor_pool.py:11] inicio del metodo enter
+05:01:18 PM: DEBUG [conexion.py:41] obtener conexion, <connection object at 0x0000011A49978480; dsn: 'user=onryyemf password=xxx dbname=onryyemf host=batyr.db.elephantsql.com port=5432', closed: 0>
+05:01:18 PM: DEBUG [usuario_dao.py:55] insertar usuario, 
+            Id usaurio: None, nombre: luis fernando , apellido : enciso caballero , documento : 1075314119
+            celular: 3204455211, correo: encisolf901@gmail.com, user: luisf, password: pbkdf2:sha256:260000$oLEFh74aOqKPpfVW$312d296ddfb85b1bcd25c8b4a85846787c83c075083e23c409cf95e2aa9961c0 
+        
+05:01:18 PM: DEBUG [cursor_pool.py:17] ejecuta metodo exit
+05:01:18 PM: DEBUG [cursor_pool.py:23] commit de la transaccion
+05:01:18 PM: DEBUG [conexion.py:47] regresar conecion al pool
+05:01:18 PM: INFO [_internal.py:224] 127.0.0.1 - - [24/Jul/2022 17:01:18] "[35m[1mPOST /auth/signup HTTP/1.1[0m" 500 -
+05:04:29 PM: INFO [_internal.py:224]  * Detected change in 'c:\\Users\\luisf\\OneDrive\\Documents\\proyecto_code\\RiegoFlask\\app\\auth\\routes.py', reloading
+05:04:29 PM: INFO [_internal.py:224]  * Restarting with stat
+05:04:32 PM: WARNING [_internal.py:224]  * Debugger is active!
+05:04:32 PM: INFO [_internal.py:224]  * Debugger PIN: 132-172-471
+05:07:13 PM: INFO [_internal.py:224]  * Detected change in 'c:\\Users\\luisf\\OneDrive\\Documents\\proyecto_code\\RiegoFlask\\app\\auth\\routes.py', reloading
+05:07:13 PM: INFO [_internal.py:224]  * Restarting with stat
+05:07:16 PM: WARNING [_internal.py:224]  * Debugger is active!
+05:07:16 PM: INFO [_internal.py:224]  * Debugger PIN: 132-172-471
+05:08:09 PM: INFO [_internal.py:224]  * Detected change in 'c:\\Users\\luisf\\OneDrive\\Documents\\proyecto_code\\RiegoFlask\\app\\auth\\routes.py', reloading
+05:08:10 PM: INFO [_internal.py:224]  * Restarting with stat
+05:08:13 PM: WARNING [_internal.py:224]  * Debugger is active!
+05:08:13 PM: INFO [_internal.py:224]  * Debugger PIN: 132-172-471
+05:08:20 PM: INFO [_internal.py:224]  * Detected change in 'c:\\Users\\luisf\\OneDrive\\Documents\\proyecto_code\\RiegoFlask\\app\\auth\\routes.py', reloading
+05:08:20 PM: INFO [_internal.py:224]  * Restarting with stat
+05:08:22 PM: WARNING [_internal.py:224]  * Debugger is active!
+05:08:22 PM: INFO [_internal.py:224]  * Debugger PIN: 132-172-471
+05:08:34 PM: DEBUG [cursor_pool.py:11] inicio del metodo enter
+05:08:35 PM: DEBUG [conexion.py:29] conexion exitosa, <psycopg2.pool.SimpleConnectionPool object at 0x000002031D7A6350>
+05:08:35 PM: DEBUG [conexion.py:41] obtener conexion, <connection object at 0x000002031D6DC370; dsn: 'user=onryyemf password=xxx dbname=onryyemf host=batyr.db.elephantsql.com port=5432', closed: 0>
+05:08:35 PM: DEBUG [cursor_pool.py:17] ejecuta metodo exit
+05:08:35 PM: DEBUG [cursor_pool.py:23] commit de la transaccion
+05:08:35 PM: DEBUG [conexion.py:47] regresar conecion al pool
+05:08:36 PM: DEBUG [cursor_pool.py:11] inicio del metodo enter
+05:08:36 PM: DEBUG [conexion.py:41] obtener conexion, <connection object at 0x000002031D6DC370; dsn: 'user=onryyemf password=xxx dbname=onryyemf host=batyr.db.elephantsql.com port=5432', closed: 0>
+05:08:36 PM: DEBUG [usuario_dao.py:55] insertar usuario, 
+            Id usaurio: None, nombre: luis fernando , apellido : enciso caballero , documento : 1075314119
+            celular: 3204455211, correo: encisolf901@gmail.com, user: luisf, password: pbkdf2:sha256:260000$jsHkVYmDXIFHjuKc$9bdae61dc480bd3eb8335e36db1eda8ec10f8d8cbe20b53d59783741bc7a7f62 
+        
+05:08:36 PM: DEBUG [cursor_pool.py:17] ejecuta metodo exit
+05:08:36 PM: DEBUG [cursor_pool.py:23] commit de la transaccion
+05:08:36 PM: DEBUG [conexion.py:47] regresar conecion al pool
+05:08:36 PM: INFO [_internal.py:224] 127.0.0.1 - - [24/Jul/2022 17:08:36] "POST /auth/signup HTTP/1.1" 200 -
+05:08:41 PM: DEBUG [cursor_pool.py:11] inicio del metodo enter
+05:08:41 PM: DEBUG [conexion.py:41] obtener conexion, <connection object at 0x000002031D6DC370; dsn: 'user=onryyemf password=xxx dbname=onryyemf host=batyr.db.elephantsql.com port=5432', closed: 0>
+05:08:41 PM: DEBUG [cursor_pool.py:17] ejecuta metodo exit
+05:08:41 PM: DEBUG [cursor_pool.py:23] commit de la transaccion
+05:08:41 PM: DEBUG [conexion.py:47] regresar conecion al pool
+05:08:41 PM: INFO [_internal.py:224] 127.0.0.1 - - [24/Jul/2022 17:08:41] "[31m[1mPOST /auth/signup HTTP/1.1[0m" 400 -
+05:30:29 PM: INFO [_internal.py:224]  * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+05:30:29 PM: INFO [_internal.py:224]  * Restarting with stat
+05:30:31 PM: WARNING [_internal.py:224]  * Debugger is active!
+05:30:31 PM: INFO [_internal.py:224]  * Debugger PIN: 132-172-471
+05:30:42 PM: DEBUG [cursor_pool.py:11] inicio del metodo enter
+05:30:43 PM: DEBUG [conexion.py:29] conexion exitosa, <psycopg2.pool.SimpleConnectionPool object at 0x0000019EDD986320>
+05:30:43 PM: DEBUG [conexion.py:41] obtener conexion, <connection object at 0x0000019EDD8BC370; dsn: 'user=onryyemf password=xxx dbname=onryyemf host=batyr.db.elephantsql.com port=5432', closed: 0>
+05:30:43 PM: DEBUG [cursor_pool.py:17] ejecuta metodo exit
+05:30:43 PM: DEBUG [cursor_pool.py:23] commit de la transaccion
+05:30:43 PM: DEBUG [conexion.py:47] regresar conecion al pool
+05:30:43 PM: INFO [_internal.py:224] 127.0.0.1 - - [24/Jul/2022 17:30:43] "[35m[1mGET /auth/login HTTP/1.1[0m" 500 -
+05:31:25 PM: INFO [_internal.py:224]  * Detected change in 'c:\\Users\\luisf\\OneDrive\\Documents\\proyecto_code\\RiegoFlask\\app\\auth\\routes.py', reloading
+05:31:25 PM: INFO [_internal.py:224]  * Restarting with stat
+05:31:29 PM: WARNING [_internal.py:224]  * Debugger is active!
+05:31:29 PM: INFO [_internal.py:224]  * Debugger PIN: 132-172-471
+05:31:30 PM: DEBUG [cursor_pool.py:11] inicio del metodo enter
+05:31:31 PM: DEBUG [conexion.py:29] conexion exitosa, <psycopg2.pool.SimpleConnectionPool object at 0x000001B50F306380>
+05:31:31 PM: DEBUG [conexion.py:41] obtener conexion, <connection object at 0x000001B50F23C370; dsn: 'user=onryyemf password=xxx dbname=onryyemf host=batyr.db.elephantsql.com port=5432', closed: 0>
+05:31:31 PM: DEBUG [cursor_pool.py:17] ejecuta metodo exit
+05:31:31 PM: DEBUG [cursor_pool.py:23] commit de la transaccion
+05:31:31 PM: DEBUG [conexion.py:47] regresar conecion al pool
+05:31:31 PM: INFO [_internal.py:224] 127.0.0.1 - - [24/Jul/2022 17:31:31] "[35m[1mGET /auth/login HTTP/1.1[0m" 500 -
+05:31:55 PM: INFO [_internal.py:224]  * Detected change in 'c:\\Users\\luisf\\OneDrive\\Documents\\proyecto_code\\RiegoFlask\\app\\auth\\routes.py', reloading
+05:31:56 PM: INFO [_internal.py:224]  * Restarting with stat
+05:31:59 PM: WARNING [_internal.py:224]  * Debugger is active!
+05:31:59 PM: INFO [_internal.py:224]  * Debugger PIN: 132-172-471
+05:31:59 PM: DEBUG [cursor_pool.py:11] inicio del metodo enter
+05:32:00 PM: DEBUG [conexion.py:29] conexion exitosa, <psycopg2.pool.SimpleConnectionPool object at 0x0000026976286410>
+05:32:00 PM: DEBUG [conexion.py:41] obtener conexion, <connection object at 0x00000269761BC370; dsn: 'user=onryyemf password=xxx dbname=onryyemf host=batyr.db.elephantsql.com port=5432', closed: 0>
+05:32:00 PM: DEBUG [cursor_pool.py:17] ejecuta metodo exit
+05:32:00 PM: DEBUG [cursor_pool.py:23] commit de la transaccion
+05:32:00 PM: DEBUG [conexion.py:47] regresar conecion al pool
+05:32:01 PM: INFO [_internal.py:224] 127.0.0.1 - - [24/Jul/2022 17:32:01] "GET /auth/login HTTP/1.1" 200 -
+05:32:15 PM: INFO [_internal.py:224]  * Detected change in 'c:\\Users\\luisf\\OneDrive\\Documents\\proyecto_code\\RiegoFlask\\app\\auth\\routes.py', reloading
+05:32:15 PM: INFO [_internal.py:224]  * Restarting with stat
+05:32:17 PM: WARNING [_internal.py:224]  * Debugger is active!
+05:32:17 PM: INFO [_internal.py:224]  * Debugger PIN: 132-172-471
+05:33:55 PM: INFO [_internal.py:224]  * Detected change in 'c:\\Users\\luisf\\OneDrive\\Documents\\proyecto_code\\RiegoFlask\\main.py', reloading
+05:33:56 PM: INFO [_internal.py:224]  * Restarting with stat
+05:33:59 PM: WARNING [_internal.py:224]  * Debugger is active!
+05:33:59 PM: INFO [_internal.py:224]  * Debugger PIN: 132-172-471
+05:34:04 PM: INFO [_internal.py:224]  * Detected change in 'c:\\Users\\luisf\\OneDrive\\Documents\\proyecto_code\\RiegoFlask\\app\\auth\\routes.py', reloading
+05:34:05 PM: INFO [_internal.py:224]  * Restarting with stat
+05:34:10 PM: WARNING [_internal.py:224]  * Debugger is active!
+05:34:10 PM: INFO [_internal.py:224]  * Debugger PIN: 132-172-471
+05:36:46 PM: INFO [_internal.py:224]  * Detected change in 'c:\\Users\\luisf\\OneDrive\\Documents\\proyecto_code\\RiegoFlask\\main.py', reloading
+05:36:47 PM: INFO [_internal.py:224]  * Restarting with stat
+05:36:50 PM: WARNING [_internal.py:224]  * Debugger is active!
+05:36:50 PM: INFO [_internal.py:224]  * Debugger PIN: 132-172-471
+05:38:06 PM: INFO [_internal.py:224]  * Detected change in 'c:\\Users\\luisf\\OneDrive\\Documents\\proyecto_code\\RiegoFlask\\app\\auth\\routes.py', reloading
+05:38:06 PM: INFO [_internal.py:224]  * Restarting with stat
+06:57:38 PM: INFO [_internal.py:224]  * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+06:57:38 PM: INFO [_internal.py:224]  * Restarting with stat
+06:57:42 PM: WARNING [_internal.py:224]  * Debugger is active!
+06:57:42 PM: INFO [_internal.py:224]  * Debugger PIN: 132-172-471
+06:57:49 PM: INFO [_internal.py:224] 127.0.0.1 - - [24/Jul/2022 18:57:49] "[31m[1mGET /auth/login HTTP/1.1[0m" 405 -
+06:59:05 PM: INFO [_internal.py:224]  * Detected change in 'c:\\Users\\luisf\\OneDrive\\Documents\\proyecto_code\\RiegoFlask\\main.py', reloading
+06:59:05 PM: INFO [_internal.py:224]  * Restarting with stat
+06:59:07 PM: WARNING [_internal.py:224]  * Debugger is active!
+06:59:07 PM: INFO [_internal.py:224]  * Debugger PIN: 132-172-471
+06:59:15 PM: INFO [_internal.py:224]  * Detected change in 'c:\\Users\\luisf\\OneDrive\\Documents\\proyecto_code\\RiegoFlask\\app\\auth\\__init__.py', reloading
+06:59:15 PM: INFO [_internal.py:224]  * Restarting with stat
+06:59:18 PM: WARNING [_internal.py:224]  * Debugger is active!
+06:59:18 PM: INFO [_internal.py:224]  * Debugger PIN: 132-172-471
+06:59:19 PM: INFO [_internal.py:224] 127.0.0.1 - - [24/Jul/2022 18:59:19] "[31m[1mGET /auth/login HTTP/1.1[0m" 405 -
+06:59:43 PM: DEBUG [cursor_pool.py:11] inicio del metodo enter
+06:59:44 PM: DEBUG [conexion.py:29] conexion exitosa, <psycopg2.pool.SimpleConnectionPool object at 0x000001EBA16D6A70>
+06:59:44 PM: DEBUG [conexion.py:41] obtener conexion, <connection object at 0x000001EBA16088C0; dsn: 'user=onryyemf password=xxx dbname=onryyemf host=batyr.db.elephantsql.com port=5432', closed: 0>
+06:59:44 PM: DEBUG [cursor_pool.py:17] ejecuta metodo exit
+06:59:44 PM: DEBUG [cursor_pool.py:23] commit de la transaccion
+06:59:44 PM: DEBUG [conexion.py:47] regresar conecion al pool
+06:59:45 PM: INFO [_internal.py:224] 127.0.0.1 - - [24/Jul/2022 18:59:45] "POST /auth/login HTTP/1.1" 200 -
+07:09:14 PM: INFO [_internal.py:224]  * Detected change in 'c:\\Users\\luisf\\OneDrive\\Documents\\proyecto_code\\RiegoFlask\\app\\auth\\routes.py', reloading
+07:09:15 PM: INFO [_internal.py:224]  * Restarting with stat
+07:09:17 PM: WARNING [_internal.py:224]  * Debugger is active!
+07:09:17 PM: INFO [_internal.py:224]  * Debugger PIN: 132-172-471
+07:12:08 PM: INFO [_internal.py:224]  * Detected change in 'c:\\Users\\luisf\\OneDrive\\Documents\\proyecto_code\\RiegoFlask\\app\\cultivos\\__init__.py', reloading
+07:12:09 PM: INFO [_internal.py:224]  * Restarting with stat
+07:12:11 PM: WARNING [_internal.py:224]  * Debugger is active!
+07:12:11 PM: INFO [_internal.py:224]  * Debugger PIN: 132-172-471
+07:59:21 PM: INFO [_internal.py:224]  * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+07:59:21 PM: INFO [_internal.py:224]  * Restarting with stat
+07:59:23 PM: WARNING [_internal.py:224]  * Debugger is active!
+07:59:23 PM: INFO [_internal.py:224]  * Debugger PIN: 132-172-471
+08:01:12 PM: INFO [_internal.py:224]  * Detected change in 'c:\\Users\\luisf\\OneDrive\\Documents\\proyecto_code\\RiegoFlask\\app\\finca\\route_finca.py', reloading
+08:01:13 PM: INFO [_internal.py:224]  * Restarting with stat
+08:01:15 PM: WARNING [_internal.py:224]  * Debugger is active!
+08:01:15 PM: INFO [_internal.py:224]  * Debugger PIN: 132-172-471
+08:07:18 PM: DEBUG [cursor_pool.py:11] inicio del metodo enter
+08:07:19 PM: DEBUG [conexion.py:29] conexion exitosa, <psycopg2.pool.SimpleConnectionPool object at 0x000001E23D9AE080>
+08:07:19 PM: DEBUG [conexion.py:41] obtener conexion, <connection object at 0x000001E23D9289D0; dsn: 'user=onryyemf password=xxx dbname=onryyemf host=batyr.db.elephantsql.com port=5432', closed: 0>
+08:07:19 PM: DEBUG [cursor_pool.py:17] ejecuta metodo exit
+08:07:19 PM: ERROR [cursor_pool.py:20] error exc, maximum recursion depth exceeded
+08:07:19 PM: DEBUG [conexion.py:47] regresar conecion al pool
+08:07:22 PM: INFO [_internal.py:224] 127.0.0.1 - - [24/Jul/2022 20:07:22] "[35m[1mPOST /finca HTTP/1.1[0m" 500 -
+08:07:44 PM: INFO [_internal.py:224]  * Detected change in 'c:\\Users\\luisf\\OneDrive\\Documents\\proyecto_code\\RiegoFlask\\app\\models\\finca.py', reloading
+08:07:45 PM: INFO [_internal.py:224]  * Restarting with stat
+08:07:48 PM: WARNING [_internal.py:224]  * Debugger is active!
+08:07:48 PM: INFO [_internal.py:224]  * Debugger PIN: 132-172-471
+08:07:53 PM: INFO [_internal.py:224]  * Detected change in 'c:\\Users\\luisf\\OneDrive\\Documents\\proyecto_code\\RiegoFlask\\app\\models\\finca.py', reloading
+08:07:54 PM: INFO [_internal.py:224]  * Restarting with stat
+08:07:58 PM: WARNING [_internal.py:224]  * Debugger is active!
+08:07:58 PM: INFO [_internal.py:224]  * Debugger PIN: 132-172-471
+08:07:59 PM: DEBUG [cursor_pool.py:11] inicio del metodo enter
+08:08:00 PM: DEBUG [conexion.py:29] conexion exitosa, <psycopg2.pool.SimpleConnectionPool object at 0x000001738345E1D0>
+08:08:00 PM: DEBUG [conexion.py:41] obtener conexion, <connection object at 0x00000173833D89D0; dsn: 'user=onryyemf password=xxx dbname=onryyemf host=batyr.db.elephantsql.com port=5432', closed: 0>
+08:08:00 PM: DEBUG [finca_dao.py:71] insertar finca, 
+            Id finca: None, nombre: eden , direccion : cr 31 sur ,
+            altitud: 0, longitud: -75.26639088403925, latitud: 2.883137459182263, usuario: 25
+        
+08:08:00 PM: DEBUG [cursor_pool.py:17] ejecuta metodo exit
+08:08:01 PM: DEBUG [cursor_pool.py:23] commit de la transaccion
+08:08:01 PM: DEBUG [conexion.py:47] regresar conecion al pool
+08:08:01 PM: INFO [_internal.py:224] 127.0.0.1 - - [24/Jul/2022 20:08:01] "POST /finca HTTP/1.1" 200 -
+08:09:14 PM: DEBUG [cursor_pool.py:11] inicio del metodo enter
+08:09:14 PM: DEBUG [conexion.py:41] obtener conexion, <connection object at 0x00000173833D89D0; dsn: 'user=onryyemf password=xxx dbname=onryyemf host=batyr.db.elephantsql.com port=5432', closed: 0>
+08:09:14 PM: DEBUG [cursor_pool.py:17] ejecuta metodo exit
+08:09:14 PM: DEBUG [cursor_pool.py:23] commit de la transaccion
+08:09:14 PM: DEBUG [conexion.py:47] regresar conecion al pool
+08:09:14 PM: INFO [_internal.py:224] 127.0.0.1 - - [24/Jul/2022 20:09:14] "[31m[1mGET /finca/1 HTTP/1.1[0m" 400 -
+08:09:31 PM: INFO [_internal.py:224]  * Detected change in 'c:\\Users\\luisf\\OneDrive\\Documents\\proyecto_code\\RiegoFlask\\app\\finca\\route_finca.py', reloading
+08:09:32 PM: INFO [_internal.py:224]  * Restarting with stat
+08:09:35 PM: WARNING [_internal.py:224]  * Debugger is active!
+08:09:35 PM: INFO [_internal.py:224]  * Debugger PIN: 132-172-471
+08:09:39 PM: DEBUG [cursor_pool.py:11] inicio del metodo enter
+08:09:40 PM: DEBUG [conexion.py:29] conexion exitosa, <psycopg2.pool.SimpleConnectionPool object at 0x0000021BB9D2E110>
+08:09:40 PM: DEBUG [conexion.py:41] obtener conexion, <connection object at 0x0000021BB9CA89D0; dsn: 'user=onryyemf password=xxx dbname=onryyemf host=batyr.db.elephantsql.com port=5432', closed: 0>
+08:09:40 PM: DEBUG [cursor_pool.py:17] ejecuta metodo exit
+08:09:40 PM: DEBUG [cursor_pool.py:23] commit de la transaccion
+08:09:40 PM: DEBUG [conexion.py:47] regresar conecion al pool
+08:09:40 PM: INFO [_internal.py:224] 127.0.0.1 - - [24/Jul/2022 20:09:40] "[31m[1mGET /finca/1 HTTP/1.1[0m" 400 -
+08:09:45 PM: DEBUG [cursor_pool.py:11] inicio del metodo enter
+08:09:45 PM: DEBUG [conexion.py:41] obtener conexion, <connection object at 0x0000021BB9CA89D0; dsn: 'user=onryyemf password=xxx dbname=onryyemf host=batyr.db.elephantsql.com port=5432', closed: 0>
+08:09:46 PM: DEBUG [cursor_pool.py:17] ejecuta metodo exit
+08:09:46 PM: DEBUG [cursor_pool.py:23] commit de la transaccion
+08:09:46 PM: DEBUG [conexion.py:47] regresar conecion al pool
+08:09:46 PM: INFO [_internal.py:224] 127.0.0.1 - - [24/Jul/2022 20:09:46] "[31m[1mGET /finca/1 HTTP/1.1[0m" 400 -
+08:09:59 PM: INFO [_internal.py:224]  * Detected change in 'c:\\Users\\luisf\\OneDrive\\Documents\\proyecto_code\\RiegoFlask\\app\\finca\\route_finca.py', reloading
+08:10:00 PM: INFO [_internal.py:224]  * Restarting with stat
+08:10:03 PM: WARNING [_internal.py:224]  * Debugger is active!
+08:10:03 PM: INFO [_internal.py:224]  * Debugger PIN: 132-172-471
+08:10:07 PM: DEBUG [cursor_pool.py:11] inicio del metodo enter
+08:10:08 PM: DEBUG [conexion.py:29] conexion exitosa, <psycopg2.pool.SimpleConnectionPool object at 0x000001E011FAE110>
+08:10:08 PM: DEBUG [conexion.py:41] obtener conexion, <connection object at 0x000001E011F289D0; dsn: 'user=onryyemf password=xxx dbname=onryyemf host=batyr.db.elephantsql.com port=5432', closed: 0>
+08:10:08 PM: DEBUG [cursor_pool.py:17] ejecuta metodo exit
+08:10:09 PM: DEBUG [cursor_pool.py:23] commit de la transaccion
+08:10:09 PM: DEBUG [conexion.py:47] regresar conecion al pool
+08:10:09 PM: INFO [_internal.py:224] 127.0.0.1 - - [24/Jul/2022 20:10:09] "GET /finca/1 HTTP/1.1" 200 -
+08:11:27 PM: INFO [_internal.py:224]  * Detected change in 'c:\\Users\\luisf\\OneDrive\\Documents\\proyecto_code\\RiegoFlask\\app\\finca\\route_finca.py', reloading
+08:11:27 PM: INFO [_internal.py:224]  * Restarting with stat
+08:11:30 PM: WARNING [_internal.py:224]  * Debugger is active!
+08:11:30 PM: INFO [_internal.py:224]  * Debugger PIN: 132-172-471
+08:11:32 PM: DEBUG [cursor_pool.py:11] inicio del metodo enter
+08:11:33 PM: DEBUG [conexion.py:29] conexion exitosa, <psycopg2.pool.SimpleConnectionPool object at 0x0000020406BBE110>
+08:11:33 PM: DEBUG [conexion.py:41] obtener conexion, <connection object at 0x0000020406B389D0; dsn: 'user=onryyemf password=xxx dbname=onryyemf host=batyr.db.elephantsql.com port=5432', closed: 0>
+08:11:33 PM: DEBUG [cursor_pool.py:17] ejecuta metodo exit
+08:11:33 PM: DEBUG [cursor_pool.py:23] commit de la transaccion
+08:11:33 PM: DEBUG [conexion.py:47] regresar conecion al pool
+08:11:33 PM: INFO [_internal.py:224] 127.0.0.1 - - [24/Jul/2022 20:11:33] "GET /finca/1 HTTP/1.1" 200 -
+08:13:56 PM: INFO [_internal.py:224]  * Detected change in 'c:\\Users\\luisf\\OneDrive\\Documents\\proyecto_code\\RiegoFlask\\app\\finca\\route_finca.py', reloading
+08:13:56 PM: INFO [_internal.py:224]  * Restarting with stat
+08:13:59 PM: WARNING [_internal.py:224]  * Debugger is active!
+08:13:59 PM: INFO [_internal.py:224]  * Debugger PIN: 132-172-471
+08:14:13 PM: INFO [_internal.py:224]  * Detected change in 'c:\\Users\\luisf\\OneDrive\\Documents\\proyecto_code\\RiegoFlask\\app\\finca\\route_finca.py', reloading
+08:14:13 PM: INFO [_internal.py:224]  * Restarting with stat
+08:14:16 PM: WARNING [_internal.py:224]  * Debugger is active!
+08:14:16 PM: INFO [_internal.py:224]  * Debugger PIN: 132-172-471
+08:14:24 PM: DEBUG [cursor_pool.py:11] inicio del metodo enter
+08:14:25 PM: DEBUG [conexion.py:29] conexion exitosa, <psycopg2.pool.SimpleConnectionPool object at 0x0000018DE8F2E110>
+08:14:25 PM: DEBUG [conexion.py:41] obtener conexion, <connection object at 0x0000018DE8EA89D0; dsn: 'user=onryyemf password=xxx dbname=onryyemf host=batyr.db.elephantsql.com port=5432', closed: 0>
+08:14:25 PM: DEBUG [cursor_pool.py:17] ejecuta metodo exit
+08:14:26 PM: DEBUG [cursor_pool.py:23] commit de la transaccion
+08:14:26 PM: DEBUG [conexion.py:47] regresar conecion al pool
+08:14:26 PM: INFO [_internal.py:224] 127.0.0.1 - - [24/Jul/2022 20:14:26] "GET /finca/1 HTTP/1.1" 200 -
+08:15:06 PM: INFO [_internal.py:224]  * Detected change in 'c:\\Users\\luisf\\OneDrive\\Documents\\proyecto_code\\RiegoFlask\\app\\finca\\route_finca.py', reloading
+08:15:06 PM: INFO [_internal.py:224]  * Restarting with stat
+08:15:09 PM: WARNING [_internal.py:224]  * Debugger is active!
+08:15:09 PM: INFO [_internal.py:224]  * Debugger PIN: 132-172-471
+08:15:15 PM: INFO [_internal.py:224]  * Detected change in 'c:\\Users\\luisf\\OneDrive\\Documents\\proyecto_code\\RiegoFlask\\app\\finca\\route_finca.py', reloading
+08:15:15 PM: INFO [_internal.py:224]  * Restarting with stat
+08:15:19 PM: WARNING [_internal.py:224]  * Debugger is active!
+08:15:19 PM: INFO [_internal.py:224]  * Debugger PIN: 132-172-471
+08:15:20 PM: DEBUG [cursor_pool.py:11] inicio del metodo enter
+08:15:21 PM: DEBUG [conexion.py:29] conexion exitosa, <psycopg2.pool.SimpleConnectionPool object at 0x000001DD65BDE0E0>
+08:15:21 PM: DEBUG [conexion.py:41] obtener conexion, <connection object at 0x000001DD65B589D0; dsn: 'user=onryyemf password=xxx dbname=onryyemf host=batyr.db.elephantsql.com port=5432', closed: 0>
+08:15:21 PM: DEBUG [cursor_pool.py:17] ejecuta metodo exit
+08:15:21 PM: DEBUG [cursor_pool.py:23] commit de la transaccion
+08:15:21 PM: DEBUG [conexion.py:47] regresar conecion al pool
+08:15:21 PM: INFO [_internal.py:224] 127.0.0.1 - - [24/Jul/2022 20:15:21] "GET /finca/1 HTTP/1.1" 200 -
+08:16:43 PM: DEBUG [cursor_pool.py:11] inicio del metodo enter
+08:16:43 PM: DEBUG [conexion.py:41] obtener conexion, <connection object at 0x000001DD65B589D0; dsn: 'user=onryyemf password=xxx dbname=onryyemf host=batyr.db.elephantsql.com port=5432', closed: 0>
+08:16:43 PM: DEBUG [cursor_pool.py:17] ejecuta metodo exit
+08:16:43 PM: DEBUG [cursor_pool.py:23] commit de la transaccion
+08:16:43 PM: DEBUG [conexion.py:47] regresar conecion al pool
+08:16:43 PM: INFO [_internal.py:224] 127.0.0.1 - - [24/Jul/2022 20:16:43] "[35m[1mGET /finca/user/25 HTTP/1.1[0m" 500 -
+08:17:43 PM: INFO [_internal.py:224]  * Detected change in 'c:\\Users\\luisf\\OneDrive\\Documents\\proyecto_code\\RiegoFlask\\app\\dao\\finca_dao.py', reloading
+08:17:43 PM: INFO [_internal.py:224]  * Restarting with stat
+08:17:45 PM: WARNING [_internal.py:224]  * Debugger is active!
+08:17:45 PM: INFO [_internal.py:224]  * Debugger PIN: 132-172-471
+08:17:52 PM: INFO [_internal.py:224]  * Detected change in 'c:\\Users\\luisf\\OneDrive\\Documents\\proyecto_code\\RiegoFlask\\app\\finca\\route_finca.py', reloading
+08:17:53 PM: INFO [_internal.py:224]  * Restarting with stat
+08:17:55 PM: WARNING [_internal.py:224]  * Debugger is active!
+08:17:55 PM: INFO [_internal.py:224]  * Debugger PIN: 132-172-471
+08:17:57 PM: DEBUG [cursor_pool.py:11] inicio del metodo enter
+08:17:57 PM: DEBUG [conexion.py:29] conexion exitosa, <psycopg2.pool.SimpleConnectionPool object at 0x000001D53781E0E0>
+08:17:57 PM: DEBUG [conexion.py:41] obtener conexion, <connection object at 0x000001D5377989D0; dsn: 'user=onryyemf password=xxx dbname=onryyemf host=batyr.db.elephantsql.com port=5432', closed: 0>
+08:17:58 PM: DEBUG [cursor_pool.py:17] ejecuta metodo exit
+08:17:58 PM: DEBUG [cursor_pool.py:23] commit de la transaccion
+08:17:58 PM: DEBUG [conexion.py:47] regresar conecion al pool
+08:17:58 PM: INFO [_internal.py:224] 127.0.0.1 - - [24/Jul/2022 20:17:58] "[35m[1mGET /finca/user/25 HTTP/1.1[0m" 500 -
+08:19:01 PM: INFO [_internal.py:224]  * Detected change in 'c:\\Users\\luisf\\OneDrive\\Documents\\proyecto_code\\RiegoFlask\\app\\finca\\route_finca.py', reloading
+08:19:02 PM: INFO [_internal.py:224]  * Restarting with stat
+08:19:03 PM: WARNING [_internal.py:224]  * Debugger is active!
+08:19:03 PM: INFO [_internal.py:224]  * Debugger PIN: 132-172-471
+08:19:12 PM: DEBUG [cursor_pool.py:11] inicio del metodo enter
+08:19:12 PM: DEBUG [conexion.py:29] conexion exitosa, <psycopg2.pool.SimpleConnectionPool object at 0x0000028D3C42E0E0>
+08:19:12 PM: DEBUG [conexion.py:41] obtener conexion, <connection object at 0x0000028D3C3A89D0; dsn: 'user=onryyemf password=xxx dbname=onryyemf host=batyr.db.elephantsql.com port=5432', closed: 0>
+08:19:13 PM: DEBUG [cursor_pool.py:17] ejecuta metodo exit
+08:19:13 PM: DEBUG [cursor_pool.py:23] commit de la transaccion
+08:19:13 PM: DEBUG [conexion.py:47] regresar conecion al pool
+08:19:13 PM: INFO [_internal.py:224] 127.0.0.1 - - [24/Jul/2022 20:19:13] "GET /finca/user/25 HTTP/1.1" 200 -
+08:19:42 PM: INFO [_internal.py:224]  * Detected change in 'c:\\Users\\luisf\\OneDrive\\Documents\\proyecto_code\\RiegoFlask\\app\\dao\\finca_dao.py', reloading
+08:19:43 PM: INFO [_internal.py:224]  * Restarting with stat
+08:19:45 PM: WARNING [_internal.py:224]  * Debugger is active!
+08:19:45 PM: INFO [_internal.py:224]  * Debugger PIN: 132-172-471
+08:19:46 PM: DEBUG [cursor_pool.py:11] inicio del metodo enter
+08:19:47 PM: DEBUG [conexion.py:29] conexion exitosa, <psycopg2.pool.SimpleConnectionPool object at 0x0000016AE3AAE5F0>
+08:19:47 PM: DEBUG [conexion.py:41] obtener conexion, <connection object at 0x0000016AE3A289D0; dsn: 'user=onryyemf password=xxx dbname=onryyemf host=batyr.db.elephantsql.com port=5432', closed: 0>
+08:19:47 PM: DEBUG [cursor_pool.py:17] ejecuta metodo exit
+08:19:47 PM: DEBUG [cursor_pool.py:23] commit de la transaccion
+08:19:47 PM: DEBUG [conexion.py:47] regresar conecion al pool
+08:19:47 PM: INFO [_internal.py:224] 127.0.0.1 - - [24/Jul/2022 20:19:47] "GET /finca/user/25 HTTP/1.1" 200 -
+08:20:05 PM: INFO [_internal.py:224]  * Detected change in 'c:\\Users\\luisf\\OneDrive\\Documents\\proyecto_code\\RiegoFlask\\app\\dao\\finca_dao.py', reloading
+08:20:05 PM: INFO [_internal.py:224]  * Restarting with stat
+08:20:07 PM: WARNING [_internal.py:224]  * Debugger is active!
+08:20:07 PM: INFO [_internal.py:224]  * Debugger PIN: 132-172-471
+08:20:08 PM: DEBUG [cursor_pool.py:11] inicio del metodo enter
+08:20:09 PM: DEBUG [conexion.py:29] conexion exitosa, <psycopg2.pool.SimpleConnectionPool object at 0x000002A61921E5F0>
+08:20:09 PM: DEBUG [conexion.py:41] obtener conexion, <connection object at 0x000002A6191989D0; dsn: 'user=onryyemf password=xxx dbname=onryyemf host=batyr.db.elephantsql.com port=5432', closed: 0>
+08:20:10 PM: DEBUG [cursor_pool.py:17] ejecuta metodo exit
+08:20:10 PM: ERROR [cursor_pool.py:20] error exc, 'Finca' object has no attribute 'replace'
+08:20:10 PM: DEBUG [conexion.py:47] regresar conecion al pool
+08:20:10 PM: INFO [_internal.py:224] 127.0.0.1 - - [24/Jul/2022 20:20:10] "[35m[1mGET /finca/user/25 HTTP/1.1[0m" 500 -
+08:20:19 PM: INFO [_internal.py:224]  * Detected change in 'c:\\Users\\luisf\\OneDrive\\Documents\\proyecto_code\\RiegoFlask\\app\\dao\\finca_dao.py', reloading
+08:20:19 PM: INFO [_internal.py:224]  * Restarting with stat
+08:20:21 PM: WARNING [_internal.py:224]  * Debugger is active!
+08:20:21 PM: INFO [_internal.py:224]  * Debugger PIN: 132-172-471
+08:20:26 PM: DEBUG [cursor_pool.py:11] inicio del metodo enter
+08:20:27 PM: DEBUG [conexion.py:29] conexion exitosa, <psycopg2.pool.SimpleConnectionPool object at 0x000002438BE0E5F0>
+08:20:27 PM: DEBUG [conexion.py:41] obtener conexion, <connection object at 0x000002438BD889D0; dsn: 'user=onryyemf password=xxx dbname=onryyemf host=batyr.db.elephantsql.com port=5432', closed: 0>
+08:20:27 PM: DEBUG [cursor_pool.py:17] ejecuta metodo exit
+08:20:27 PM: DEBUG [cursor_pool.py:23] commit de la transaccion
+08:20:27 PM: DEBUG [conexion.py:47] regresar conecion al pool
+08:20:27 PM: INFO [_internal.py:224] 127.0.0.1 - - [24/Jul/2022 20:20:27] "[35m[1mGET /finca/user/25 HTTP/1.1[0m" 500 -
+08:22:32 PM: INFO [_internal.py:224]  * Detected change in 'c:\\Users\\luisf\\OneDrive\\Documents\\proyecto_code\\RiegoFlask\\app\\dao\\finca_dao.py', reloading
+08:22:32 PM: INFO [_internal.py:224]  * Restarting with stat
+08:22:34 PM: WARNING [_internal.py:224]  * Debugger is active!
+08:22:34 PM: INFO [_internal.py:224]  * Debugger PIN: 132-172-471
+08:23:26 PM: INFO [_internal.py:224]  * Detected change in 'c:\\Users\\luisf\\OneDrive\\Documents\\proyecto_code\\RiegoFlask\\app\\finca\\route_finca.py', reloading
+08:23:26 PM: INFO [_internal.py:224]  * Restarting with stat
+08:23:28 PM: WARNING [_internal.py:224]  * Debugger is active!
+08:23:28 PM: INFO [_internal.py:224]  * Debugger PIN: 132-172-471
+08:23:29 PM: DEBUG [cursor_pool.py:11] inicio del metodo enter
+08:23:30 PM: DEBUG [conexion.py:29] conexion exitosa, <psycopg2.pool.SimpleConnectionPool object at 0x0000026EB240E110>
+08:23:30 PM: DEBUG [conexion.py:41] obtener conexion, <connection object at 0x0000026EB23889D0; dsn: 'user=onryyemf password=xxx dbname=onryyemf host=batyr.db.elephantsql.com port=5432', closed: 0>
+08:23:30 PM: DEBUG [cursor_pool.py:17] ejecuta metodo exit
+08:23:30 PM: DEBUG [cursor_pool.py:23] commit de la transaccion
+08:23:30 PM: DEBUG [conexion.py:47] regresar conecion al pool
+08:23:30 PM: INFO [_internal.py:224] 127.0.0.1 - - [24/Jul/2022 20:23:30] "[35m[1mGET /finca/user/25 HTTP/1.1[0m" 500 -
+08:24:53 PM: INFO [_internal.py:224]  * Detected change in 'c:\\Users\\luisf\\OneDrive\\Documents\\proyecto_code\\RiegoFlask\\app\\finca\\route_finca.py', reloading
+08:24:53 PM: INFO [_internal.py:224]  * Restarting with stat
+08:24:55 PM: WARNING [_internal.py:224]  * Debugger is active!
+08:24:55 PM: INFO [_internal.py:224]  * Debugger PIN: 132-172-471
+08:24:55 PM: DEBUG [cursor_pool.py:11] inicio del metodo enter
+08:24:56 PM: DEBUG [conexion.py:29] conexion exitosa, <psycopg2.pool.SimpleConnectionPool object at 0x0000023FC3E9E080>
+08:24:56 PM: DEBUG [conexion.py:41] obtener conexion, <connection object at 0x0000023FC3E189D0; dsn: 'user=onryyemf password=xxx dbname=onryyemf host=batyr.db.elephantsql.com port=5432', closed: 0>
+08:24:56 PM: DEBUG [cursor_pool.py:17] ejecuta metodo exit
+08:24:56 PM: DEBUG [cursor_pool.py:23] commit de la transaccion
+08:24:56 PM: DEBUG [conexion.py:47] regresar conecion al pool
+08:24:56 PM: INFO [_internal.py:224] 127.0.0.1 - - [24/Jul/2022 20:24:56] "GET /finca/user/25 HTTP/1.1" 200 -
+08:26:05 PM: INFO [_internal.py:224]  * Detected change in 'c:\\Users\\luisf\\OneDrive\\Documents\\proyecto_code\\RiegoFlask\\app\\finca\\route_finca.py', reloading
+08:26:05 PM: INFO [_internal.py:224]  * Restarting with stat
+08:26:07 PM: WARNING [_internal.py:224]  * Debugger is active!
+08:26:07 PM: INFO [_internal.py:224]  * Debugger PIN: 132-172-471
+08:26:07 PM: DEBUG [cursor_pool.py:11] inicio del metodo enter
+08:26:08 PM: DEBUG [conexion.py:29] conexion exitosa, <psycopg2.pool.SimpleConnectionPool object at 0x0000022BC82DE050>
+08:26:08 PM: DEBUG [conexion.py:41] obtener conexion, <connection object at 0x0000022BC82589D0; dsn: 'user=onryyemf password=xxx dbname=onryyemf host=batyr.db.elephantsql.com port=5432', closed: 0>
+08:26:08 PM: DEBUG [cursor_pool.py:17] ejecuta metodo exit
+08:26:09 PM: DEBUG [cursor_pool.py:23] commit de la transaccion
+08:26:09 PM: DEBUG [conexion.py:47] regresar conecion al pool
+08:26:09 PM: INFO [_internal.py:224] 127.0.0.1 - - [24/Jul/2022 20:26:09] "GET /finca/user/25 HTTP/1.1" 200 -
+08:26:18 PM: DEBUG [cursor_pool.py:11] inicio del metodo enter
+08:26:18 PM: DEBUG [conexion.py:41] obtener conexion, <connection object at 0x0000022BC82589D0; dsn: 'user=onryyemf password=xxx dbname=onryyemf host=batyr.db.elephantsql.com port=5432', closed: 0>
+08:26:18 PM: DEBUG [cursor_pool.py:17] ejecuta metodo exit
+08:26:18 PM: DEBUG [cursor_pool.py:23] commit de la transaccion
+08:26:18 PM: DEBUG [conexion.py:47] regresar conecion al pool
+08:26:18 PM: INFO [_internal.py:224] 127.0.0.1 - - [24/Jul/2022 20:26:18] "GET /finca/1 HTTP/1.1" 200 -
+08:26:57 PM: INFO [_internal.py:224]  * Detected change in 'c:\\Users\\luisf\\OneDrive\\Documents\\proyecto_code\\RiegoFlask\\app\\finca\\route_finca.py', reloading
+08:26:57 PM: INFO [_internal.py:224]  * Restarting with stat
+08:26:59 PM: WARNING [_internal.py:224]  * Debugger is active!
+08:26:59 PM: INFO [_internal.py:224]  * Debugger PIN: 132-172-471
+08:27:04 PM: DEBUG [cursor_pool.py:11] inicio del metodo enter
+08:27:05 PM: DEBUG [conexion.py:29] conexion exitosa, <psycopg2.pool.SimpleConnectionPool object at 0x000002176A87E110>
+08:27:05 PM: DEBUG [conexion.py:41] obtener conexion, <connection object at 0x000002176A7F89D0; dsn: 'user=onryyemf password=xxx dbname=onryyemf host=batyr.db.elephantsql.com port=5432', closed: 0>
+08:27:05 PM: DEBUG [cursor_pool.py:17] ejecuta metodo exit
+08:27:05 PM: DEBUG [cursor_pool.py:23] commit de la transaccion
+08:27:05 PM: DEBUG [conexion.py:47] regresar conecion al pool
+08:27:05 PM: INFO [_internal.py:224] 127.0.0.1 - - [24/Jul/2022 20:27:05] "GET /finca/1 HTTP/1.1" 200 -
+08:27:31 PM: INFO [_internal.py:224]  * Detected change in 'c:\\Users\\luisf\\OneDrive\\Documents\\proyecto_code\\RiegoFlask\\app\\finca\\route_finca.py', reloading
+08:27:31 PM: INFO [_internal.py:224]  * Restarting with stat
+08:27:33 PM: WARNING [_internal.py:224]  * Debugger is active!
+08:27:33 PM: INFO [_internal.py:224]  * Debugger PIN: 132-172-471
+08:27:40 PM: DEBUG [cursor_pool.py:11] inicio del metodo enter
+08:27:40 PM: DEBUG [conexion.py:29] conexion exitosa, <psycopg2.pool.SimpleConnectionPool object at 0x000001B4BBD0E110>
+08:27:40 PM: DEBUG [conexion.py:41] obtener conexion, <connection object at 0x000001B4BBC889D0; dsn: 'user=onryyemf password=xxx dbname=onryyemf host=batyr.db.elephantsql.com port=5432', closed: 0>
+08:27:41 PM: DEBUG [cursor_pool.py:17] ejecuta metodo exit
+08:27:41 PM: DEBUG [cursor_pool.py:23] commit de la transaccion
+08:27:41 PM: DEBUG [conexion.py:47] regresar conecion al pool
+08:27:41 PM: INFO [_internal.py:224] 127.0.0.1 - - [24/Jul/2022 20:27:41] "GET /finca/1 HTTP/1.1" 200 -
+08:27:50 PM: INFO [_internal.py:224]  * Detected change in 'c:\\Users\\luisf\\OneDrive\\Documents\\proyecto_code\\RiegoFlask\\app\\finca\\route_finca.py', reloading
+08:27:50 PM: INFO [_internal.py:224]  * Restarting with stat
+08:27:52 PM: WARNING [_internal.py:224]  * Debugger is active!
+08:27:52 PM: INFO [_internal.py:224]  * Debugger PIN: 132-172-471
+08:30:32 PM: DEBUG [cursor_pool.py:11] inicio del metodo enter
+08:30:33 PM: DEBUG [conexion.py:29] conexion exitosa, <psycopg2.pool.SimpleConnectionPool object at 0x000001603358E080>
+08:30:33 PM: DEBUG [conexion.py:41] obtener conexion, <connection object at 0x00000160335089D0; dsn: 'user=onryyemf password=xxx dbname=onryyemf host=batyr.db.elephantsql.com port=5432', closed: 0>
+08:30:34 PM: DEBUG [finca_dao.py:72] insertar finca, 
+            Id finca: None, nombre: eden 2 , direccion : cr 31 sur ,
+            altitud: 0, longitud: -75.26639088403925, latitud: 2.883137459182263, usuario: 25
+        
+08:30:34 PM: DEBUG [cursor_pool.py:17] ejecuta metodo exit
+08:30:34 PM: DEBUG [cursor_pool.py:23] commit de la transaccion
+08:30:34 PM: DEBUG [conexion.py:47] regresar conecion al pool
+08:30:34 PM: INFO [_internal.py:224] 127.0.0.1 - - [24/Jul/2022 20:30:34] "POST /finca HTTP/1.1" 200 -
+08:30:38 PM: DEBUG [cursor_pool.py:11] inicio del metodo enter
+08:30:38 PM: DEBUG [conexion.py:41] obtener conexion, <connection object at 0x00000160335089D0; dsn: 'user=onryyemf password=xxx dbname=onryyemf host=batyr.db.elephantsql.com port=5432', closed: 0>
+08:30:39 PM: DEBUG [cursor_pool.py:17] ejecuta metodo exit
+08:30:39 PM: DEBUG [cursor_pool.py:23] commit de la transaccion
+08:30:39 PM: DEBUG [conexion.py:47] regresar conecion al pool
+08:30:39 PM: INFO [_internal.py:224] 127.0.0.1 - - [24/Jul/2022 20:30:39] "GET /finca/user/25 HTTP/1.1" 200 -
+08:30:48 PM: DEBUG [cursor_pool.py:11] inicio del metodo enter
+08:30:48 PM: DEBUG [conexion.py:41] obtener conexion, <connection object at 0x00000160335089D0; dsn: 'user=onryyemf password=xxx dbname=onryyemf host=batyr.db.elephantsql.com port=5432', closed: 0>
+08:30:48 PM: DEBUG [cursor_pool.py:17] ejecuta metodo exit
+08:30:48 PM: DEBUG [cursor_pool.py:23] commit de la transaccion
+08:30:48 PM: DEBUG [conexion.py:47] regresar conecion al pool
+08:30:48 PM: INFO [_internal.py:224] 127.0.0.1 - - [24/Jul/2022 20:30:48] "GET /finca/2 HTTP/1.1" 200 -
+09:29:39 AM: INFO [_internal.py:224]  * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+09:29:39 AM: INFO [_internal.py:224]  * Restarting with stat
+09:29:41 AM: WARNING [_internal.py:224]  * Debugger is active!
+09:29:41 AM: INFO [_internal.py:224]  * Debugger PIN: 132-172-471
+09:29:53 AM: DEBUG [cursor_pool.py:11] inicio del metodo enter
+09:29:54 AM: DEBUG [conexion.py:29] conexion exitosa, <psycopg2.pool.SimpleConnectionPool object at 0x000001BDDE86CBB0>
+09:29:54 AM: DEBUG [conexion.py:41] obtener conexion, <connection object at 0x000001BDDE7489D0; dsn: 'user=onryyemf password=xxx dbname=onryyemf host=batyr.db.elephantsql.com port=5432', closed: 0>
+09:29:54 AM: DEBUG [cursor_pool.py:17] ejecuta metodo exit
+09:29:54 AM: ERROR [cursor_pool.py:20] error exc, maximum recursion depth exceeded
+09:29:54 AM: DEBUG [conexion.py:47] regresar conecion al pool
+09:29:57 AM: INFO [_internal.py:224] 127.0.0.1 - - [25/Jul/2022 09:29:57] "[35m[1mPOST /lote HTTP/1.1[0m" 500 -
+09:30:24 AM: INFO [_internal.py:224]  * Detected change in 'c:\\Users\\luisf\\OneDrive\\Documents\\proyecto_code\\RiegoFlask\\app\\models\\lote.py', reloading
+09:30:25 AM: INFO [_internal.py:224]  * Restarting with stat
+09:30:27 AM: WARNING [_internal.py:224]  * Debugger is active!
+09:30:27 AM: INFO [_internal.py:224]  * Debugger PIN: 132-172-471
+09:30:28 AM: DEBUG [cursor_pool.py:11] inicio del metodo enter
+09:30:29 AM: DEBUG [conexion.py:29] conexion exitosa, <psycopg2.pool.SimpleConnectionPool object at 0x00000237302ACB80>
+09:30:29 AM: DEBUG [conexion.py:41] obtener conexion, <connection object at 0x00000237301889D0; dsn: 'user=onryyemf password=xxx dbname=onryyemf host=batyr.db.elephantsql.com port=5432', closed: 0>
+09:30:29 AM: DEBUG [cursor_pool.py:17] ejecuta metodo exit
+09:30:29 AM: ERROR [cursor_pool.py:20] error exc, column "lot_longitug" of relation "lotes" does not exist
+LINE 1: ...es (lot_nombre, lot_finca, lot_area, lot_latitud, lot_longit...
+                                                             ^
+
+09:30:29 AM: DEBUG [conexion.py:47] regresar conecion al pool
+09:30:29 AM: INFO [_internal.py:224] 127.0.0.1 - - [25/Jul/2022 09:30:29] "[35m[1mPOST /lote HTTP/1.1[0m" 500 -
+09:34:42 AM: INFO [_internal.py:224]  * Detected change in 'c:\\Users\\luisf\\OneDrive\\Documents\\proyecto_code\\RiegoFlask\\app\\dao\\lotes_dao.py', reloading
+09:34:43 AM: INFO [_internal.py:224]  * Restarting with stat
+09:34:45 AM: WARNING [_internal.py:224]  * Debugger is active!
+09:34:45 AM: INFO [_internal.py:224]  * Debugger PIN: 132-172-471
+09:34:50 AM: INFO [_internal.py:224]  * Detected change in 'c:\\Users\\luisf\\OneDrive\\Documents\\proyecto_code\\RiegoFlask\\app\\dao\\lotes_dao.py', reloading
+09:34:51 AM: INFO [_internal.py:224]  * Restarting with stat
+09:34:54 AM: WARNING [_internal.py:224]  * Debugger is active!
+09:34:54 AM: INFO [_internal.py:224]  * Debugger PIN: 132-172-471
+09:35:06 AM: DEBUG [cursor_pool.py:11] inicio del metodo enter
+09:35:07 AM: DEBUG [conexion.py:29] conexion exitosa, <psycopg2.pool.SimpleConnectionPool object at 0x000001A34AE0CB80>
+09:35:07 AM: DEBUG [conexion.py:41] obtener conexion, <connection object at 0x000001A34ACD89D0; dsn: 'user=onryyemf password=xxx dbname=onryyemf host=batyr.db.elephantsql.com port=5432', closed: 0>
+09:35:07 AM: DEBUG [lotes_dao.py:75] insertar lote, 
+            Id lote: None, nombre: lot-01 , finca : 1,
+            altitud: 0, longitud: -75.26639088403925, latitud: 2.883137459182263, area: 1
+        
+09:35:07 AM: DEBUG [cursor_pool.py:17] ejecuta metodo exit
+09:35:07 AM: DEBUG [cursor_pool.py:23] commit de la transaccion
+09:35:07 AM: DEBUG [conexion.py:47] regresar conecion al pool
+09:35:07 AM: INFO [_internal.py:224] 127.0.0.1 - - [25/Jul/2022 09:35:07] "POST /lote HTTP/1.1" 200 -
+09:35:40 AM: DEBUG [cursor_pool.py:11] inicio del metodo enter
+09:35:40 AM: DEBUG [conexion.py:41] obtener conexion, <connection object at 0x000001A34ACD89D0; dsn: 'user=onryyemf password=xxx dbname=onryyemf host=batyr.db.elephantsql.com port=5432', closed: 0>
+09:35:40 AM: DEBUG [cursor_pool.py:17] ejecuta metodo exit
+09:35:40 AM: DEBUG [cursor_pool.py:23] commit de la transaccion
+09:35:40 AM: DEBUG [conexion.py:47] regresar conecion al pool
+09:35:40 AM: INFO [_internal.py:224] 127.0.0.1 - - [25/Jul/2022 09:35:40] "GET /lote/1 HTTP/1.1" 200 -
+09:35:52 AM: INFO [_internal.py:224] 127.0.0.1 - - [25/Jul/2022 09:35:52] "[33mGET /lote/finca/ HTTP/1.1[0m" 404 -
+09:35:56 AM: INFO [_internal.py:224] 127.0.0.1 - - [25/Jul/2022 09:35:56] "[35m[1mGET /lote/finca/1 HTTP/1.1[0m" 500 -
+09:36:41 AM: INFO [_internal.py:224]  * Detected change in 'c:\\Users\\luisf\\OneDrive\\Documents\\proyecto_code\\RiegoFlask\\app\\lotes\\route_lote.py', reloading
+09:36:41 AM: INFO [_internal.py:224]  * Restarting with stat
+09:36:44 AM: WARNING [_internal.py:224]  * Debugger is active!
+09:36:44 AM: INFO [_internal.py:224]  * Debugger PIN: 132-172-471
+09:36:45 AM: DEBUG [cursor_pool.py:11] inicio del metodo enter
+09:36:46 AM: DEBUG [conexion.py:29] conexion exitosa, <psycopg2.pool.SimpleConnectionPool object at 0x000002D85F3328F0>
+09:36:46 AM: DEBUG [conexion.py:41] obtener conexion, <connection object at 0x000002D85F2889D0; dsn: 'user=onryyemf password=xxx dbname=onryyemf host=batyr.db.elephantsql.com port=5432', closed: 0>
+09:36:46 AM: DEBUG [cursor_pool.py:17] ejecuta metodo exit
+09:36:46 AM: DEBUG [cursor_pool.py:23] commit de la transaccion
+09:36:46 AM: DEBUG [conexion.py:47] regresar conecion al pool
+09:36:46 AM: INFO [_internal.py:224] 127.0.0.1 - - [25/Jul/2022 09:36:46] "GET /lote/finca/1 HTTP/1.1" 200 -
+09:36:49 AM: DEBUG [cursor_pool.py:11] inicio del metodo enter
+09:36:50 AM: DEBUG [conexion.py:41] obtener conexion, <connection object at 0x000002D85F2889D0; dsn: 'user=onryyemf password=xxx dbname=onryyemf host=batyr.db.elephantsql.com port=5432', closed: 0>
+09:36:50 AM: DEBUG [cursor_pool.py:17] ejecuta metodo exit
+09:36:50 AM: DEBUG [cursor_pool.py:23] commit de la transaccion
+09:36:50 AM: DEBUG [conexion.py:47] regresar conecion al pool
+09:36:50 AM: INFO [_internal.py:224] 127.0.0.1 - - [25/Jul/2022 09:36:50] "GET /lote/finca/1 HTTP/1.1" 200 -
+09:38:22 AM: INFO [_internal.py:224]  * Detected change in 'c:\\Users\\luisf\\OneDrive\\Documents\\proyecto_code\\RiegoFlask\\app\\dao\\lotes_dao.py', reloading
+09:38:22 AM: INFO [_internal.py:224]  * Restarting with stat
+09:38:24 AM: WARNING [_internal.py:224]  * Debugger is active!
+09:38:24 AM: INFO [_internal.py:224]  * Debugger PIN: 132-172-471
+09:38:31 AM: DEBUG [cursor_pool.py:11] inicio del metodo enter
+09:38:31 AM: DEBUG [conexion.py:29] conexion exitosa, <psycopg2.pool.SimpleConnectionPool object at 0x000001B68B24CB50>
+09:38:31 AM: DEBUG [conexion.py:41] obtener conexion, <connection object at 0x000001B68B1189D0; dsn: 'user=onryyemf password=xxx dbname=onryyemf host=batyr.db.elephantsql.com port=5432', closed: 0>
+09:38:31 AM: DEBUG [cursor_pool.py:17] ejecuta metodo exit
+09:38:32 AM: DEBUG [cursor_pool.py:23] commit de la transaccion
+09:38:32 AM: DEBUG [conexion.py:47] regresar conecion al pool
+09:38:32 AM: INFO [_internal.py:224] 127.0.0.1 - - [25/Jul/2022 09:38:32] "GET /lote/finca/1 HTTP/1.1" 200 -
+09:38:52 AM: DEBUG [cursor_pool.py:11] inicio del metodo enter
+09:38:52 AM: DEBUG [conexion.py:41] obtener conexion, <connection object at 0x000001B68B1189D0; dsn: 'user=onryyemf password=xxx dbname=onryyemf host=batyr.db.elephantsql.com port=5432', closed: 0>
+09:38:52 AM: DEBUG [cursor_pool.py:17] ejecuta metodo exit
+09:38:52 AM: DEBUG [cursor_pool.py:23] commit de la transaccion
+09:38:52 AM: DEBUG [conexion.py:47] regresar conecion al pool
+09:38:52 AM: INFO [_internal.py:224] 127.0.0.1 - - [25/Jul/2022 09:38:52] "[31m[1mGET /lote/finca/2 HTTP/1.1[0m" 400 -
+09:20:50 AM: INFO [_internal.py:224]  * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+09:20:50 AM: INFO [_internal.py:224]  * Restarting with stat
+09:20:52 AM: WARNING [_internal.py:224]  * Debugger is active!
+09:20:52 AM: INFO [_internal.py:224]  * Debugger PIN: 132-172-471
+09:22:01 AM: INFO [_internal.py:224]  * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+09:22:01 AM: INFO [_internal.py:224]  * Restarting with stat
+09:22:02 AM: WARNING [_internal.py:224]  * Debugger is active!
+09:22:02 AM: INFO [_internal.py:224]  * Debugger PIN: 132-172-471
+09:22:18 AM: INFO [_internal.py:224]  * Detected change in 'c:\\Users\\luisf\\OneDrive\\Documents\\proyecto_code\\RiegoFlask\\app\\lotes\\route_lote.py', reloading
+09:22:18 AM: INFO [_internal.py:224]  * Restarting with stat
+09:22:20 AM: WARNING [_internal.py:224]  * Debugger is active!
+09:22:20 AM: INFO [_internal.py:224]  * Debugger PIN: 132-172-471
+09:23:57 AM: INFO [_internal.py:224] 127.0.0.1 - - [26/Jul/2022 09:23:57] "[31m[1mGET /finca/user/25 HTTP/1.1[0m" 401 -
+09:25:22 AM: DEBUG [cursor_pool.py:11] inicio del metodo enter
+09:25:23 AM: DEBUG [conexion.py:29] conexion exitosa, <psycopg2.pool.SimpleConnectionPool object at 0x000002071CCC1C00>
+09:25:23 AM: DEBUG [conexion.py:41] obtener conexion, <connection object at 0x000002071CC189D0; dsn: 'user=onryyemf password=xxx dbname=onryyemf host=batyr.db.elephantsql.com port=5432', closed: 0>
+09:25:23 AM: DEBUG [cursor_pool.py:17] ejecuta metodo exit
+09:25:23 AM: DEBUG [cursor_pool.py:23] commit de la transaccion
+09:25:23 AM: DEBUG [conexion.py:47] regresar conecion al pool
+09:25:24 AM: INFO [_internal.py:224] 127.0.0.1 - - [26/Jul/2022 09:25:24] "POST /auth/login HTTP/1.1" 200 -
+09:25:41 AM: DEBUG [cursor_pool.py:11] inicio del metodo enter
+09:25:41 AM: DEBUG [conexion.py:41] obtener conexion, <connection object at 0x000002071CC189D0; dsn: 'user=onryyemf password=xxx dbname=onryyemf host=batyr.db.elephantsql.com port=5432', closed: 0>
+09:25:41 AM: DEBUG [cursor_pool.py:17] ejecuta metodo exit
+09:25:41 AM: DEBUG [cursor_pool.py:23] commit de la transaccion
+09:25:41 AM: DEBUG [conexion.py:47] regresar conecion al pool
+09:25:41 AM: INFO [_internal.py:224] 127.0.0.1 - - [26/Jul/2022 09:25:41] "GET /finca/user/25 HTTP/1.1" 200 -
+09:26:42 AM: DEBUG [cursor_pool.py:11] inicio del metodo enter
+09:26:42 AM: DEBUG [conexion.py:41] obtener conexion, <connection object at 0x000002071CC189D0; dsn: 'user=onryyemf password=xxx dbname=onryyemf host=batyr.db.elephantsql.com port=5432', closed: 0>
+09:26:43 AM: DEBUG [cursor_pool.py:17] ejecuta metodo exit
+09:26:43 AM: DEBUG [cursor_pool.py:23] commit de la transaccion
+09:26:43 AM: DEBUG [conexion.py:47] regresar conecion al pool
+09:26:43 AM: INFO [_internal.py:224] 127.0.0.1 - - [26/Jul/2022 09:26:43] "[31m[1mGET /lote/finca/2 HTTP/1.1[0m" 400 -
+09:26:51 AM: DEBUG [cursor_pool.py:11] inicio del metodo enter
+09:26:51 AM: DEBUG [conexion.py:41] obtener conexion, <connection object at 0x000002071CC189D0; dsn: 'user=onryyemf password=xxx dbname=onryyemf host=batyr.db.elephantsql.com port=5432', closed: 0>
+09:26:51 AM: DEBUG [cursor_pool.py:17] ejecuta metodo exit
+09:26:51 AM: DEBUG [cursor_pool.py:23] commit de la transaccion
+09:26:51 AM: DEBUG [conexion.py:47] regresar conecion al pool
+09:26:51 AM: INFO [_internal.py:224] 127.0.0.1 - - [26/Jul/2022 09:26:51] "GET /lote/finca/3 HTTP/1.1" 200 -
+09:27:32 AM: INFO [_internal.py:224]  * Detected change in 'c:\\Users\\luisf\\OneDrive\\Documents\\proyecto_code\\RiegoFlask\\app\\lotes\\route_lote.py', reloading
+09:27:32 AM: INFO [_internal.py:224]  * Restarting with stat
+09:27:35 AM: WARNING [_internal.py:224]  * Debugger is active!
+09:27:35 AM: INFO [_internal.py:224]  * Debugger PIN: 132-172-471
+09:28:23 AM: INFO [_internal.py:224]  * Detected change in 'c:\\Users\\luisf\\OneDrive\\Documents\\proyecto_code\\RiegoFlask\\app\\auth\\routes.py', reloading
+09:28:24 AM: INFO [_internal.py:224]  * Restarting with stat
+09:36:17 AM: INFO [_internal.py:224]  * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+09:36:17 AM: INFO [_internal.py:224]  * Restarting with stat
+09:36:19 AM: WARNING [_internal.py:224]  * Debugger is active!
+09:36:19 AM: INFO [_internal.py:224]  * Debugger PIN: 132-172-471
+09:36:29 AM: DEBUG [cursor_pool.py:11] inicio del metodo enter
+09:36:30 AM: DEBUG [conexion.py:29] conexion exitosa, <psycopg2.pool.SimpleConnectionPool object at 0x0000021B2CB45630>
+09:36:30 AM: DEBUG [conexion.py:41] obtener conexion, <connection object at 0x0000021B2CA48480; dsn: 'user=onryyemf password=xxx dbname=onryyemf host=batyr.db.elephantsql.com port=5432', closed: 0>
+09:36:30 AM: DEBUG [cursor_pool.py:17] ejecuta metodo exit
+09:36:30 AM: DEBUG [cursor_pool.py:23] commit de la transaccion
+09:36:30 AM: DEBUG [conexion.py:47] regresar conecion al pool
+09:36:31 AM: INFO [_internal.py:224] 127.0.0.1 - - [26/Jul/2022 09:36:31] "POST /auth/login HTTP/1.1" 200 -
+09:36:50 AM: INFO [_internal.py:224] 127.0.0.1 - - [26/Jul/2022 09:36:50] "[35m[1mGET /auth/who_am_i HTTP/1.1[0m" 500 -
+09:38:30 AM: INFO [_internal.py:224]  * Detected change in 'c:\\Users\\luisf\\OneDrive\\Documents\\proyecto_code\\RiegoFlask\\app\\auth\\routes.py', reloading
+09:38:30 AM: INFO [_internal.py:224]  * Restarting with stat
+09:38:32 AM: WARNING [_internal.py:224]  * Debugger is active!
+09:38:32 AM: INFO [_internal.py:224]  * Debugger PIN: 132-172-471
+09:38:35 AM: INFO [_internal.py:224] 127.0.0.1 - - [26/Jul/2022 09:38:35] "[35m[1mGET /auth/who_am_i HTTP/1.1[0m" 500 -
+09:39:37 AM: INFO [_internal.py:224]  * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+09:39:37 AM: INFO [_internal.py:224]  * Restarting with stat
+09:39:38 AM: WARNING [_internal.py:224]  * Debugger is active!
+09:39:38 AM: INFO [_internal.py:224]  * Debugger PIN: 132-172-471
+09:39:50 AM: DEBUG [cursor_pool.py:11] inicio del metodo enter
+09:39:51 AM: DEBUG [conexion.py:29] conexion exitosa, <psycopg2.pool.SimpleConnectionPool object at 0x000002DE55185660>
+09:39:51 AM: DEBUG [conexion.py:41] obtener conexion, <connection object at 0x000002DE55088480; dsn: 'user=onryyemf password=xxx dbname=onryyemf host=batyr.db.elephantsql.com port=5432', closed: 0>
+09:39:51 AM: DEBUG [cursor_pool.py:17] ejecuta metodo exit
+09:39:51 AM: DEBUG [cursor_pool.py:23] commit de la transaccion
+09:39:51 AM: DEBUG [conexion.py:47] regresar conecion al pool
+09:39:52 AM: INFO [_internal.py:224] 127.0.0.1 - - [26/Jul/2022 09:39:52] "POST /auth/login HTTP/1.1" 200 -
+09:40:16 AM: INFO [_internal.py:224] 127.0.0.1 - - [26/Jul/2022 09:40:16] "GET /auth/who_am_i HTTP/1.1" 200 -

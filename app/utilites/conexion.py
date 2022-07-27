@@ -1,5 +1,5 @@
 #import psycopg2 as db
-from logger_base import log
+from .logger_base import log
 import sys
 from psycopg2 import pool
 
@@ -30,7 +30,7 @@ class Conexion:
                 return cls._pool
             except Exception as ex:
                 log.error(f'error al obtener pool, {ex}')
-                sys.exit()
+                #sys.exit()
         else:
             return cls._pool
 
