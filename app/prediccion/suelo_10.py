@@ -11,9 +11,9 @@ from PIL import Image
 from tensorflow import keras
 from tensorflow.keras.preprocessing.image import load_img
 
-from suelo_sequence import SueloSequence
-from suelo_sequence_np import SueloSequenceNP
-from suelo_utils import SueloUtils    
+from .suelo_sequence import SueloSequence
+from .suelo_sequence_np import SueloSequenceNP
+from .suelo_utils import SueloUtils    
     
 suelo_utils = SueloUtils()
 
@@ -96,7 +96,9 @@ class SoilClassifier:
         img_masks = []
             
         for clase in self.class_names:
-            model_filename = "segmentation_model_" + clase + ".h5"
+            model_filename = "C:\\Users\\luisf\\OneDrive\\Documents\\proyecto_code\\RiegoFlask\\app\\prediccion\\segmentation_model_" + clase + ".h5"
+            print("*"*40)
+            print(model_filename)
             
             model = keras.models.load_model(model_filename)
             
