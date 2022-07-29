@@ -8,3 +8,7 @@ click
 psycopg2
 psycopg2-binary
 pandas
+opencv-python
+tensorflow
+scikit-image
+base64

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Image to use:</p>
+
+<input id="inputFileToLoad" type="file" onchange="classifySoil();" />
+<br/>
+<p id="txt_arcilla"></p>
+<p id="txt_limo"></p>
+<p id="txt_arena"></p>
+<br/>
+<div id="imgTest" width="800" height="1200"></div>
+
+<canvas id="myCanvasImg" width="320" height="480" style="border:solid 1px red; position: absolute; left: 0; top: 300; z-index: 10;"></canvas>
+
+<!--
+<canvas id="myCanvas" width="320" height="480" style="position: absolute; left: 0; top: 300; z-index: 20;"></canvas>
+-->
+
+<!--
+<canvas id="layerName" width="320" height="240" style="position: absolute; left: 0; top: 0; z-index: 3;"></canvas>
+<canvas id="myCanvas" width="320" height="480"
+    style="border:1px solid #d3d3d3;">
+    Your browser does not support the HTML5 canvas tag.
+</canvas>
+-->
+
+<div id="scrollcomponents" width="30" height="600" style="background-color: yellow;">
+    <button id="arcilla_btn">Arcilla</button>
+    <button id="limo_btn">Limo</button>
+    <button id="arena_btn">Arena</button>
+</div>
+
+<script type='text/javascript'>
+    var newImage;
+    //var y_top = 0;
+    
+    function cleanComponents(){
+        document.getElementById("txt_arcilla").innerHTML = "Arcilla:";
+        document.getElementById("txt_limo").innerHTML = "Limo:";
+        document.getElementById("txt_arena").innerHTML = "Arena:";
+    }
+    
+    function showComponents(components){
+        document.getElementById("txt_arcilla").innerHTML = "Arcilla: " + components.arcilla + " %";
+        document.getElementById("txt_limo").innerHTML = "Limo: " + components.limo + " %";
+        document.getElementById("txt_arena").innerHTML = "Arena: " + components.arena + " %";
+    }
+    
+    function cleanCanvas(){
+        var canvas = document.getElementById("myCanvas");
+        var ctx = canvas.getContext("2d");
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+    }
+    
+    function drawLines(thresholds){
+        var arcilla_top = thresholds.arcilla_top;
+        var limo_top = thresholds.limo_top;
+        var arena_bottom = thresholds.arena_bottom;
+        var arena_top = thresholds.arena_top;
+        
+        var ys = [arcilla_top, limo_top, arena_bottom, arena_top];
+        
+        var canvas2 = document.getElementById("myCanvasImg");
+        var ctx2 = canvas2.getContext("2d");
+        ctx2.drawImage(newImage, 0, 0, 320, 480);
+        
+        
+        /*
+        var canvas = document.getElementById("myCanvas");
+        var ctx = canvas.getContext("2d");
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        */
+        
+        ctx2.lineWidth = 5;
+        
+        //var newImage = document.getElementById("newImage");
+        
+        //console.log(top);        
+        
+        for (var i=0; i<ys.length; i++){
+            var y = parseInt(ys[i]);
+            console.log(i, y);
+            ctx2.beginPath();
+            ctx2.moveTo(0, y);
+            ctx2.lineTo(399, y);
+            ctx2.stroke();
+        }
+    }
+
+    function classifySoil(){
+        var image_base64 = "";  //encodeImageFileAsURL();
+        var image_filename = ""; //filesSelected[0]["name"];
+        
+        var filesSelected = document.getElementById("inputFileToLoad").files;
+        
+        if (filesSelected.length > 0) {
+            var fileToLoad = filesSelected[0];
+            
+            image_filename = fileToLoad["name"];
+                        
+            var fileReader = new FileReader();
+            
+            fileReader.onload = function(fileLoadedEvent) {
+                image_base64 = fileLoadedEvent.target.result; // <--- data: base64
+                
+                
+                newImage = document.createElement('img');
+                //newImage.id = "newImage";
+                newImage.src = image_base64;
+                newImage.width = 320;
+                newImage.height = 480;
+                
+                            
+                var canvas = document.getElementById("myCanvasImg");
+                var ctx = canvas.getContext("2d");
+                ctx.drawImage(newImage, 0, 0, 320, 480);
+                
+                
+                //document.getElementById("myCanvas").style.background=image_base64;
+                //ctx.clearRect(0, 0, canvas.width, canvas.height);
+                //var img = document.getElementById("scream");
+                
+                
+
+                canvas.width += 0; // causes the canvas to resize (to the same size)
+                                
+                /////document.getElementById("imgTest").innerHTML = newImage.outerHTML;
+                
+                //console.log(image_filename);
+                
+                var xhttp = new XMLHttpRequest();
+                xhttp.open("POST", "http://localhost:5000", true); 
+                xhttp.setRequestHeader("Content-Type", "application/json");
+                xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        var response_text = this.responseText;
+                        var response = JSON.parse(response_text);
+                        
+                        var components = response.components;
+                        var thresholds = response.thresholds;
+                        var polygons = response.polygons;
+                        
+                        drawLines(thresholds);
+                        showComponents(components);
+                        
+                        //console.log(response_text);
+                        console.log("arcilla: " + components.arcilla);
+                        console.log("limo: " + components.limo);
+                        console.log("arena: " + components.arena); 
+                        
+                    }
+                };
+                
+                cleanComponents();
+                
+                var data = {filename:image_filename,image: image_base64};
+                //console.log(data);
+                xhttp.send(JSON.stringify(data));
+                
+            }
+            fileReader.readAsDataURL(fileToLoad);
+
+        }
+    }
+    
+    function printMousePos(event) {
+        //console.log("clientX: " + event.clientX + " - clientY: " + event.clientY);
+        var x = event.pageX - this.offsetLeft;
+        var y = event.pageY - this.offsetTop;
+        console.log("X Coordinate: " + x + " Y Coordinate: " + y);
+    }
+    
+    document.getElementById("imgTest").addEventListener("mousemove", () => {
+        let mousex = event.clientX - event.target.offsetLeft; // Gets Mouse X
+        let mousey = event.clientY - event.target.offsetTop; // Gets Mouse Y
+        //console.log([mousex, mousey]); // Prints data
+    });
+    
+    document.getElementById("arcilla_btn").addEventListener("mousemove", () => {
+        let mousex = event.clientX - event.target.offsetLeft; // Gets Mouse X
+        let mousey = event.clientY - event.target.offsetTop; // Gets Mouse Y
+        console.log([mousex, mousey]); // Prints data
+    });
+    
+                
+</script>
+
+
+</body>
+</html>
