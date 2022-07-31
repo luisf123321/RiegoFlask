@@ -96,7 +96,7 @@ class SoilClassifier:
         img_masks = []
             
         for clase in self.class_names:
-            model_filename = "C:\\Users\\luisf\\OneDrive\\Documents\\proyecto_code\\RiegoFlask\\app\\prediccion\\segmentation_model_" + clase + ".h5"
+            model_filename = "C:\\Users\\LUISFERNANDO\\Documents\\proyecto-code\\RiegoFlask\\app\\prediccion\\segmentation_model_" + clase + ".h5"
             print("*"*40)
             print(model_filename)
             
@@ -178,7 +178,7 @@ class SoilClassifier:
         # print(height_percentage)
         
         polygons, thresholds = self.get_polygons()
-        
+        #print(components)
         return {"components":components,
                 "thresholds":thresholds,
                 "polygons":polygons}
