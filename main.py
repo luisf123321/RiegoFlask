@@ -8,10 +8,7 @@ from flask_jwt_extended import JWTManager
 from app.models.usuario import User
 from app.auth.routes import signup
 
-
-
 from app import create_app
-
 
 app = create_app()
 

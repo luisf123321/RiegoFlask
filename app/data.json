@@ -1,0 +1,10 @@
+{
+    "subscription_type": "free",
+    "language": "es",
+    "connection": {
+        "use_ssl": true,
+        "verify_ssl_certs": true,
+        "use_proxy": true        
+    }
+    
+}
