@@ -1,10 +1,9 @@
 
 
 class Cultivo:
-    def __init__(self,id,cultivoNombre,cultivoLote,tipoCultivo,fechaInicio,fechaFinal, cultivoEstado) -> None:
+    def __init__(self,id=None,cultivoNombre=None,tipoCultivo=None,fechaInicio=None,fechaFinal=None, cultivoEstado=None) -> None:
         self._id = id
         self._cultivoNombre = cultivoNombre
-        self._cultivoLote = cultivoLote
         self._tipoCultivo = tipoCultivo
         self._fechaInicio = fechaInicio
         self._fechaFinal = fechaFinal
@@ -26,13 +25,7 @@ class Cultivo:
     def cultivoNombre(self,cultivoNombre):
         self._cultivoNombre = cultivoNombre
     
-    @property
-    def cultivoLote(self):
-        return self._cultivoLote
-    
-    @cultivoLote.setter
-    def cultivoLote(self,cultivoLote):
-        self._cultivoLote = cultivoLote
+   
     
     @property
     def tipoCultivo(self):

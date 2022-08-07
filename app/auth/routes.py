@@ -32,6 +32,8 @@ def login():
             "username": consulta_usuario.user
         }
         access_token = create_access_token(identity=user)
+        #refresh_token = create_refresh_token(identity=user)
+        #return jsonify(access_token=access_token, refresh_token=refresh_token)
         return jsonify(access_token=access_token),200
         #return jsonify({"code":400,"message":"El usuario ya existe"}),400
 
