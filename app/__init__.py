@@ -8,6 +8,7 @@ from .lotes import lote
 from .extensions import jwt
 from .prediccion import prediction
 from .clima import clima
+from .riego import riego
 def create_app():
     app = Flask(__name__)
     app.config.from_object(Config)
@@ -22,4 +23,5 @@ def create_app():
     app.register_blueprint(lote)
     app.register_blueprint(prediction)
     app.register_blueprint(clima)
+    app.register_blueprint(riego)
     return app

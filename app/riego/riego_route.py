@@ -11,13 +11,44 @@ from app.dao.admin_riego_dao import AdminRiegoDao
 import json
 
 
-@riego.route('user/<int:lote>', methods=['GET'])
+@riego.route('sector/<int:sector>', methods=['GET'])
 @jwt_required()
-def buscarPorLote(lote):
+def buscarPorSector(sector):
+    print(sector)
+    admin = AdminRiego(sector=sector)
+    riegos = AdminRiegoDao.buscarSector(admin)
+    if riegos is None:
+        return jsonify("no se encontro registro"),400
+    else:
+        print("*"*20)
+        print(riegos)
+        admin_riegos_result = []
+        for riego in riegos:
+            riego = riego.replace("_","")
+            admin_riegos_result.append(json.loads(riego))
+        return jsonify(admin_riegos_result) ,200 
+
+
+@riego.route('<int:id>', methods=['GET'])
+@jwt_required()
+def buscarPorLote(id):
     return "hello"
 
 
-@riego.route('user/<int:lote>', methods=['GET'])
+@riego.route('tipo', methods=['GET'])
 @jwt_required()
-def buscarPorLote(lote):
-    return "hello"
+def buscarTodos():
+    print("tipo")
+    registros = TipoRiegoDao.seleccionarTodos()
+    if registros is None:
+        return jsonify("no se encontro registro"),400
+    else:
+        print("*"*20)
+        print(registros)
+        tipos_riego_result = []
+        for tipoRiego in registros:
+            tipoRiego = tipoRiego.replace("_","")
+            tipos_riego_result.append(json.loads(tipoRiego))
+        return jsonify(tipos_riego_result) ,200 
+
+

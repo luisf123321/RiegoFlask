@@ -20,6 +20,7 @@ class TipoRiegoDao:
             tiposRiego = []
             for registro in registros:
                 tipoRiego = TipoRiego(registro[0], registro[1], registro[2], registro[3])
+                tipoRiego = json.dumps(tipoRiego.__dict__)
                 tiposRiego.append(tipoRiego)
                 print(registro)
             return tiposRiego
