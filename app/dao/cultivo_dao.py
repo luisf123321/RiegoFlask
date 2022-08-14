@@ -4,16 +4,17 @@ from app.utilites.cursor_pool import CursorPool
 from app.models.cultivo import Cultivo
 from app.utilites.logger_base import log
 import json
-
+import datetime
 class CultivoDao:
     '''
     DAO --> Data Access Object
     '''
 
     _SELELCT = 'SELECT * FROM cultivo ORDER BY id'
-    _SELECT_BY_USER = 'SELECT * FROM cultivo INNER JOIN sectores ON sectores.sec_cultivo  = cultivo.id INNER JOIN lotes ON lotes.id = sectores.sec_lotes INNER JOIN finca ON finca.id = lotes.lot_finca WHERE finca.fin_usuario = %s'
-    _INSERT = 'INSERT INTO cultivo (cul_nombre, cul_tipo_cul, cul_fecha_inicio, cul_fecha_final, cul_estado) VALUES (%(str)s,%(int)s,%(date)s,%(date)s,%(int)s)'
-    _UPDATE = 'UPDATE cultivo SET  cul_nombre=%s, cul_tipo_cul=%s, cul_fecha_inicio=%s, cul_fecha_final=%s, cul_estado=%s WHERE id=%s'
+    _SELECT_BY_USER = 'SELECT * FROM cultivo WHERE cul_user=%s '
+    _SELECT_BY_ID = 'SELECT * FROM cultivo WHERE id=%s '
+    _INSERT = 'INSERT INTO cultivo (cul_nombre, cul_tipo_cul, cul_fecha_inicio, cul_fecha_final, cul_estado,cul_user) VALUES (%s,%s,%s,%s,%s,%s)'
+    _UPDATE = 'UPDATE cultivo SET  cul_nombre=%s, cul_tipo_cul=%s, cul_fecha_inicio=%s, cul_fecha_final=%s, cul_estado=%s,cul_user=%s WHERE id=%s'
     _DELETE = 'DELETE FROM cultivo WHERE id=%s'
 
     @classmethod
@@ -23,15 +24,15 @@ class CultivoDao:
             registros = cursor.fetchall()
             cultivos = []
             for registro in registros:
-                cultivo = Cultivo(registro[0], registro[1], registro[2], registro[3], registro[4], registro[5])
+                cultivo = Cultivo(registro[0], registro[1], registro[2], registro[3], registro[4], registro[5], registro[6])
                 cultivos.append(cultivo)
                 print(registro)
             return cultivos
     
     @classmethod
-    def buscarFincaPorUsuario(cls,cultivo):
+    def buscarPorUsuario(cls,cultivo):
         with CursorPool() as cursor:
-            valores = (cultivo.id,)
+            valores = (cultivo.user,)
             cursor.execute(cls._SELECT_BY_USER,valores)
             registros = cursor.fetchall()
             if registros is None or registros == []:
@@ -39,11 +40,37 @@ class CultivoDao:
             else:
                 cultivos = []
                 for registro in registros:
-                    cultivo = Cultivo(registro[0], registro[1], registro[2], registro[3], registro[4], registro[5])
+                    fecha_inicio = registro[3]
+                    fecha_inicio = fecha_inicio.strftime('%Y-%m-%d')   
+                    fecha_fin = registro[4]
+                    fecha_fin=fecha_fin.strftime('%Y-%m-%d')    
+                    cultivo = Cultivo(registro[0], registro[1], registro[2], fecha_inicio, fecha_fin, registro[5], registro[6])
                     cultivo = json.dumps(cultivo.__dict__)
                     cultivos.append(cultivo)
                     print(cultivo)
                 return cultivos
+    
+    @classmethod
+    def buscarPorId(cls,cultivo):
+        with CursorPool() as cursor:
+            valores = (cultivo.id,)
+            cursor.execute(cls._SELECT_BY_ID,valores)
+            registro = cursor.fetchone()
+            if registro is None:
+                return None
+            else:
+                print("cultivo")
+                print(registro)
+                fecha_inicio = registro[3]
+                fecha_inicio = fecha_inicio.strftime('%Y-%m-%d')   
+                fecha_fin = registro[4]
+                fecha_fin=fecha_fin.strftime('%Y-%m-%d')              
+                cultivo = Cultivo(registro[0], registro[1], registro[2], fecha_inicio, fecha_fin, registro[5], registro[6])
+                print(cultivo.__dict__)   
+                cultivo = json.dumps(cultivo.__dict__)
+                print(cultivo)
+                return cultivo
+               
     
     @classmethod
     def eliminar(cls, cultivo):
@@ -56,7 +83,9 @@ class CultivoDao:
     @classmethod
     def insertar(cls,cultivo):
         with CursorPool() as cursor:
-            valores = (cultivo.cultivoNombre, cultivo.tipoCultivo,cultivo.fechaInicio,cultivo.fechaFinal,cultivo.cultivoEstado )
+            valores = (cultivo.cultivoNombre, cultivo.tipoCultivo,cultivo.fechaInicio,cultivo.fechaFinal,cultivo.cultivoEstado,cultivo.user )
+            print("valores")
+            print(valores)
             cursor.execute(cls._INSERT, valores)
             log.debug(f'insertar cultivo, {cultivo}')
             return cursor.rowcount
@@ -64,7 +93,7 @@ class CultivoDao:
     @classmethod
     def actualizar(cls, cultivo):
         with CursorPool() as cursor:
-            valores = (cultivo.cultivoNombre, cultivo.tipoCultivo,cultivo.fechaInicio,cultivo.fechaFinal,cultivo.cultivoEstado, cultivo.id )
+            valores = (cultivo.cultivoNombre, cultivo.tipoCultivo,cultivo.fechaInicio,cultivo.fechaFinal,cultivo.cultivoEstado,cultivo.user, cultivo.id )
             cursor.execute(cls._UPDATE, valores)
             log.debug(f'actualizar cultivo, {cultivo}')
             return cursor.rowcount

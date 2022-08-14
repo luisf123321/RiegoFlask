@@ -129,10 +129,15 @@ class SueloUtils:
     def get_components(self, height_dict):
         height_total = 0
 
+
+        #calcular altura total
+
         for key in height_dict.keys():
             height_total += height_dict[key]
         
         height_percentage = {}
+
+        #calcular porcentajes 
         
         for key in height_dict.keys():
              height_percentage[key] = round((height_dict[key] / height_total)*100,2)
