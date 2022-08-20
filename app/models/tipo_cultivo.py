@@ -1,7 +1,10 @@
 
 
+from pickle import NONE
+
+
 class TipoCultivo:
-    def __init__(self,id, nombre, variedad, referencia) -> None:
+    def __init__(self,id=None, nombre=None, variedad=None, referencia=None) -> None:
         self._id = id
         self._nombre = nombre
         self._variedad = variedad
@@ -17,7 +20,7 @@ class TipoCultivo:
     
     @property
     def nombre(self):
-        return self.nombre
+        return self._nombre
     
     @nombre.setter
     def nombre(self, nombre):
@@ -35,8 +38,8 @@ class TipoCultivo:
     def referencia(self):
         return self._referencia
     
-    @referencia
-    def variedad(self, referencia):
+    @referencia.setter
+    def referencia(self, referencia):
         self._referencia = referencia
     
     def __str__(self) -> str:

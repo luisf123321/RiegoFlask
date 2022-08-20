@@ -1,9 +1,9 @@
 
 
-from utilites.cursor_pool import CursorPool
-from models.tipo_cultivo import TipoCultivo
-from utilites.logger_base import log
-
+from app.utilites.cursor_pool import CursorPool
+from app.models.tipo_cultivo import TipoCultivo
+from app.utilites.logger_base import log
+import json
 class TipoCultivoDao:
     '''
     DAO --> Data Access Object
@@ -20,11 +20,17 @@ class TipoCultivoDao:
             cursor.execute(cls._SELELCT)
             registros = cursor.fetchall()
             tipoCultivos = []
-            for registro in registros:
-                tipoCultivo = TipoCultivo(registro[0], registro[1], registro[2, registro[3]])
-                tipoCultivos.append(tipoCultivo)
-                print(tipoCultivo)
-            return tipoCultivos
+            if registros is None or registros == []:
+                return None
+            else:
+                print(registros)
+                for registro in registros:
+                    print(registro)
+                    tipoCultivo = TipoCultivo(registro[0], registro[1], registro[2], registro[3])
+                    tipoCultivo = json.dumps(tipoCultivo.__dict__)
+                    tipoCultivos.append(tipoCultivo)
+                    print(tipoCultivo)
+                return tipoCultivos
     
     @classmethod
     def eliminar(cls, tipoCultivo):

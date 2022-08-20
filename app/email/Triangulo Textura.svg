@@ -1,0 +1,307 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2384.523" height="2304.286" viewBox="0 0 2384.523 2304.286">
+  <g id="Grupo_8" data-name="Grupo 8" transform="translate(-361 -131)">
+    <g id="Grupo_7" data-name="Grupo 7">
+      <g id="Colors" transform="translate(386 154.399)">
+        <path id="Silt_1_" d="M1948,1727.75h168l140,242.48H1808Z" fill="#e4ecc7" stroke="#000" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-width="6"/>
+        <path id="Sand_1_" d="M16,1970.23l112-193.99,224,193.99Z" fill="#fcce9d" stroke="#000" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-width="6"/>
+        <path id="Loamy_Sand_1_" d="M128,1776.24l56-96.99,504,290.98H352Z" fill="#fcc" stroke="#000" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-width="6"/>
+        <path id="Sandy_Loam_1_" d="M856,1582.25h0l140,242.49h224l-84,145.49H688L184,1679.25l56-97Z" fill="#dbd7e6" stroke="#000" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-width="6"/>
+        <path id="Silt_Loam_1_" d="M1948,1436.76H1444l-224,387.98-84,145.49h672l140-242.48h168Z" fill="#d1e29c" stroke="#000" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-width="6"/>
+        <path id="Loam_1_" d="M1444,1436.76H940l-84,145.49h0l140,242.49h224Z" fill="#e6e1db" stroke="#000" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-width="6"/>
+        <path id="Sandy_Clay_Loam_1_" d="M940,1436.76l-84,145.49H240l168-290.98H856Z" fill="#a4cfe0" stroke="#000" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-width="6"/>
+        <path id="Silty_Clay_Loam_1_" d="M1948,1436.76l-140-242.49H1360l140,242.49Z" fill="#c8dae2" stroke="#000" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-width="6"/>
+        <path id="Clay_Loam_1_" d="M940,1436.76l-84-145.49-56-97h560l140,242.49Z" fill="#e9bb9a" stroke="#000" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-width="6"/>
+        <path id="Sandy_Clay_1_" d="M408,1291.27,632,903.29l224,387.98Z" fill="#beb9bf" stroke="#000" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-width="6"/>
+        <path id="Silty_Clay_1_" d="M1584,806.3l224,387.974H1360Z" fill="#e9e6f1" stroke="#000" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-width="6"/>
+        <path id="Clay_2_" d="M1136,30.337,1584,806.3,1360,1194.27H800L632,903.29Z" fill="#e9c6c0" stroke="#000" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-width="6"/>
+      </g>
+      <text id="limo" transform="translate(2339 2035.639)" font-size="70" font-family="ArialMT, Arial"><tspan x="0" y="0">limo</tspan></text>
+      <text id="franco_limoso" data-name="franco limoso" transform="translate(1813.362 1858.655)" font-size="70" font-family="ArialMT, Arial"><tspan x="0" y="0">franco limoso</tspan></text>
+      <text id="franco_arenoso" data-name="franco arenoso" transform="translate(755 1887.655)" font-size="70" font-family="ArialMT, Arial"><tspan x="0" y="0">franco arenoso</tspan></text>
+      <g id="Grupo" transform="translate(341.044 122.4)">
+        <text id="arena_" data-name="arena " transform="translate(255.983 1873.239)" font-size="70" font-family="ArialMT, Arial"><tspan x="0" y="0">arena </tspan></text>
+        <text id="franco" transform="translate(356.225 1953.239)" font-size="70" font-family="ArialMT, Arial"><tspan x="0" y="0">franco</tspan></text>
+      </g>
+      <text id="arena" transform="translate(456.737 2077.639)" font-size="70" font-family="ArialMT, Arial"><tspan x="0" y="0">arena</tspan></text>
+      <text id="franco-2" data-name="franco" transform="translate(1398.891 1799.473)" font-size="70" font-family="ArialMT, Arial"><tspan x="0" y="0">franco</tspan></text>
+      <g id="Grupo-2" data-name="Grupo" transform="translate(355.716 144.649)">
+        <text id="franco_arcilla" data-name="franco arcilla" transform="translate(434.277 1463.015)" font-size="70" font-family="ArialMT, Arial"><tspan x="0" y="0">franco arcilla</tspan></text>
+        <text id="arenosa" transform="translate(506.208 1543.015)" font-size="70" font-family="ArialMT, Arial"><tspan x="0" y="0">arenosa</tspan></text>
+      </g>
+      <g id="Grupo-3" data-name="Grupo" transform="translate(309.59 145.576)">
+        <text id="franco_" data-name="franco " transform="translate(1727.524 1285.088)" font-size="70" font-family="ArialMT, Arial"><tspan x="-107" y="0">franco </tspan></text>
+        <text id="arcilla_limosa" data-name="arcilla limosa" transform="translate(1540.524 1365.088)" font-size="70" font-family="ArialMT, Arial"><tspan x="0" y="0">arcilla limosa</tspan></text>
+      </g>
+      <text id="franco_arcilloso" data-name="franco arcilloso" transform="translate(1302.671 1492.667)" font-size="70" font-family="ArialMT, Arial"><tspan x="0" y="0">franco arcilloso</tspan></text>
+      <g id="Grupo-4" data-name="Grupo" transform="translate(377 180.263)">
+        <text id="arcilla" transform="translate(1492.586 1025.32)" font-size="70" font-family="ArialMT, Arial"><tspan x="0" y="0">arcilla</tspan></text>
+        <text id="limosa" transform="translate(1482.862 1124.32)" font-size="70" font-family="ArialMT, Arial"><tspan x="0" y="0">limosa</tspan></text>
+      </g>
+      <g id="Grupo-5" data-name="Grupo" transform="translate(379 154.399)">
+        <text id="arcilla-2" data-name="arcilla" transform="translate(539.336 1154.25)" font-size="70" font-family="ArialMT, Arial"><tspan x="0" y="0">arcilla</tspan></text>
+        <text id="arenosa-2" data-name="arenosa" transform="translate(504.268 1253.25)" font-size="70" font-family="ArialMT, Arial"><tspan x="0" y="0">arenosa</tspan></text>
+      </g>
+      <text id="arcilla-3" data-name="arcilla" transform="translate(1430.5 848.7)" font-size="70" font-family="ArialMT, Arial"><tspan x="0" y="0">arcilla</tspan></text>
+      <path id="Trazado_1" data-name="Trazado 1" d="M1192,418.316l-112,193.99h224Z" transform="translate(330 154.399)" fill="none" stroke="#000" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-width="2"/>
+      <path id="Trazado_3" data-name="Trazado 3" d="M1416,418.316l-112,193.99h224Z" transform="translate(330 154.399)" fill="none" stroke="#000" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-width="2"/>
+      <path id="Trazado_6" data-name="Trazado 6" d="M1136,321.321l-112,193.99h224Z" transform="translate(274 57.404)" fill="none" stroke="#000" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-width="2"/>
+      <path id="Trazado_7" data-name="Trazado 7" d="M1248,321.321l-112,193.99h224Z" transform="translate(386 57.404)" fill="none" stroke="#000" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-width="2"/>
+      <path id="Trazado_18" data-name="Trazado 18" d="M912,515.311,800,709.3h224Z" transform="translate(386 57.404)" fill="none" stroke="#000" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-width="2"/>
+      <path id="Trazado_25" data-name="Trazado 25" d="M1136,418.316l-112-193.99h224Z" transform="translate(386 154.399)" fill="none" stroke="#000" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-width="2"/>
+      <path id="Trazado_47" data-name="Trazado 47" d="M1640,806.3l-112,193.988h224Z" transform="translate(330 154.399)" fill="none" stroke="#000" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-width="2"/>
+      <path id="Trazado_48" data-name="Trazado 48" d="M1472,709.3l-112,193.99h224Z" transform="translate(386 57.405)" fill="none" stroke="#000" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-width="2"/>
+      <path id="Trazado_52" data-name="Trazado 52" d="M1360,903.29l-112,193.994h223.993Z" transform="translate(386 57.405)" fill="none" stroke="#000" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-width="2"/>
+      <path id="Trazado_53" data-name="Trazado 53" d="M1808,1097.28l-112,193.99h224Z" transform="translate(274 57.409)" fill="none" stroke="#000" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-width="2"/>
+      <path id="Trazado_54" data-name="Trazado 54" d="M1248,1097.28l-112,193.986h224Z" transform="translate(386 57.403)" fill="none" stroke="#000" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-width="2"/>
+      <path id="Trazado_59" data-name="Trazado 59" d="M1640,1291.27l112-193.99H1528Z" transform="translate(330.001 57.41)" fill="none" stroke="#000" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-width="2"/>
+      <path id="Trazado_60" data-name="Trazado 60" d="M1584,1000.284,1472,806.3h224Z" transform="translate(274 154.399)" fill="none" stroke="#000" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-width="2"/>
+      <path id="Trazado_68" data-name="Trazado 68" d="M1360,1194.28l-112-193.99h224Z" transform="translate(386 154.399)" fill="none" stroke="#000" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-width="2"/>
+      <path id="Trazado_69" data-name="Trazado 69" d="M1472,1097.28l-112,193.986h224Z" transform="translate(386 57.403)" fill="none" stroke="#000" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-width="2"/>
+      <path id="Trazado_79" data-name="Trazado 79" d="M912,903.29,800,1097.284h223.993Z" transform="translate(386 57.405)" fill="none" stroke="#000" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-width="2"/>
+      <path id="Trazado_81" data-name="Trazado 81" d="M744,806.3,632,1000.284H856Z" transform="translate(330 154.399)" fill="none" stroke="#000" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-width="2"/>
+      <path id="Trazado_86" data-name="Trazado 86" d="M856,612.306,744,806.3H968Z" transform="translate(330 154.399)" fill="none" stroke="#000" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-width="2"/>
+      <path id="Trazado_90" data-name="Trazado 90" d="M576,1097.28,464,1291.266H688Z" transform="translate(386 57.403)" fill="none" stroke="#000" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-width="2"/>
+      <path id="Trazado_96" data-name="Trazado 96" d="M912,1000.284,800,806.3h224Z" transform="translate(274 154.399)" fill="none" stroke="#000" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-width="2"/>
+      <path id="Trazado_101" data-name="Trazado 101" d="M1024,1194.28,912,1000.29h224Z" transform="translate(274 154.399)" fill="none" stroke="#000" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-width="2"/>
+      <path id="Trazado_103" data-name="Trazado 103" d="M800,1194.281,688,1000.29H912Z" transform="translate(274 154.399)" fill="none" stroke="#000" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-width="2"/>
+      <path id="Trazado_106" data-name="Trazado 106" d="M912,1097.28,800,1291.266h224Z" transform="translate(273.993 57.403)" fill="none" stroke="#000" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-width="2"/>
+      <path id="Trazado_107" data-name="Trazado 107" d="M1024,1097.28l-112,193.99h224Z" transform="translate(386 57.409)" fill="none" stroke="#000" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-width="2"/>
+      <path id="Trazado_109" data-name="Trazado 109" d="M1192,903.291,1304,709.3H1080Z" transform="translate(330 57.404)" fill="none" stroke="#000" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-width="2"/>
+      <path id="Trazado_111" data-name="Trazado 111" d="M968,903.291,1080,709.3H856Z" transform="translate(330 57.405)" fill="none" stroke="#000" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-width="2"/>
+      <path id="Trazado_114" data-name="Trazado 114" d="M1248,1000.284,1360,806.3H1136Z" transform="translate(386 154.399)" fill="none" stroke="#000" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-width="2"/>
+      <path id="Trazado_116" data-name="Trazado 116" d="M1024,1000.284,1136,806.3H912Z" transform="translate(386 154.399)" fill="none" stroke="#000" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-width="2"/>
+      <path id="Trazado_121" data-name="Trazado 121" d="M1136,1194.28l112-193.99H1024Z" transform="translate(386 154.399)" fill="none" stroke="#000" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-width="2"/>
+      <path id="Trazado_126" data-name="Trazado 126" d="M1472,806.3l112-193.99H1360Z" transform="translate(274 154.399)" fill="none" stroke="#000" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-width="2"/>
+      <path id="Trazado_132" data-name="Trazado 132" d="M1136,903.29l112,193.994H1024Z" transform="translate(386 57.405)" fill="none" stroke="#000" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-width="2"/>
+      <path id="Trazado_137" data-name="Trazado 137" d="M1024,709.3l112,193.99H912Z" transform="translate(386 57.405)" fill="none" stroke="#000" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-width="2"/>
+      <path id="Trazado_139" data-name="Trazado 139" d="M1248,709.3l112,193.99H1136Z" transform="translate(386 57.405)" fill="none" stroke="#000" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-width="2"/>
+      <path id="Trazado_150" data-name="Trazado 150" d="M1808,1485.26l-112,193.99h224Z" transform="translate(274 57.399)" fill="none" stroke="#000" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-width="2"/>
+      <path id="Trazado_152" data-name="Trazado 152" d="M2032,1485.26l-112,193.99h224Z" transform="translate(274 57.399)" fill="none" stroke="#000" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-width="2"/>
+      <path id="Trazado_156" data-name="Trazado 156" d="M1808,1291.27l-112,193.99h224Z" transform="translate(386 57.399)" fill="none" stroke="#000" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-width="2"/>
+      <path id="Trazado_161" data-name="Trazado 161" d="M2144,1679.25l-112,193.989h224Z" transform="translate(274 57.4)" fill="none" stroke="#000" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-width="2"/>
+      <path id="Trazado_168" data-name="Trazado 168" d="M1920,1582.25l-112-193.99h224Z" transform="translate(274 154.399)" fill="none" stroke="#000" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-width="2"/>
+      <path id="Trazado_173" data-name="Trazado 173" d="M2032,1776.239,1920,1582.25h224Z" transform="translate(274 154.399)" fill="none" stroke="#000" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-width="2"/>
+      <path id="Trazado_175" data-name="Trazado 175" d="M1808,1776.239,1696,1582.25h224Z" transform="translate(274 154.399)" fill="none" stroke="#000" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-width="2"/>
+      <path id="Trazado_178" data-name="Trazado 178" d="M1920,1679.25l-112,193.989h224Z" transform="translate(274 57.4)" fill="none" stroke="#000" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-width="2"/>
+      <path id="Trazado_180" data-name="Trazado 180" d="M1696,1679.25l-112,193.99h224Z" transform="translate(274 57.4)" fill="none" stroke="#000" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-width="2"/>
+      <path id="Trazado_186" data-name="Trazado 186" d="M1024,1679.25,912,1873.24h224Z" transform="translate(274 57.41)" fill="none" stroke="#000" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-width="2"/>
+      <path id="Trazado_188" data-name="Trazado 188" d="M1248,1679.25l-112,193.99h224Z" transform="translate(274 57.41)" fill="none" stroke="#000" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-width="2"/>
+      <path id="Trazado_193" data-name="Trazado 193" d="M2256,1873.24l-112,193.989h224Z" transform="translate(274 57.4)" fill="none" stroke="#000" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-width="2"/>
+      <path id="Trazado_197" data-name="Trazado 197" d="M1360,1873.24l-112,193.99h224Z" transform="translate(274 57.399)" fill="none" stroke="#000" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-width="2"/>
+      <path id="Trazado_204" data-name="Trazado 204" d="M1136,1776.239l-112-193.99h224Z" transform="translate(274 154.399)" fill="none" stroke="#000" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-width="2"/>
+      <path id="Trazado_209" data-name="Trazado 209" d="M1248,1970.23l-112-193.99h224Z" transform="translate(274 154.399)" fill="none" stroke="#000" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-width="2"/>
+      <path id="Trazado_211" data-name="Trazado 211" d="M1024,1970.23,912,1776.24h224Z" transform="translate(274 154.399)" fill="none" stroke="#000" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-width="2"/>
+      <path id="Trazado_214" data-name="Trazado 214" d="M1136,1873.24l-112,193.99h224Z" transform="translate(274 57.399)" fill="none" stroke="#000" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-width="2"/>
+      <path id="Trazado_216" data-name="Trazado 216" d="M912,1873.24,800,2067.229h224Z" transform="translate(274 57.4)" fill="none" stroke="#000" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-width="2"/>
+      <path id="Trazado_224" data-name="Trazado 224" d="M576,1679.25,464,1873.24H688Z" transform="translate(274 57.4)" fill="none" stroke="#000" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-width="2"/>
+      <path id="Trazado_229" data-name="Trazado 229" d="M1584,1873.24l-112,193.99h224Z" transform="translate(274 57.399)" fill="none" stroke="#000" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-width="2"/>
+      <path id="Trazado_232" data-name="Trazado 232" d="M240,1679.25,128,1873.24H352Z" transform="translate(386 57.399)" fill="none" stroke="#000" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-width="2"/>
+      <path id="Trazado_233" data-name="Trazado 233" d="M688,1873.24,576,2067.229H800Z" transform="translate(274 57.4)" fill="none" stroke="#000" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-width="2"/>
+      <path id="Trazado_234" data-name="Trazado 234" d="M128,1873.24,16,2067.23H240Z" transform="translate(386 57.399)" fill="none" stroke="#000" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-width="2"/>
+      <path id="Trazado_240" data-name="Trazado 240" d="M464,1776.24,352,1582.25H576Z" transform="translate(274 154.399)" fill="none" stroke="#000" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-width="2"/>
+      <path id="Trazado_245" data-name="Trazado 245" d="M576,1970.23,464,1776.24H688Z" transform="translate(274 154.399)" fill="none" stroke="#000" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-width="2"/>
+      <path id="Trazado_249" data-name="Trazado 249" d="M352,1873.24,240,2067.23H464Z" transform="translate(386 57.399)" fill="none" stroke="#000" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-width="2"/>
+      <path id="Trazado_250" data-name="Trazado 250" d="M408,1873.24l-56,96.99H464Z" transform="translate(386 154.399)" fill="none"/>
+      <path id="Trazado_259" data-name="Trazado 259" d="M688,1776.24l112-193.99H576Z" transform="translate(274 154.399)" fill="none" stroke="#000" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-width="2"/>
+      <path id="Trazado_264" data-name="Trazado 264" d="M800,1970.23l112-193.99H688Z" transform="translate(274 154.399)" fill="none" stroke="#000" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-width="2"/>
+      <path id="Trazado_268" data-name="Trazado 268" d="M912,1776.24l112-193.99H800Z" transform="translate(274 154.399)" fill="none" stroke="#000" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-width="2"/>
+      <path id="Trazado_270" data-name="Trazado 270" d="M2144,1970.23l112-193.99H2032Z" transform="translate(274 154.399)" fill="none" stroke="#000" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-width="2"/>
+      <path id="Trazado_277" data-name="Trazado 277" d="M800,1679.25l112,193.99H688Z" transform="translate(274 57.399)" fill="none" stroke="#000" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-width="2"/>
+      <path id="Trazado_282" data-name="Trazado 282" d="M1808,1873.24l112,193.99H1696Z" transform="translate(274 57.399)" fill="none" stroke="#000" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-width="2"/>
+      <path id="Trazado_284" data-name="Trazado 284" d="M2032,1873.24l112,193.99H1920Z" transform="translate(274 57.399)" fill="none" stroke="#000" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-width="2"/>
+      <path id="Trazado_285" data-name="Trazado 285" d="M1920,1970.23l112-193.99H1808Z" transform="translate(274 154.399)" fill="none" stroke="#000" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-width="2"/>
+      <path id="Trazado_287" data-name="Trazado 287" d="M1696,1970.23l112-193.99H1584Z" transform="translate(274 154.399)" fill="none" stroke="#000" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-width="2"/>
+      <path id="Trazado_292" data-name="Trazado 292" d="M1472,1970.23l112-193.99H1360Z" transform="translate(274 154.399)" fill="none" stroke="#000" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-width="2"/>
+      <path id="Trazado_301" data-name="Trazado 301" d="M1472,1679.25l112,193.99H1360Z" transform="translate(274.001 57.4)" fill="none" stroke="#000" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-width="2"/>
+      <path id="Trazado_302" data-name="Trazado 302" d="M1584,1776.239l112-193.989H1472Z" transform="translate(274 154.399)" fill="none" stroke="#000" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-width="2"/>
+      <path id="Trazado_304" data-name="Trazado 304" d="M1360,1776.239l112-193.989H1248Z" transform="translate(274 154.399)" fill="none" stroke="#000" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-width="2"/>
+      <path id="Trazado_311" data-name="Trazado 311" d="M1360,1291.27l-112,193.99h224Z" transform="translate(386 57.399)" fill="none" stroke="#000" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-width="2"/>
+      <path id="Trazado_316" data-name="Trazado 316" d="M1136,1291.27l-112,193.99h224Z" transform="translate(386 57.399)" fill="none" stroke="#000" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-width="2"/>
+      <path id="Trazado_317" data-name="Trazado 317" d="M1584,1485.26l-112,193.99h224Z" transform="translate(274 57.399)" fill="none" stroke="#000" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-width="2"/>
+      <path id="Trazado_318" data-name="Trazado 318" d="M1024,1485.26,912,1679.25h224Z" transform="translate(386 57.399)" fill="none" stroke="#000" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-width="2"/>
+      <path id="Trazado_325" data-name="Trazado 325" d="M1248,1388.26l-112-193.99h224Z" transform="translate(386 154.399)" fill="none" stroke="#000" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-width="2"/>
+      <path id="Trazado_329" data-name="Trazado 329" d="M1472,1582.25l-112-193.99h224Z" transform="translate(273.998 154.399)" fill="none" stroke="#000" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-width="2"/>
+      <path id="Trazado_332" data-name="Trazado 332" d="M1136,1582.25l-112-193.99h224Z" transform="translate(386 154.399)" fill="none" stroke="#000" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-width="2"/>
+      <path id="Trazado_333" data-name="Trazado 333" d="M1248,1485.26l-112,193.99h224Z" transform="translate(386 57.399)" fill="none" stroke="#000" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-width="2"/>
+      <path id="Trazado_343" data-name="Trazado 343" d="M688,1291.27,576,1485.26H800Z" transform="translate(386 57.41)" fill="none" stroke="#000" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-width="2"/>
+      <path id="Trazado_348" data-name="Trazado 348" d="M464,1291.27,352,1485.26H576Z" transform="translate(386 57.41)" fill="none" stroke="#000" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-width="2"/>
+      <path id="Trazado_350" data-name="Trazado 350" d="M352,1485.26,240,1679.25H464Z" transform="translate(386 57.41)" fill="none" stroke="#000" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-width="2"/>
+      <path id="Trazado_357" data-name="Trazado 357" d="M576,1388.26,464,1194.27H688Z" transform="translate(386 154.399)" fill="none" stroke="#000" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-width="2"/>
+      <path id="Trazado_362" data-name="Trazado 362" d="M688,1582.25,576,1388.26H800Z" transform="translate(386 154.399)" fill="none" stroke="#000" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-width="2"/>
+      <path id="Trazado_364" data-name="Trazado 364" d="M464,1582.25,352,1388.26H576Z" transform="translate(386 154.399)" fill="none" stroke="#000" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-width="2"/>
+      <path id="Trazado_367" data-name="Trazado 367" d="M800,1485.26,688,1679.25H912Z" transform="translate(386 57.41)" fill="none" stroke="#000" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-width="2"/>
+      <path id="Trazado_371" data-name="Trazado 371" d="M800,1388.26l112-193.99H688Z" transform="translate(386 154.399)" fill="none" stroke="#000" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-width="2"/>
+      <path id="Trazado_376" data-name="Trazado 376" d="M912,1582.25l112-193.99H800Z" transform="translate(386 154.399)" fill="none" stroke="#000" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-width="2"/>
+      <path id="Trazado_379" data-name="Trazado 379" d="M1136,1388.26l112-193.99H1024Z" transform="translate(274 154.399)" fill="none" stroke="#000" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-width="2"/>
+      <path id="Trazado_382" data-name="Trazado 382" d="M968,1194.27l112,193.99H856Z" transform="translate(329.993 154.399)" fill="none" stroke="#000" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-width="2"/>
+      <path id="Trazado_385" data-name="Trazado 385" d="M1696,1388.26l112-193.99H1584Z" transform="translate(386 154.399)" fill="none" stroke="#000" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-width="2"/>
+      <path id="Trazado_387" data-name="Trazado 387" d="M1472,1388.26l112-193.99H1360Z" transform="translate(386 154.399)" fill="none" stroke="#000" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-width="2"/>
+      <path id="Trazado_391" data-name="Trazado 391" d="M1696,1582.25l112-193.99H1584Z" transform="translate(274 154.399)" fill="none" stroke="#000" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-width="2"/>
+      <path id="Trazado_396" data-name="Trazado 396" d="M1584,1291.27l112,193.99H1472Z" transform="translate(386 57.399)" fill="none" stroke="#000" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-width="2"/>
+      <g id="Lines" transform="translate(386 154.399)">
+        <g id="Sand_4_">
+          <line id="Línea_1" data-name="Línea 1" x2="16.8" y2="29.1" transform="translate(240 1970.23)" fill="none" stroke="#000" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-width="2"/>
+          <line id="Línea_2" data-name="Línea 2" x2="16.8" y2="29.1" transform="translate(464 1970.23)" fill="none" stroke="#000" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-width="2"/>
+          <line id="Línea_3" data-name="Línea 3" x2="16.8" y2="29.1" transform="translate(688 1970.23)" fill="none" stroke="#000" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-width="2"/>
+          <line id="Línea_4" data-name="Línea 4" x2="16.8" y2="29.1" transform="translate(912 1970.23)" fill="none" stroke="#000" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-width="2"/>
+          <line id="Línea_5" data-name="Línea 5" x2="16.8" y2="29.1" transform="translate(1136 1970.23)" fill="none" stroke="#000" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-width="2"/>
+          <line id="Línea_6" data-name="Línea 6" x2="16.8" y2="29.1" transform="translate(1360 1970.23)" fill="none" stroke="#000" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-width="2"/>
+          <line id="Línea_7" data-name="Línea 7" x2="16.8" y2="29.1" transform="translate(1584 1970.23)" fill="none" stroke="#000" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-width="2"/>
+          <line id="Línea_8" data-name="Línea 8" x2="16.8" y2="29.1" transform="translate(1808 1970.23)" fill="none" stroke="#000" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-width="2"/>
+          <line id="Línea_9" data-name="Línea 9" x2="16.8" y2="29.1" transform="translate(2032 1970.23)" fill="none" stroke="#000" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-width="2"/>
+        </g>
+        <g id="Silt_5_">
+          <line id="Línea_10" data-name="Línea 10" y1="29.09" x2="16.8" transform="translate(2144 1747.15)" fill="none" stroke="#000" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-width="2"/>
+          <line id="Línea_11" data-name="Línea 11" y1="29.09" x2="16.8" transform="translate(2032 1553.16)" fill="none" stroke="#000" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-width="2"/>
+          <line id="Línea_12" data-name="Línea 12" y1="29.09" x2="16.8" transform="translate(1920 1359.17)" fill="none" stroke="#000" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-width="2"/>
+          <line id="Línea_13" data-name="Línea 13" y1="29.09" x2="16.8" transform="translate(1808 1165.18)" fill="none" stroke="#000" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-width="2"/>
+          <line id="Línea_14" data-name="Línea 14" y1="29.103" x2="16.8" transform="translate(1696 971.187)" fill="none" stroke="#000" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-width="2"/>
+          <line id="Línea_15" data-name="Línea 15" y1="29.099" x2="16.8" transform="translate(1584 777.197)" fill="none" stroke="#000" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-width="2"/>
+          <line id="Línea_16" data-name="Línea 16" y1="29.099" x2="16.8" transform="translate(1472 583.207)" fill="none" stroke="#000" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-width="2"/>
+          <line id="Línea_17" data-name="Línea 17" y1="29.098" x2="16.8" transform="translate(1360 389.218)" fill="none" stroke="#000" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-width="2"/>
+          <line id="Línea_18" data-name="Línea 18" y1="29.098" x2="16.8" transform="translate(1248 195.228)" fill="none" stroke="#000" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-width="2"/>
+        </g>
+        <g id="Clay_5_">
+          <line id="Línea_19" data-name="Línea 19" x1="33.6" transform="translate(94.4 1776.24)" fill="none" stroke="#000" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-width="2"/>
+          <line id="Línea_20" data-name="Línea 20" x1="33.6" transform="translate(206.4 1582.25)" fill="none" stroke="#000" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-width="2"/>
+          <line id="Línea_21" data-name="Línea 21" x1="33.6" transform="translate(318.4 1388.26)" fill="none" stroke="#000" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-width="2"/>
+          <line id="Línea_22" data-name="Línea 22" x1="33.6" transform="translate(430.4 1194.27)" fill="none" stroke="#000" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-width="2"/>
+          <line id="Línea_23" data-name="Línea 23" x1="33.6" transform="translate(542.4 1000.29)" fill="none" stroke="#000" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-width="2"/>
+          <line id="Línea_24" data-name="Línea 24" x1="33.6" transform="translate(654.4 806.296)" fill="none" stroke="#000" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-width="2"/>
+          <line id="Línea_25" data-name="Línea 25" x1="33.6" transform="translate(766.4 612.306)" fill="none" stroke="#000" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-width="2"/>
+          <line id="Línea_26" data-name="Línea 26" x1="33.6" transform="translate(878.4 418.316)" fill="none" stroke="#000" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-width="2"/>
+          <line id="Línea_27" data-name="Línea 27" x1="33.6" transform="translate(990.4 224.326)" fill="none" stroke="#000" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-width="2"/>
+        </g>
+      </g>
+      <g id="Numbers" transform="translate(386 154.399)">
+        <g id="Sand_6_">
+          <line id="Línea_28" data-name="Línea 28" x2="57.5" y2="99.59" transform="translate(2058.69 2016.46)" fill="none"/>
+          <text id="_10" data-name="10" transform="translate(2046.399 2073.541)" font-size="72" font-family="SegoeUI-Semibold, Segoe UI" font-weight="600"><tspan x="0" y="0">10</tspan></text>
+          <line id="Línea_29" data-name="Línea 29" x2="57.5" y2="99.59" transform="translate(1834.69 2016.46)" fill="none"/>
+          <text id="_20" data-name="20" transform="translate(1819.65 2078.305)" font-size="72" font-family="SegoeUI-Semibold, Segoe UI" font-weight="600"><tspan x="0" y="0">20</tspan></text>
+          <line id="Línea_30" data-name="Línea 30" x2="57.5" y2="99.59" transform="translate(1610.69 2016.46)" fill="none"/>
+          <text id="_30" data-name="30" transform="translate(1595.65 2078.305)" font-size="72" font-family="SegoeUI-Semibold, Segoe UI" font-weight="600"><tspan x="0" y="0">30</tspan></text>
+          <line id="Línea_31" data-name="Línea 31" x2="57.5" y2="99.59" transform="translate(1386.69 2016.46)" fill="none"/>
+          <text id="_40" data-name="40" transform="translate(1371.399 2078.737)" font-size="72" font-family="SegoeUI-Semibold, Segoe UI" font-weight="600"><tspan x="0" y="0">40</tspan></text>
+          <line id="Línea_32" data-name="Línea 32" x2="57.5" y2="99.59" transform="translate(1162.69 2016.46)" fill="none"/>
+          <text id="_50" data-name="50" transform="translate(1147.649 2078.304)" font-size="72" font-family="SegoeUI-Semibold, Segoe UI" font-weight="600"><tspan x="0" y="0">50</tspan></text>
+          <line id="Línea_33" data-name="Línea 33" x2="57.499" y2="99.59" transform="translate(938.688 2016.46)" fill="none"/>
+          <text id="_60" data-name="60" transform="translate(923.649 2078.304)" font-size="72" font-family="SegoeUI-Semibold, Segoe UI" font-weight="600"><tspan x="0" y="0">60</tspan></text>
+          <line id="Línea_34" data-name="Línea 34" x2="57.499" y2="99.59" transform="translate(714.688 2016.46)" fill="none"/>
+          <text id="_70" data-name="70" transform="translate(699.9 2077.871)" font-size="72" font-family="SegoeUI-Semibold, Segoe UI" font-weight="600"><tspan x="0" y="0">70</tspan></text>
+          <line id="Línea_35" data-name="Línea 35" x2="57.499" y2="99.59" transform="translate(490.688 2016.46)" fill="none"/>
+          <text id="_80" data-name="80" transform="translate(475.648 2078.304)" font-size="72" font-family="SegoeUI-Semibold, Segoe UI" font-weight="600"><tspan x="0" y="0">80</tspan></text>
+          <line id="Línea_36" data-name="Línea 36" x2="57.499" y2="99.59" transform="translate(266.688 2016.46)" fill="none"/>
+          <text id="_90" data-name="90" transform="translate(251.649 2078.304)" font-size="72" font-family="SegoeUI-Semibold, Segoe UI" font-weight="600"><tspan x="0" y="0">90</tspan></text>
+          <line id="Línea_37" data-name="Línea 37" x2="57.5" y2="99.59" transform="translate(42.688 2016.46)" fill="none"/>
+          <text id="_100" data-name="100" transform="translate(20.399 2090.861)" font-size="72" font-family="SegoeUI-Semibold, Segoe UI" font-weight="600"><tspan x="0" y="0">100</tspan></text>
+        </g>
+        <g id="Silt_6_">
+          <line id="Línea_38" data-name="Línea 38" y1="99.593" x2="57.5" transform="translate(1274.69 78.509)" fill="none"/>
+          <text id="_10-2" data-name="10" transform="translate(1252.523 175.283)" font-size="72" font-family="SegoeUI-Semibold, Segoe UI" font-weight="600"><tspan x="0" y="0">10</tspan></text>
+          <line id="Línea_39" data-name="Línea 39" y1="99.593" x2="57.5" transform="translate(1386.69 272.499)" fill="none"/>
+          <text id="_20-2" data-name="20" transform="translate(1361.773 364.509)" font-size="72" font-family="SegoeUI-Semibold, Segoe UI" font-weight="600"><tspan x="0" y="0">20</tspan></text>
+          <line id="Línea_40" data-name="Línea 40" y1="99.593" x2="57.5" transform="translate(1498.69 466.489)" fill="none"/>
+          <text id="_30-2" data-name="30" transform="translate(1473.773 558.498)" font-size="72" font-family="SegoeUI-Semibold, Segoe UI" font-weight="600"><tspan x="0" y="0">30</tspan></text>
+          <line id="Línea_41" data-name="Línea 41" y1="99.592" x2="57.5" transform="translate(1610.69 660.479)" fill="none"/>
+          <text id="_40-2" data-name="40" transform="translate(1585.523 752.056)" font-size="72" font-family="SegoeUI-Semibold, Segoe UI" font-weight="600"><tspan x="0" y="0">40</tspan></text>
+          <line id="Línea_42" data-name="Línea 42" y1="99.593" x2="57.5" transform="translate(1722.69 854.468)" fill="none"/>
+          <text id="_50-2" data-name="50" transform="translate(1697.773 946.479)" font-size="72" font-family="SegoeUI-Semibold, Segoe UI" font-weight="600"><tspan x="0" y="0">50</tspan></text>
+          <line id="Línea_43" data-name="Línea 43" y1="99.59" x2="57.5" transform="translate(1834.69 1048.46)" fill="none"/>
+          <text id="_60-2" data-name="60" transform="translate(1809.773 1140.468)" font-size="72" font-family="SegoeUI-Semibold, Segoe UI" font-weight="600"><tspan x="0" y="0">60</tspan></text>
+          <line id="Línea_44" data-name="Línea 44" y1="99.59" x2="57.5" transform="translate(1946.69 1242.45)" fill="none"/>
+          <text id="_70-2" data-name="70" transform="translate(1922.023 1334.89)" font-size="72" font-family="SegoeUI-Semibold, Segoe UI" font-weight="600"><tspan x="0" y="0">70</tspan></text>
+          <line id="Línea_45" data-name="Línea 45" y1="99.59" x2="57.5" transform="translate(2058.69 1436.44)" fill="none"/>
+          <text id="_80-2" data-name="80" transform="translate(2033.773 1528.449)" font-size="72" font-family="SegoeUI-Semibold, Segoe UI" font-weight="600"><tspan x="0" y="0">80</tspan></text>
+          <line id="Línea_46" data-name="Línea 46" y1="99.59" x2="57.5" transform="translate(2170.69 1630.43)" fill="none"/>
+          <text id="_90-2" data-name="90" transform="translate(2145.773 1722.438)" font-size="72" font-family="SegoeUI-Semibold, Segoe UI" font-weight="600"><tspan x="0" y="0">90</tspan></text>
+          <line id="Línea_47" data-name="Línea 47" y1="99.59" x2="57.5" transform="translate(2282.69 1824.42)" fill="none"/>
+          <text id="_100-2" data-name="100" transform="translate(2250.523 1903.87)" font-size="72" font-family="SegoeUI-Semibold, Segoe UI" font-weight="600"><tspan x="0" y="0">100</tspan></text>
+        </g>
+        <g id="Clay_6_">
+          <line id="Línea_48" data-name="Línea 48" x2="115" transform="translate(983 30.337)" fill="none"/>
+          <text id="_100-3" data-name="100" transform="translate(987.15 54.601)" font-size="72" font-family="SegoeUI-Semibold, Segoe UI" font-weight="600"><tspan x="0" y="0">100</tspan></text>
+          <line id="Línea_49" data-name="Línea 49" x2="115" transform="translate(871 224.326)" fill="none"/>
+          <text id="_90-3" data-name="90" transform="translate(901.096 248.59)" font-size="72" font-family="SegoeUI-Semibold, Segoe UI" font-weight="600"><tspan x="0" y="0">90</tspan></text>
+          <line id="Línea_50" data-name="Línea 50" x2="115" transform="translate(759 418.316)" fill="none"/>
+          <text id="_80-3" data-name="80" transform="translate(789.096 442.58)" font-size="72" font-family="SegoeUI-Semibold, Segoe UI" font-weight="600"><tspan x="0" y="0">80</tspan></text>
+          <line id="Línea_51" data-name="Línea 51" x2="115" transform="translate(647 612.306)" fill="none"/>
+          <text id="_70-3" data-name="70" transform="translate(679.096 636.57)" font-size="72" font-family="SegoeUI-Semibold, Segoe UI" font-weight="600"><tspan x="0" y="0">70</tspan></text>
+          <line id="Línea_52" data-name="Línea 52" x2="115" transform="translate(535 806.296)" fill="none"/>
+          <text id="_60-3" data-name="60" transform="translate(565 830.559)" font-size="72" font-family="SegoeUI-Semibold, Segoe UI" font-weight="600"><tspan x="0" y="0">60</tspan></text>
+          <line id="Línea_53" data-name="Línea 53" x2="115" transform="translate(422.5 1000.29)" fill="none"/>
+          <text id="_50-3" data-name="50" transform="translate(453.596 1024.549)" font-size="72" font-family="SegoeUI-Semibold, Segoe UI" font-weight="600"><tspan x="0" y="0">50</tspan></text>
+          <line id="Línea_54" data-name="Línea 54" x2="115" transform="translate(311 1194.27)" fill="none"/>
+          <text id="_40-3" data-name="40" transform="translate(340.096 1218.539)" font-size="72" font-family="SegoeUI-Semibold, Segoe UI" font-weight="600"><tspan x="0" y="0">40</tspan></text>
+          <line id="Línea_55" data-name="Línea 55" x2="115" transform="translate(199 1388.26)" fill="none"/>
+          <text id="_30-3" data-name="30" transform="translate(229 1412.528)" font-size="72" font-family="SegoeUI-Semibold, Segoe UI" font-weight="600"><tspan x="0" y="0">30</tspan></text>
+          <line id="Línea_56" data-name="Línea 56" x2="115" transform="translate(87 1582.25)" fill="none"/>
+          <text id="_20-3" data-name="20" transform="translate(117.096 1606.518)" font-size="72" font-family="SegoeUI-Semibold, Segoe UI" font-weight="600"><tspan x="0" y="0">20</tspan></text>
+          <line id="Línea_57" data-name="Línea 57" x2="115" transform="translate(-25 1776.24)" fill="none"/>
+          <text id="_10-3" data-name="10" transform="translate(16.096 1800.508)" font-size="72" font-family="SegoeUI-Semibold, Segoe UI" font-weight="600"><tspan x="0" y="0">10</tspan></text>
+          <text id="_10-4" data-name="10" transform="translate(16.096 1800.508)" font-size="72" font-family="SegoeUI-Semibold, Segoe UI" font-weight="600"><tspan x="0" y="0">10</tspan></text>
+        </g>
+      </g>
+      <path id="Triangle_3_" d="M1136,30.337,2256,1970.23H16Z" transform="translate(385.6 154.399)" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="10"/>
+      <g id="Arrows_1_" transform="translate(386 154.399)">
+        <g id="Sand_2_">
+          <g id="Grupo_2" data-name="Grupo 2">
+            <line id="Línea_58" data-name="Línea 58" x1="1058.22" transform="translate(637.78 2227.56)" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="10"/>
+            <g id="Grupo_1" data-name="Grupo 1">
+              <path id="Trazado_401" data-name="Trazado 401" d="M576,2227.56l87.056-35.58v71.14Z"/>
+            </g>
+          </g>
+        </g>
+        <g id="Silt_2_">
+          <g id="Grupo_4" data-name="Grupo 4">
+            <line id="Línea_59" data-name="Línea 59" x2="529.2" y2="916.394" transform="translate(1639.08 386.046)" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="10"/>
+            <g id="Grupo_3" data-name="Grupo 3">
+              <path id="Trazado_402" data-name="Trazado 402" d="M2199.17,1355.94l-74.34-57.6,33.537-17.94,28.063-17.63Z"/>
+            </g>
+          </g>
+        </g>
+        <g id="Grupo_6" data-name="Grupo 6">
+          <path id="Trazado_407" data-name="Trazado 407" d="M0,894.829l164.582-284.44L517.763,0" transform="translate(72.737 461.101)" fill="none" stroke="#000" stroke-width="10"/>
+          <g id="Grupo_5" data-name="Grupo 5">
+            <path id="Trazado_403" data-name="Trazado 403" d="M632.689,385.954l-12.716,93.179-30.542-19.072-31.066-16.493Z"/>
+          </g>
+        </g>
+      </g>
+      <g id="White_space" transform="translate(386 154.399)">
+        <line id="Sand_3_" x1="504" transform="translate(884 2227.56)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="15"/>
+        <path id="Silt_3_" d="M0,0,252.05,436.454" transform="translate(1793.1 652.766)" fill="none" stroke="#fff" stroke-width="15"/>
+        <line id="Clay_3_" y1="436.493" x2="251.979" transform="translate(226.724 652.697)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="15"/>
+      </g>
+      <g id="Labels" transform="translate(386 154.399)">
+        <path id="Sand" d="M1120,0H0" transform="translate(576 2227.56)" fill="none"/>
+        <text id="Arena_2" data-name="Arena (%)" transform="translate(954.538 2257.887)" font-size="90" font-family="SegoeUI-Semibold, Segoe UI" font-weight="600"><tspan x="0" y="0">Arena (%)</tspan></text>
+        <path id="Silt" d="M0,0,510.863,884.65l49.227,85.244" transform="translate(1639.08 386.046)" fill="none"/>
+        <g id="Grupo-6" data-name="Grupo">
+          <text id="L" transform="matrix(0.5, 0.866, -0.866, 0.5, 1810.4, 743.37)" font-size="90" font-family="SegoeUI-Semibold, Segoe UI" font-weight="600"><tspan x="0" y="0">L</tspan></text>
+          <text id="i" transform="matrix(0.5, 0.866, -0.866, 0.5, 1831.651, 780.17)" font-size="90" font-family="SegoeUI-Semibold, Segoe UI" font-weight="600"><tspan x="0" y="0">i</tspan></text>
+          <text id="m" transform="matrix(0.5, 0.866, -0.866, 0.5, 1842.18, 798.402)" font-size="90" font-family="SegoeUI-Semibold, Segoe UI" font-weight="600"><tspan x="0" y="0">m</tspan></text>
+          <text id="o_" data-name="o " transform="matrix(0.5, 0.866, -0.866, 0.5, 1879.71, 863.39)" font-size="90" font-family="SegoeUI-Semibold, Segoe UI" font-weight="600"><tspan x="0" y="0">o </tspan></text>
+          <text id="_" data-name="(" transform="matrix(0.5, 0.866, -0.866, 0.5, 1913.965, 922.709)" font-size="90" font-family="SegoeUI-Semibold, Segoe UI" font-weight="600"><tspan x="0" y="0">(</tspan></text>
+          <text id="_2" data-name="%" transform="matrix(0.5, 0.866, -0.866, 0.5, 1926.743, 944.833)" font-size="90" font-family="SegoeUI-Semibold, Segoe UI" font-weight="600"><tspan x="0" y="0">%</tspan></text>
+          <text id="_3" data-name=")" transform="matrix(0.5, 0.866, -0.866, 0.5, 1962.391, 1006.564)" font-size="90" font-family="SegoeUI-Semibold, Segoe UI" font-weight="600"><tspan x="0" y="0">)</tspan></text>
+        </g>
+        <path id="Clay" d="M0,969.976,559.952,0" transform="translate(72.737 385.954)" fill="none"/>
+        <g id="Grupo-7" data-name="Grupo">
+          <text id="A" transform="translate(285.908 1047.33) rotate(-60.003)" font-size="90" font-family="SegoeUI-Semibold, Segoe UI" font-weight="600"><tspan x="0" y="0">A</tspan></text>
+          <text id="r" transform="translate(313.308 999.869) rotate(-60.003)" font-size="90" font-family="SegoeUI-Semibold, Segoe UI" font-weight="600"><tspan x="0" y="0">r</tspan></text>
+          <text id="c" transform="translate(327.575 975.152) rotate(-60.003)" font-size="90" font-family="SegoeUI-Semibold, Segoe UI" font-weight="600"><tspan x="0" y="0">c</tspan></text>
+          <text id="i-2" data-name="i" transform="translate(347.733 940.236) rotate(-60.003)" font-size="90" font-family="SegoeUI-Semibold, Segoe UI" font-weight="600"><tspan x="0" y="0">i</tspan></text>
+          <text id="l-2" data-name="l" transform="translate(358.261 921.999) rotate(-60.003)" font-size="90" font-family="SegoeUI-Semibold, Segoe UI" font-weight="600"><tspan x="0" y="0">l</tspan></text>
+          <text id="l-3" data-name="l" transform="translate(368.879 903.606) rotate(-60.003)" font-size="90" font-family="SegoeUI-Semibold, Segoe UI" font-weight="600"><tspan x="0" y="0">l</tspan></text>
+          <text id="a_" data-name="a " transform="translate(379.49 885.226) rotate(-60.003)" font-size="90" font-family="SegoeUI-Semibold, Segoe UI" font-weight="600"><tspan x="0" y="0">a </tspan></text>
+          <text id="_4" data-name="(" transform="translate(410.73 831.109) rotate(-60.003)" font-size="90" font-family="SegoeUI-Semibold, Segoe UI" font-weight="600"><tspan x="0" y="0">(</tspan></text>
+          <text id="_5" data-name="%" transform="translate(423.494 808.998) rotate(-60.003)" font-size="90" font-family="SegoeUI-Semibold, Segoe UI" font-weight="600"><tspan x="0" y="0">%</tspan></text>
+          <text id="_6" data-name=")" transform="translate(459.141 747.249) rotate(-60.003)" font-size="90" font-family="SegoeUI-Semibold, Segoe UI" font-weight="600"><tspan x="0" y="0">)</tspan></text>
+        </g>
+      </g>
+      <path id="Trazado_404" data-name="Trazado 404" d="M1136,224.326,1024,418.315h224Z" transform="translate(385.954 -39.59)" fill="none" stroke="#000" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-width="2"/>
+      <path id="Trazado_405" data-name="Trazado 405" d="M1136,418.316l-112-193.99h224Z" transform="translate(274 348.389)" fill="none" stroke="#000" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-width="2"/>
+      <path id="Trazado_406" data-name="Trazado 406" d="M1136,418.316l-112-193.99h224Z" transform="translate(498 348.389)" fill="none" stroke="#000" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-width="2"/>
+    </g>
+  </g>
+</svg>

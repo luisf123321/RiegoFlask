@@ -59,15 +59,11 @@ class CultivoDao:
             if registro is None:
                 return None
             else:
-                print("cultivo")
-                print(registro)
                 fecha_inicio = registro[3]
                 fecha_inicio = fecha_inicio.strftime('%Y-%m-%d')   
                 fecha_fin = registro[4]
                 fecha_fin=fecha_fin.strftime('%Y-%m-%d')              
                 cultivo = Cultivo(registro[0], registro[1], registro[2], fecha_inicio, fecha_fin, registro[5], registro[6])
-                print(cultivo.__dict__)   
-                cultivo = json.dumps(cultivo.__dict__)
                 print(cultivo)
                 return cultivo
                
