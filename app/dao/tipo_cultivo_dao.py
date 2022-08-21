@@ -27,7 +27,6 @@ class TipoCultivoDao:
                 for registro in registros:
                     print(registro)
                     tipoCultivo = TipoCultivo(registro[0], registro[1], registro[2], registro[3])
-                    tipoCultivo = json.dumps(tipoCultivo.__dict__)
                     tipoCultivos.append(tipoCultivo)
                     print(tipoCultivo)
                 return tipoCultivos

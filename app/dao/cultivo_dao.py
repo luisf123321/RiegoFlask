@@ -45,7 +45,6 @@ class CultivoDao:
                     fecha_fin = registro[4]
                     fecha_fin=fecha_fin.strftime('%Y-%m-%d')    
                     cultivo = Cultivo(registro[0], registro[1], registro[2], fecha_inicio, fecha_fin, registro[5], registro[6])
-                    cultivo = json.dumps(cultivo.__dict__)
                     cultivos.append(cultivo)
                     print(cultivo)
                 return cultivos
