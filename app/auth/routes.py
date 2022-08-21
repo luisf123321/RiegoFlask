@@ -70,9 +70,6 @@ def user_identity_lookup(user):
 def protected():
     # We can now access our sqlalchemy User object via `current_user`.
     current_user = get_jwt_identity()
-    print("*"*20)
-    print("current_user")
-    print(current_user)
     return jsonify(
         nombre=current_user['nombre'],
         apellido = current_user['apellido'],
@@ -84,6 +81,4 @@ def protected():
 @jwt.user_lookup_loader
 def user_lookup_callback(_jwt_header, jwt_data):
     identity = jwt_data["sub"]
-    print("*"*20)
-    print(identity)
     return identity

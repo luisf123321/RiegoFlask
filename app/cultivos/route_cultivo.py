@@ -2,8 +2,6 @@ from . import cultivo
 import sys
 from flask import request, jsonify
 from flask_jwt_extended import (create_access_token, jwt_required)
-from app.email.body import BodyEmail
-from app.email.send import SendEmail
 from app.cultivos.cultivo_ligica import CultivoLogica
 
 
@@ -55,9 +53,6 @@ def crear():
     try:
         data = request.json
         response = CultivoLogica.crearCultivo(data=data)
-        html = BodyEmail.bodyToRegister()
-        SendEmail.send(html, 'encisolf901@gmail.com',
-                    "Welcome to riego application")  
         if response['code'] == 200:
             return jsonify(response), 200
         else:
@@ -72,9 +67,6 @@ def actualizar(idCultivo):
     try:
         data = request.json
         response = CultivoLogica.actualizarCultivo(data=data,idCultivo=idCultivo)
-        html = BodyEmail.bodyToRegister()
-        SendEmail.send(html, 'encisolf901@gmail.com',
-                    "Welcome to riego application")  
         if response['code'] == 200:
             return jsonify(response), 200
         else:

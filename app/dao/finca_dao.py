@@ -39,7 +39,6 @@ class FincaDao:
                 fincas = []
                 for registro in registros:
                     finca = Finca(registro[0], registro[1], registro[2], registro[3], registro[4], registro[5], registro[6])
-                    finca = json.dumps(finca.__dict__)
                     fincas.append(finca)
                     print(finca)
                 return fincas
@@ -54,7 +53,7 @@ class FincaDao:
                 return None
             else:
                 finca = Finca(registro[0], registro[1], registro[2], registro[3], registro[4], registro[5], registro[6])
-                return json.dumps(finca.__dict__)
+                return finca
     
     @classmethod
     def eliminar(cls, finca):

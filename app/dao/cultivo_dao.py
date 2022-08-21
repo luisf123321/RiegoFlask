@@ -26,7 +26,6 @@ class CultivoDao:
             for registro in registros:
                 cultivo = Cultivo(registro[0], registro[1], registro[2], registro[3], registro[4], registro[5], registro[6])
                 cultivos.append(cultivo)
-                print(registro)
             return cultivos
     
     @classmethod
@@ -46,7 +45,6 @@ class CultivoDao:
                     fecha_fin=fecha_fin.strftime('%Y-%m-%d')    
                     cultivo = Cultivo(registro[0], registro[1], registro[2], fecha_inicio, fecha_fin, registro[5], registro[6])
                     cultivos.append(cultivo)
-                    print(cultivo)
                 return cultivos
     
     @classmethod
@@ -63,7 +61,6 @@ class CultivoDao:
                 fecha_fin = registro[4]
                 fecha_fin=fecha_fin.strftime('%Y-%m-%d')              
                 cultivo = Cultivo(registro[0], registro[1], registro[2], fecha_inicio, fecha_fin, registro[5], registro[6])
-                print(cultivo)
                 return cultivo
                
     
@@ -79,8 +76,6 @@ class CultivoDao:
     def insertar(cls,cultivo):
         with CursorPool() as cursor:
             valores = (cultivo.cultivoNombre, cultivo.tipoCultivo,cultivo.fechaInicio,cultivo.fechaFinal,cultivo.cultivoEstado,cultivo.user )
-            print("valores")
-            print(valores)
             cursor.execute(cls._INSERT, valores)
             log.debug(f'insertar cultivo, {cultivo}')
             return cursor.rowcount
