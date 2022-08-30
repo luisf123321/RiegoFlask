@@ -76,5 +76,5 @@ class FincaDao:
         with CursorPool() as cursor:
             valores = (finca.nombre, finca.direccion, finca.latitud,finca.longitud,finca.altitud,finca.usuario,finca.id )
             cursor.execute(cls._UPDATE, valores)
-            log.debug(f'actualizar cultivo, {finca}')
+            log.debug(f'actualizar finca, {finca}')
             return cursor.rowcount
