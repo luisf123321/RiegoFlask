@@ -39,7 +39,7 @@ class LotesDao:
             else:
                 lote = Lote(registro[0], registro[1], registro[2],
                             registro[3], registro[4], registro[5], registro[6])
-                return json.dumps(lote.__dict__)
+                return lote
             
     @classmethod
     def buscarPorFinca(cls, lote):
@@ -54,7 +54,6 @@ class LotesDao:
                 for registro in registros:
                     lote = Lote(registro[0], registro[1], registro[2],
                                 registro[3], registro[4], registro[5], registro[6])
-                    lote = json.dumps(lote.__dict__)
                     lotes.append(lote)
                     print(lote)
                 return lotes
