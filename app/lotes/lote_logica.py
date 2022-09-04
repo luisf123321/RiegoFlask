@@ -26,8 +26,9 @@ class LoteLogica:
         if lote is None:
             return dict({"code": 400, "message": "Lotes no encontrado"})
         else:
+            lote = json.dumps(lote.__dict__)
             lote = lote.replace("_","")
-            return dict({"code": 200, "message": "Cultivo encontrado", "lote": lote})  
+            return dict({"code": 200, "message": "Cultivo encontrado", "lote": json.loads(lote)})  
     
     @classmethod
     def crear(cls, data):
@@ -37,14 +38,14 @@ class LoteLogica:
         longitud = data.get("longitud", None)
         altitud = data.get("altitud", None)
         finca_id = data.get("finca_id", None)
-        finca = Lote(nombre=nombre,area=area,latitud=latitud,longitud=longitud,altitud=altitud,finca=finca_id)
-        rows = LotesDao.insertar(finca)
+        lote = Lote(nombre=nombre,area=area,latitud=latitud,longitud=longitud,altitud=altitud,finca=finca_id)
+        rows = LotesDao.insertar(lote)
         if rows is None:
             return dict({"code": 400, "message": "No se creo lote"})
         else:
-            finca = json.dumps(finca.__dict__)
-            finca = finca.replace("_", "")
-            return dict({"code": 200, "message": "Lote creado", "cultivo": json.loads(finca)})
+            lote = json.dumps(lote.__dict__)
+            lote = lote.replace("_", "")
+            return dict({"code": 200, "message": "Lote creado", "cultivo": json.loads(lote)})
         
     @classmethod
     def actualizar(cls, data, idLote):
@@ -59,12 +60,12 @@ class LoteLogica:
             longitud = data.get("longitud", None)
             altitud = data.get("altitud", None)
             finca_id = data.get("finca_id", None)
-            finca = Lote(nombre=nombre,area=area,latitud=latitud,longitud=longitud,altitud=altitud,finca=finca_id)
-            rows = LotesDao.insertar(finca)
+            lote = Lote(nombre=nombre,area=area,latitud=latitud,longitud=longitud,altitud=altitud,finca=finca_id,id=idLote)
+            rows = LotesDao.actualizar(lote)
             if rows is None:
                 return dict({"code": 400, "message": "No se creo lote"})
             else:
-                finca = json.dumps(finca.__dict__)
-                finca = finca.replace("_", "")
-                return dict({"code": 200, "message": "Lote creado", "cultivo": json.loads(finca)})
+                lote = json.dumps(lote.__dict__)
+                lote = lote.replace("_", "")
+                return dict({"code": 200, "message": "Lote creado", "cultivo": json.loads(lote)})
 
