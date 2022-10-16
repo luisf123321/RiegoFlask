@@ -71,12 +71,13 @@ class CultivoLogica:
         cultivo = Cultivo(cultivoNombre=nombre, tipoCultivo=tipo_cultivo,
                           fechaInicio=fecha_inicio, fechaFinal=fecha_final, cultivoEstado=estado, user=user_id)
         result = CultivoDao.insertar(cultivo=cultivo)
-        if result is not None:
-            cultivo = json.dumps(cultivo.__dict__)
-            cultivo = cultivo.replace("_", "")
-            html = BodyEmail.bodyToRegister()
+        if result is not None:            
+            htmlCultivo = BodyEmail.bodyToCrearCultivo(cultivo=cultivo)
+            html = BodyEmail.body(bodyTempleate=htmlCultivo)
             SendEmail.send(html, 'encisolf901@gmail.com',
                            "Welcome to riego application")
+            cultivo = json.dumps(cultivo.__dict__)
+            cultivo = cultivo.replace("_", "")
             return dict({"code": 200, "message": "Cultivo creado", "cultivo": json.loads(cultivo)})
         else:
             return dict({"code": 400, "message": "No se creo cultivo"})
