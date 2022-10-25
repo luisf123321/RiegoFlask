@@ -51,14 +51,14 @@ def signup():
     usuario = User( nombre= nickname, apellido=apellido,documento=num_identificacion,celular=num_celular,direccion=direccion,user=username,password=password,correo=correo,tipoIdentificacion=tipo_identificacion)
     
     consulta_usuario = UsuarioDao.buscarPorDocumento(usuario)
-    
-    if consulta_usuario is None :
+    consulta_usuario_by_username = UsuarioDao.buscarUserName(usuario)
+    if consulta_usuario is None and  consulta_usuario_by_username is None:
         password_hash = generate_password_hash(password)
         usuario.password = password_hash
         rows = UsuarioDao.insertar(usuario)
         return jsonify({"code":200,"message":"Usuario creado"}),200
     else:
-         return jsonify({"code":400,"message":"El usuario ya existe"}),400
+         return jsonify({"code":400,"message":"El usuario ya existe con el numero de documento o username"}),400
 
 @jwt.user_identity_loader
 def user_identity_lookup(user):
