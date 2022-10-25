@@ -25,10 +25,10 @@ class TipoSuelo:
         self._nombre = nombre
     
     @property
-    def velovidad(self):
+    def velocidad(self):
         return self._velocidad
     
-    @velovidad.setter
+    @velocidad.setter
     def velocidad(self, velocidad):
         self._velocidad = velocidad
     

@@ -1,3 +1,5 @@
+import sys
+#sys.path.append("C:\\Users\\LUISFERNANDO\\Documents\\proyecto-code\\RiegoFlask")
 from app.utilites.cursor_pool import CursorPool
 from app.models.finca import Finca
 from app.utilites.logger_base import log
@@ -25,7 +27,7 @@ class FincaDao:
                 finca = Finca(registro[0], registro[1], registro[2], registro[3], registro[4], registro[5], registro[6])
                 fincas.append(finca)
                 print(finca)
-            return 
+            return fincas
     
     @classmethod
     def buscarFincaPorUsuario(cls,finca):

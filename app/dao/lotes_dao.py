@@ -1,3 +1,6 @@
+
+import sys
+#sys.path.append("C:\\Users\\LUISFERNANDO\\Documents\\proyecto-code\\RiegoFlask")
 from app.utilites.cursor_pool import CursorPool
 from app.models.lote import Lote
 from app.utilites.logger_base import log

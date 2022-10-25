@@ -2,7 +2,7 @@ from utilites.cursor_pool import CursorPool
 from models.sectores import Sector
 from utilites.logger_base import log
 
-class LotesDao:
+class SectoresDao:
     '''
     DAO --> Data Access Object
     '''

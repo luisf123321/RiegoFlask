@@ -3,7 +3,7 @@ from models.riego import Riego
 from utilites.logger_base import log
 
 
-class CultivoDao:
+class RiegoDao:
     '''
     DAO --> Data Access Object
     '''

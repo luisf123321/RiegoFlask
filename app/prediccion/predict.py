@@ -16,7 +16,6 @@ def get_pixels(img_np):
         for y in range(img_np.shape[1]):
             pixels.add(img_np[x][y])
     print(pixels)
-    
     return pixels
 
 def get_bordes(mask):
@@ -28,7 +27,6 @@ def get_bordes(mask):
     for y in range(mask.shape[0]-1):
         line = mask[y:y+1,:] 
         info = np.sum(line)
-        
         if info > 0:
             y1 = y
             # print(info,y1)
@@ -43,8 +41,7 @@ def get_bordes(mask):
         if info > 0:
             y2 = y
             # print(info,y2)
-            break
-        
+            break        
     
     for x in range(mask.shape[1]-1):
         line = mask[:,x:x+1] 

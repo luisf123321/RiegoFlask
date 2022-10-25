@@ -4,7 +4,7 @@ from utilites.cursor_pool import CursorPool
 from models.usuario_perfil import UsuarioPerfil
 from utilites.logger_base import log
 
-class UsuarioPerfil:
+class UsuarioPerfilDao:
     '''
     DAO --> Data Access Object
     '''

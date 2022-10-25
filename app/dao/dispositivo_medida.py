@@ -2,7 +2,7 @@ from utilites.cursor_pool import CursorPool
 from models.dispositivo_medida import DispositivoMedida
 from utilites.logger_base import log
 
-class DispositivoDao:
+class DispositivoMedidaDao:
     '''
     DAO --> Data Access Object
     '''

@@ -26,7 +26,7 @@ class Conexion:
                     password=cls._PASSWORD, 
                     port=cls._PORT, 
                     database=cls._DATABASE)
-                log.debug(f'conexion exitosa, {cls._pool}')
+                #log.debug(f'conexion exitosa, {cls._pool}')
                 return cls._pool
             except Exception as ex:
                 log.error(f'error al obtener pool, {ex}')
@@ -38,13 +38,13 @@ class Conexion:
     @classmethod
     def obtenerConexion(cls):
         conexion = cls.obtenerPool().getconn()
-        log.debug(f'obtener conexion, {conexion}')
+        #log.debug(f'obtener conexion, {conexion}')
         return conexion
 
     @classmethod
     def liberarConecion(cls,conexion):
         cls.obtenerPool().putconn(conexion)
-        log.debug(f'regresar conecion al pool')
+        #log.debug(f'regresar conecion al pool')
 
     @classmethod
     def cerrarPool(cls):
