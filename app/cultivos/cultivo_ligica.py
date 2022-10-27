@@ -5,7 +5,7 @@ from app.models.tipo_cultivo import TipoCultivo
 import json
 from app.email.body import BodyEmail
 from app.email.send import SendEmail
-
+from datetime import date, timedelta
 
 class CultivoLogica:
     @classmethod
@@ -29,9 +29,38 @@ class CultivoLogica:
         if cultivo is None:
             return dict({"code": 400, "message": "Cultivo no encontrado"})
         else:
+            fecha_siembra = cultivo.fechaSiembra
+            fecha_inicio = cultivo.fechaInicio            
+            fecha_fin = cultivo.fechaFinal         
+            fecha_desarrollo = cultivo.fechaDesarrollo            
+            fecha_maduracion = cultivo.fechaMaduracion
+
+            dias_inicio = (fecha_inicio - fecha_siembra).days
+            dias_desarrollo = (fecha_desarrollo - fecha_inicio ).days
+            dias_maduracion = (fecha_maduracion - fecha_desarrollo ).days
+            dias_final = (fecha_fin - fecha_maduracion ).days
+
+            fecha_inicio = fecha_inicio.strftime('%Y-%m-%d')  
+            fecha_desarrollo=fecha_desarrollo.strftime('%Y-%m-%d') 
+            fecha_maduracion=fecha_maduracion.strftime('%Y-%m-%d')
+            fecha_fin=fecha_fin.strftime('%Y-%m-%d') 
+            fecha_siembra = fecha_siembra.strftime('%Y-%m-%d') 
+
+            cultivo.fechaSiembra = fecha_siembra
+            cultivo.fechaInicio  = fecha_inicio
+            cultivo.fechaFinal = fecha_fin
+            cultivo.fechaDesarrollo = fecha_desarrollo
+            cultivo.fechaMaduracion = fecha_maduracion
+
             cultivo = json.dumps(cultivo.__dict__)
+            print(type(cultivo))
             cultivo = cultivo.replace("_", "")
-            return dict({"code": 200, "message": "Cultivo encontrado", "cultivo": json.loads(cultivo)})
+            cultivo = json.loads(cultivo)
+            cultivo['etapaInicia'] = dias_inicio
+            cultivo['etapaDesarrollo'] = dias_desarrollo
+            cultivo['etapaMaduracion'] = dias_maduracion
+            cultivo['etapaFinal'] = dias_final
+            return dict({"code": 200, "message": "Cultivo encontrado", "cultivo": cultivo})
 
     @classmethod
     def buscarCultivoPorUser(cls, idUser):
@@ -70,10 +99,14 @@ class CultivoLogica:
         tipo_cultivo = data.get("tipoCultivo", None)
         fecha_inicio = data.get("fechaInicio", None)
         fecha_final = data.get("fechaFinal", None)
+        fecha_desarrollo = data.get("fechaDesarollo", None)
+        fecha_maduracion = data.get("fechaMaduracion", None)
         estado = data.get("estado", None)
         user_id = data.get("user_id", None)
         cultivo = Cultivo(cultivoNombre=nombre, tipoCultivo=tipo_cultivo,
-                          fechaInicio=fecha_inicio, fechaFinal=fecha_final, cultivoEstado=estado, user=user_id)
+                          fechaInicio=fecha_inicio, fechaFinal=fecha_final, 
+                          cultivoEstado=estado, user=user_id, fechaMaduracion=fecha_maduracion, 
+                          fechaDesarrollo=fecha_desarrollo)
         result = CultivoDao.insertar(cultivo=cultivo)
         if result is not None:            
             htmlCultivo = BodyEmail.bodyToCrearCultivo(cultivo=cultivo)
@@ -97,10 +130,14 @@ class CultivoLogica:
             tipo_cultivo = data.get("tipoCultivo", None)
             fecha_inicio = data.get("fechaInicio", None)
             fecha_final = data.get("fechaFinal", None)
+            fecha_desarrollo = data.get("fechaDesarollo", None)
+            fecha_maduracion = data.get("fechaMaduracion", None)
             estado = data.get("estado", None)
             user_id = data.get("user_id", None)
             cultivo = Cultivo(cultivoNombre=nombre, tipoCultivo=tipo_cultivo, fechaInicio=fecha_inicio,
-                              fechaFinal=fecha_final, cultivoEstado=estado, user=user_id, id=idCultivo)
+                              fechaFinal=fecha_final, cultivoEstado=estado, 
+                              user=user_id, id=idCultivo,fechaMaduracion=fecha_maduracion, 
+                              fechaDesarrollo=fecha_desarrollo)
             CultivoDao.actualizar(cultivo=cultivo)
             cultivo = json.dumps(cultivo.__dict__)
             cultivo = cultivo.replace("_", "")
