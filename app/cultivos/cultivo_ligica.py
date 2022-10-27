@@ -57,7 +57,11 @@ class CultivoLogica:
             for tipo in tipos:
                 tipo = json.dumps(tipo.__dict__)
                 tipo = tipo.replace("_", "")
-                tipos_cultivos_result.append(json.loads(tipo))
+                print(type(tipo))
+                tipo = json.loads(tipo)
+                tipo['value'] = tipo['id']
+                tipo['label'] = tipo['nombre'] + ' - ' + tipo['variedad'] + '-' + tipo['referencia']
+                tipos_cultivos_result.append(tipo)
             return dict({"code": 200, "message": "Tipos cultivo encontrado", "tipos": tipos_cultivos_result})
 
     @classmethod

@@ -25,7 +25,7 @@ class TipoCultivoDao:
             else:
                 print(registros)
                 for registro in registros:
-                    tipoCultivo = TipoCultivo(registro[0], registro[1], registro[2], registro[3])
+                    tipoCultivo = TipoCultivo(registro[0], registro[1], registro[2], registro[3],registro[4], registro[5], registro[6], registro[7], registro[8])
                     tipoCultivos.append(tipoCultivo)
                 return tipoCultivos
     
