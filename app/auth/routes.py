@@ -29,7 +29,8 @@ def login():
             "id": consulta_usuario.id,
             "apellido": consulta_usuario.apellido,
             "nombre": consulta_usuario.nombre,
-            "username": consulta_usuario.user
+            "username": consulta_usuario.user,
+            "correo":consulta_usuario.correo
         }
         access_token = create_access_token(identity=user)
         #refresh_token = create_refresh_token(identity=user)
@@ -74,7 +75,8 @@ def protected():
         nombre=current_user['nombre'],
         apellido = current_user['apellido'],
         id = current_user['id'],
-        username = current_user['username']
+        username = current_user['username'],
+        correo = current_user['correo']
     )
 
 

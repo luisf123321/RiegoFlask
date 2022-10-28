@@ -1,6 +1,7 @@
 from . import prediction
 from flask import request, jsonify
 from werkzeug.utils import secure_filename
+from app.prediccion.prediction_logica import PredictionLogica
 #import os
 #from .predict import predict
 
@@ -79,3 +80,14 @@ scikit-image
 ipython
 matplotlib
 """
+@prediction.route("/muestras/<usuario>", methods=['GET'])
+def muestras(usuario):
+    try:
+        response = PredictionLogica.obtenerMuestrasSuelo(usuario=usuario)
+        if response['code'] == 200:
+            return jsonify(response), 200
+        else:
+            return jsonify(response), 400
+    except Exception as ex:
+        print(ex)
+        return jsonify(dict({"code": 500, "message": "No se pudo realizar cambios, vuelva intentar"})), 500
