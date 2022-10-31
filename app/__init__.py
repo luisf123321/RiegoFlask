@@ -9,6 +9,7 @@ from .extensions import jwt
 from .prediccion import prediction
 from .clima import clima
 from .riego import riego
+from .sectores import sectores
 def create_app():
     app = Flask(__name__)
     app.config.from_object(Config)
@@ -24,4 +25,5 @@ def create_app():
     app.register_blueprint(prediction)
     app.register_blueprint(clima)
     app.register_blueprint(riego)
+    app.register_blueprint(sectores)
     return app
