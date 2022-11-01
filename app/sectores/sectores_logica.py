@@ -32,3 +32,19 @@ class SectoresLogica:
                 sector = sector.replace("_", "")
                 sectores_result.append(json.loads(sector))
             return dict({"code": 200, "message": "sectores encontrados", "sectores": sectores_result})
+    
+    @classmethod
+    def obtenerSectoresByUsuario(cls, usuario):
+        sectores = SectoresDao.seleccionarByUsuario(usuario=usuario)
+        if sectores is None:
+            return dict({"code": 400, "message": "Sectores no encontrado"})
+        else:            
+            sectores_result = []
+            for sector in sectores:
+                sector = json.dumps(sector.__dict__)
+                sector = sector.replace("_", "")
+                sector = json.loads(sector)
+                sector['value'] = sector['id']
+                sector['label'] = sector['nombre']
+                sectores_result.append(sector)
+            return dict({"code": 200, "message": "sectores encontrados", "sectores": sectores_result})
