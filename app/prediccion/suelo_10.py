@@ -17,8 +17,6 @@ from .suelo_utils import SueloUtils
     
 suelo_utils = SueloUtils()
 
-
-
 class SoilClassifier:
     
     def __init__(self):
