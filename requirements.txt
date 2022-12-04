@@ -9,3 +9,8 @@ psycopg2
 psycopg2-binary
 pandas
 pyowm
+opencv-python
+tensorflow
+scikit-image
+ipython
+matplotlib
