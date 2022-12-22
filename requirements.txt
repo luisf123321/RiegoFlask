@@ -9,8 +9,7 @@ psycopg2
 psycopg2-binary
 pandas
 pyowm
-libgl1-mesa-glx
-opencv-python
+opencv-python==4.5.4.60
 tensorflow
 scikit-image
 ipython
