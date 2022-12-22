@@ -9,7 +9,7 @@ psycopg2
 psycopg2-binary
 pandas
 pyowm
-opencv-python==4.5.4.60
+opencv-python--headless
 tensorflow
 scikit-image
 ipython
