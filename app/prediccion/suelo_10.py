@@ -95,12 +95,14 @@ class SoilClassifier:
             
         for clase in self.class_names:
             #model_filename = "C:\\Users\\LUISFERNANDO\\Documents\\proyecto-code\\RiegoFlask\\app\\prediccion\\suelo_segmentation_" + clase + ".h5"
-            model_filename = "app/prediccion/suelo_segmentation_" + clase + ".h5"
+            model_filename = "app/prediccion/suelo_segmentation_ee" + clase + ".h5"
             
             print("*"*40)
             print(model_filename)
             
             model = keras.models.load_model(model_filename)
+            print("*"*40)
+            print("modelo", model)
             
             val_preds = model.predict(val_gen)
             
@@ -109,6 +111,8 @@ class SoilClassifier:
             mask = np.expand_dims(mask, axis=-1)
             img = PIL.ImageOps.autocontrast(keras.preprocessing.image.array_to_img(mask))
             img_np = np.asarray(img)
+            print("*"*40)
+            print("img_np", img_np)
             
             # plt.title(clase)
             # plt.imshow(img_np,cmap="gray")
