@@ -10,7 +10,7 @@ psycopg2-binary
 pandas
 pyowm
 opencv-python--headless
-tensorflow==2.10.0
+tensorflow==2.10
 scikit-image
 ipython
 matplotlib
