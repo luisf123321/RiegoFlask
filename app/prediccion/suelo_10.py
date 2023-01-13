@@ -179,6 +179,9 @@ class SoilClassifier:
         
         polygons, thresholds = self.get_polygons()
         #print(components)
+        print({"components":components,
+                "thresholds":thresholds,
+                "polygons":polygons})
         return {"components":components,
                 "thresholds":thresholds,
                 "polygons":polygons}
