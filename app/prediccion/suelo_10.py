@@ -109,6 +109,8 @@ class SoilClassifier:
             """Quick utility to display a model's prediction."""
             mask = np.argmax(val_preds[self.i], axis=-1)
             mask = np.expand_dims(mask, axis=-1)
+            print("*"*40)
+            print("img_np", img_np)
             img = PIL.ImageOps.autocontrast(keras.preprocessing.image.array_to_img(mask))
             img_np = np.asarray(img)
             print("*"*40)
