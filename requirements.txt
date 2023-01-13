@@ -10,9 +10,7 @@ psycopg2-binary
 pandas
 pyowm
 opencv-python--headless
-cloud-tpu-client
-tensorflow
-nvidia-tensorrt
+tensorflow-cpu
 scikit-image
 ipython
 matplotlib
