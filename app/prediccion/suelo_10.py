@@ -151,6 +151,7 @@ class SoilClassifier:
             img_mask[:,:,2] = img_np
             
             img_masks.append(img_mask)
+            print("*"*20,"fin","*"*20)
             
             # self.height_dict[clase] = suelo_utils.get_height(img_np)
          
@@ -173,7 +174,7 @@ class SoilClassifier:
             
         # print(self.height_dict)
         
-        
+        print("*"*20,"componentes","*"*20)
         components = suelo_utils.get_components(self.height_dict)
         # print(height_percentage)
         

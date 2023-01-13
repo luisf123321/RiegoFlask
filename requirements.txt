@@ -11,6 +11,7 @@ pandas
 pyowm
 opencv-python--headless
 tensorflow-cpu
+cloud-tpu-client
 scikit-image
 ipython
 matplotlib
