@@ -5,6 +5,7 @@ dnspython
 gunicorn
 flask-cors
 click
+numpy
 psycopg2
 psycopg2-binary
 pandas
