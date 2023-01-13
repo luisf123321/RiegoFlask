@@ -95,7 +95,7 @@ class SoilClassifier:
             
         for clase in self.class_names:
             #model_filename = "C:\\Users\\LUISFERNANDO\\Documents\\proyecto-code\\RiegoFlask\\app\\prediccion\\suelo_segmentation_" + clase + ".h5"
-            model_filename = "app/prediccion/suelo_segmentation_ee" + clase + ".h5"
+            model_filename = "app/prediccion/suelo_segmentation_" + clase + ".h5"
             
             print("*"*40)
             print(model_filename)
