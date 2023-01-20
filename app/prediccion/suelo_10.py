@@ -94,74 +94,66 @@ class SoilClassifier:
         img_masks = []
             
         for clase in self.class_names:
-            try:
-                #model_filename = "C:\\Users\\LUISFERNANDO\\Documents\\proyecto-code\\RiegoFlask\\app\\prediccion\\suelo_segmentation_" + clase + ".h5"
-                model_filename = "app/prediccion/suelo_segmentation_" + clase + ".h5"
+            #model_filename = "C:\\Users\\LUISFERNANDO\\Documents\\proyecto-code\\RiegoFlask\\app\\prediccion\\suelo_segmentation_" + clase + ".h5"
+            model_filename = "app/prediccion/suelo_segmentation_" + clase + ".h5"
+            
+            print("*"*40)
+            print(model_filename)
+            
+            model = keras.models.load_model(model_filename)
+            
+            
+            val_preds = model.predict(val_gen)
+            
+            """Quick utility to display a model's prediction."""
+            mask = np.argmax(val_preds[self.i], axis=-1)
+            mask = np.expand_dims(mask, axis=-1)            
+            img = PIL.ImageOps.autocontrast(keras.preprocessing.image.array_to_img(mask))
+            img_np = np.asarray(img)
+            
+            #plt.title(clase)
+            #plt.imshow(img_np,cmap="gray")
+            #plt.show()
+            
+            
+            img_np = suelo_utils.get_binary_image(img_np)
+            
+            #plt.title(clase)
+            #plt.imshow(img_np,cmap="gray")
+            #plt.show()
                 
-                print("*"*40)
-                print(model_filename)
-                
-                model = keras.models.load_model(model_filename)
-                print("*"*40)
-                print("modelo", model)
-                
-                val_preds = model.predict(val_gen)
-                print("*"*40)
-                print("val_preds", val_preds)
-                """Quick utility to display a model's prediction."""
-                mask = np.argmax(val_preds[self.i], axis=-1)
-                mask = np.expand_dims(mask, axis=-1)
-                print("*"*40)
-                print("img_np", img_np)
-                img = PIL.ImageOps.autocontrast(keras.preprocessing.image.array_to_img(mask))
-                img_np = np.asarray(img)
-                print("*"*40)
-                print("img_np", img_np)
-                
-                # plt.title(clase)
-                # plt.imshow(img_np,cmap="gray")
-                # plt.show()
-                
-                
-                img_np = suelo_utils.get_binary_image(img_np)
-                
-                #plt.title(clase)
-                #plt.imshow(img_np,cmap="gray")
-                #plt.show()
-                    
-                
-                # img_seg = img_resized + img_np
-                # img_resized /= 255.0
-                # img_np /= 255.0
-                
-                # print(img_resized.shape, np.max(img_resized))
-                # print(img_np.shape, np.max(img_np))
-                
-                
-                self.height_dict[clase] = suelo_utils.get_height(img_np)
-                
-                
-                # img_mask = img_np
-                img_mask = np.zeros(img_resized.shape, dtype=np.uint8)
-                
-                img_np = np.where(img_np == 0, 127, img_np)
-                img_np = np.where(img_np == 255, 0, img_np)
-                img_np = np.where(img_np == 127, 255, img_np)
-                
-                
-                ret, binary = cv2.threshold(img_np,0,255,cv2.THRESH_BINARY_INV)
-                contours, hierarchy = cv2.findContours(binary,cv2.RETR_TREE,cv2.CHAIN_APPROX_SIMPLE)
-                # print(len(contours), contours)
-                self.countours_dict[clase] = contours
-                
-                img_mask[:,:,0] = img_np
-                img_mask[:,:,1] = img_np
-                img_mask[:,:,2] = img_np
-                
-                img_masks.append(img_mask)
-                print("*"*20,"fin","*"*20)
-            except Exception as ex:
-                print("error image", ex)
+            
+            # img_seg = img_resized + img_np
+            # img_resized /= 255.0
+            # img_np /= 255.0
+            
+            # print(img_resized.shape, np.max(img_resized))
+            # print(img_np.shape, np.max(img_np))
+            
+            
+            self.height_dict[clase] = suelo_utils.get_height(img_np)
+            
+            
+            # img_mask = img_np
+            img_mask = np.zeros(img_resized.shape, dtype=np.uint8)
+            
+            img_np = np.where(img_np == 0, 127, img_np)
+            img_np = np.where(img_np == 255, 0, img_np)
+            img_np = np.where(img_np == 127, 255, img_np)
+            
+            
+            ret, binary = cv2.threshold(img_np,0,255,cv2.THRESH_BINARY_INV)
+            contours, hierarchy = cv2.findContours(binary,cv2.RETR_TREE,cv2.CHAIN_APPROX_SIMPLE)
+            # print(len(contours), contours)
+            self.countours_dict[clase] = contours
+            
+            img_mask[:,:,0] = img_np
+            img_mask[:,:,1] = img_np
+            img_mask[:,:,2] = img_np
+            
+            img_masks.append(img_mask)
+
+            
             # self.height_dict[clase] = suelo_utils.get_height(img_np)
          
         
@@ -183,7 +175,7 @@ class SoilClassifier:
             
         # print(self.height_dict)
         
-        print("*"*20,"componentes","*"*20)
+      
         components = suelo_utils.get_components(self.height_dict)
         # print(height_percentage)
         
@@ -194,7 +186,10 @@ class SoilClassifier:
                 "polygons":polygons})
         return {"components":components,
                 "thresholds":thresholds,
-                "polygons":polygons}
+                "polygons":polygons,
+                "tipo_suelo":self.tipo_de_suelo(components["arena"], 
+                    components["limo"], 
+                    components["arcilla"])}
         
         # return {'thresholds':thresholds}
         # return {'components':components}
@@ -246,68 +241,32 @@ class SoilClassifier:
         
         return data_dict, threshold_dict
 
-
-
-# soil_classifier = SoilClassifier()
-# image_filename = os.path.join("/home/juancastro/usal", "img_2.jpeg")
-
-# # soil_class = soil_classifier.get_soil_class(image_filename)
-
-# image_np = plt.imread(image_filename)
-# soil_class = soil_classifier.get_soil_class_np(image_np)
-
-# print(soil_class)
-
-
-
-# image_directory = "/media/juancastro/data1/suelo/imagenes_prueba-20220721T201009Z-001"
-# image_filename = os.path.join(image_directory,
-#                               "imagenes_prueba",
-#                               "EN8-In2D0L2A1-7.jpg")
-
-
-
-
-
-# contours_dict = soil_classifier.get_contours()
-# image = soil_classifier.get_image()
-# print(image.shape)
-
-
-
-
-
-# polygons = soil_classifier.get_polygons()
-
-
-    
-# contours[1]
-
-# plt.imshow(image)
-# plt.show()
-
-
-
-# _class = "arena"
-
-
-
-# import cv2
-# import numpy as np
-
-# # Load image, create mask, and draw white circle on mask
-# image = cv2.imread('McS9K.png')
-# mask = np.zeros(image.shape, dtype=np.uint8)
-# mask = cv2.circle(mask, (260, 300), 225, (255,255,255), -1) 
-
-# # Mask input image with binary mask
-# result = cv2.bitwise_and(image, mask)
-# # Color background white
-# result[mask==0] = 255 # Optional
-
-# # cv2.imshow('image', image)
-# # cv2.imshow('mask', mask)
-# # cv2.imshow('result', result)
-# # cv2.waitKey()
-
-
+    def tipo_de_suelo(self,arena,limo, arcilla):        
+        tipo = ""
+        if ((limo + 1.5*arcilla) < 15):
+            tipo = "arenoso"
+        elif ((limo + 1.5*arcilla >= 15) and (limo + 2*arcilla < 30)):
+            tipo = "arenoso franco"
+        elif ((arcilla >= 7 and arcilla < 20) and (arena > 52) and ((limo + 2*arcilla) >= 30) or (arcilla < 7 and limo < 50 and (limo+2*arcilla) >= 30)):
+            tipo = "franco arenoso"
+        elif ((arcilla >= 7 and arcilla < 27) and (limo >= 28 and limo < 50) and (arena <= 52)):
+            tipo = "franco"
+        elif ((limo >= 50 and (arcilla >= 12 and arcilla < 27)) or ((limo >= 50 and limo < 80) and arcilla < 12)):
+            tipo = "franco limoso"
+        elif (limo >= 80 and arcilla < 12):
+            tipo = "limoso"
+        elif ((arcilla >= 20 and arcilla < 35) and (limo < 28) and (arena > 45)):
+            tipo = "franco arcilloso areno9so"
+        elif ((arcilla >= 27 and arcilla < 40) and (arena > 20 and arena <= 45)):
+            tipo = "franco arecilloso"
+        elif ((arcilla >= 27 and arcilla < 40) and (arena <= 20)):
+            tipo = "franco arcilloso limoso"
+        elif (arcilla >= 35 and arena > 45):
+            tipo = "arcilloso arenoso"
+        elif (arcilla >= 40 and limo >= 40):
+            tipo = "arcilloso limoso"
+        elif (arcilla >= 40 and arena <= 45 and limo < 40):
+            tipo = "arcilloso"
+        else:
+            tipo = "no aplica"
+        return tipo
