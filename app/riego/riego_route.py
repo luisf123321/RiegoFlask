@@ -44,7 +44,7 @@ def buscarTodos():
 
 @riego.route('tipodispositivo', methods=['GET'])
 @jwt_required()
-def buscarPorSector():
+def buscarPorDispositivos():
     try:        
         response = Riegologica.obtenerTipoDeDispositivo()
         if response['code'] == 200:
