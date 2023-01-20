@@ -53,7 +53,7 @@ class Riegologica:
                 tipodispositivo = tipodispositivo.replace("_","")
                 tipodispositivo = json.loads(tipodispositivo)
                 tipodispositivo['value'] = tipodispositivo['id']
-                tipodispositivo['label'] = tipodispositivo['nombre']
+                tipodispositivo['label'] = tipodispositivo['categoria']
                 tipos_dispositivos_result.append(tipodispositivo)
             return dict({"code": 200, "message": "sectores encontrados", "tipos": tipos_dispositivos_result})
     
