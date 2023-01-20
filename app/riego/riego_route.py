@@ -42,3 +42,16 @@ def buscarTodos():
         return jsonify(dict({"code": 500, "message": "No se pudo realizar cambios, vuelva intentar"})), 500
 
 
+@riego.route('tipodispositivo', methods=['GET'])
+@jwt_required()
+def buscarPorSector():
+    try:        
+        response = Riegologica.obtenerTipoDeDispositivo()
+        if response['code'] == 200:
+            return jsonify(response), 200
+        else:
+            return jsonify(response), 400
+    except Exception as ex:
+        print(ex)
+        return jsonify(dict({"code": 500, "message": "No se pudo realizar cambios, vuelva intentar"})), 500
+

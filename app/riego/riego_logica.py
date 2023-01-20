@@ -4,7 +4,8 @@ import json
 
 from app.models.admin_riego import AdminRiego
 from app.models.tipo_riego import TipoRiego
-
+from app.dao.tipo_dispositivo_dao import TipoDispositivoDao
+from app.models.tipo_dispositivo import TipoDispositivo
 class Riegologica:
     @classmethod
     def obtenerTipoDeRiego(cls):
@@ -39,4 +40,20 @@ class Riegologica:
                 admin_riegos_result.append(json.loads(riego))
             return dict({"code": 200, "message": "sectores encontrados", "riegos": admin_riegos_result})
 
-
+    @classmethod
+    def obtenerTipoDeDispositivo(cls):
+        registros = TipoDispositivoDao.seleccionarTodos()
+        if registros is None:
+             return dict({"code": 400, "message": "tipos de dispositivos no encontrado"})
+        else:
+            print("*"*20)
+            print(registros)
+            tipos_dispositivos_result = []
+            for tipodispositivo in registros:
+                tipodispositivo = tipodispositivo.replace("_","")
+                tipodispositivo = json.loads(tipodispositivo)
+                tipodispositivo['value'] = tipodispositivo['id']
+                tipodispositivo['label'] = tipodispositivo['nombre']
+                tipos_dispositivos_result.append(tipodispositivo)
+            return dict({"code": 200, "message": "sectores encontrados", "tipos": tipos_dispositivos_result})
+    

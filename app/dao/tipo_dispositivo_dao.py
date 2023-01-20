@@ -3,7 +3,7 @@
 from utilites.cursor_pool import CursorPool
 from models.tipo_dispositivo import TipoDispositivo
 from utilites.logger_base import log
-
+import json
 class TipoDispositivoDao:
     '''
     DAO --> Data Access Object
@@ -22,6 +22,7 @@ class TipoDispositivoDao:
             tipoDispositivos = []
             for registro in registros:
                 tipoDispositivo = TipoDispositivo(registro[0], registro[1], registro[2])
+                tipoDispositivo = json.dumps(tipoDispositivo.__dict__)
                 tipoDispositivos.append(tipoDispositivo)
                 print(tipoDispositivo)
             return tipoDispositivos
