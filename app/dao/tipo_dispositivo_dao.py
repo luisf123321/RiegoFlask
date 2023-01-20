@@ -1,8 +1,11 @@
 
 
-from utilites.cursor_pool import CursorPool
-from models.tipo_dispositivo import TipoDispositivo
-from utilites.logger_base import log
+
+from app.models.tipo_dispositivo import TipoDispositivo
+
+from app.utilites.cursor_pool import CursorPool
+from app.models.tipo_riego import TipoRiego
+from app.utilites.logger_base import log
 import json
 class TipoDispositivoDao:
     '''
