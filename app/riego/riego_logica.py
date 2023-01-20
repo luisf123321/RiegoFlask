@@ -5,7 +5,14 @@ import json
 from app.models.admin_riego import AdminRiego
 from app.models.tipo_riego import TipoRiego
 from app.dao.tipo_dispositivo_dao import TipoDispositivoDao
-from app.models.tipo_dispositivo import TipoDispositivo
+from app.dao.dispositivo_dao import DispositivoDao
+from app.models.dispositivo import Dispositivo
+
+
+from app.dao.tipo_riego_dao import TipoRiegoDao
+
+
+
 class Riegologica:
     @classmethod
     def obtenerTipoDeRiego(cls):
@@ -55,5 +62,87 @@ class Riegologica:
                 tipodispositivo['value'] = tipodispositivo['id']
                 tipodispositivo['label'] = tipodispositivo['categoria']
                 tipos_dispositivos_result.append(tipodispositivo)
-            return dict({"code": 200, "message": "sectores encontrados", "tipos": tipos_dispositivos_result})
+            return dict({"code": 200, "message": "tipos dispositivos encontrados", "tipos": tipos_dispositivos_result})
+    
+    @classmethod
+    def crearDispositivo(cls, data):
+        nombre = data.get("nombre", None)
+        descripcion = data.get("descripcion", None)
+        tipoDispositivo = data.get("tipoDispositivo", None)
+        tipoSector = data.get("tipoSector", None)
+        dispositivo = Dispositivo(disEstado=1,disModelo=descripcion,disNombre=nombre,disSectores=tipoSector,disTipo=tipoDispositivo)
+        rows = DispositivoDao.insertar(dispositivo)
+        if rows is not None:
+            dispositivo = json.dumps(dispositivo.__dict__)
+            dispositivo = dispositivo.replace("_", "")
+            return dict({"code": 200, "message": "Dispositivo creada", "dispositivo": json.loads(dispositivo)})
+        else:
+            return dict({"code": 400, "message": "Dispositivo no se creo"})
+    
+    @classmethod
+    def crearAdminRiego(cls, data):
+        caudal = data.get("caudal", None)
+        distancia = data.get("distancia", None)
+        radio = data.get("radio", None)
+        tipoRiego = data.get("tipoRiego", None)
+        tipo_riego =  TipoRiegoDao.seleccionarById(tipoRiego)        
+        tipoSector = data.get("tipoSector", None)
+        dispositivo = AdminRiego(caudal=caudal,distancia=distancia,efectividad=tipo_riego.efectividad,nad=65, radio= radio,tipoRiego = tipoRiego,sector = tipoSector)
+        rows = AdminRiegoDao.insertar()
+        if rows is not None:
+            dispositivo = json.dumps(dispositivo.__dict__)
+            dispositivo = dispositivo.replace("_", "")
+            return dict({"code": 200, "message": "Riego creada", "riego": json.loads(dispositivo)})
+        else:
+            return dict({"code": 400, "message": "Riego no se creo"})
+        
+    @classmethod
+    def obtenerDispositivoByUsuario(cls,userId):
+        registros = DispositivoDao.seleccionarByUsuario(usuario=userId)
+        if registros is None:
+             return dict({"code": 400, "message": "los dispositivos no encontraron"})
+        else:
+            print("*"*20)
+            print(registros)
+            tipos_dispositivos_result = []
+            for tipodispositivo in registros:
+                tipodispositivo = tipodispositivo.replace("_","")
+                tipodispositivo = json.loads(tipodispositivo)
+                tipodispositivo['value'] = tipodispositivo['id']
+                tipodispositivo['label'] = tipodispositivo['categoria']
+                tipos_dispositivos_result.append(tipodispositivo)
+            return dict({"code": 200, "message": "dispositivos encontrados", "dispositivos": tipos_dispositivos_result})
+    
+    @classmethod
+    def obtenerDispositivoBysectore(cls,sector):
+        registros = DispositivoDao.seleccionarBySectores(sector=sector)
+        if registros is None:
+             return dict({"code": 400, "message": "los dispositivos no encontraron"})
+        else:
+            print("*"*20)
+            print(registros)
+            tipos_dispositivos_result = []
+            for tipodispositivo in registros:
+                tipodispositivo = tipodispositivo.replace("_","")
+                tipodispositivo = json.loads(tipodispositivo)
+                tipodispositivo['value'] = tipodispositivo['id']
+                tipodispositivo['label'] = tipodispositivo['categoria']
+                tipos_dispositivos_result.append(tipodispositivo)
+            return dict({"code": 200, "message": "dispositivos encontrados", "dispositivos": tipos_dispositivos_result})
+    @classmethod
+    def obtenerAdminRiegoByUsuario(cls,usuario):
+        registros = AdminRiegoDao.buscarByUsuario(usuario=usuario)
+        if registros is None:
+             return dict({"code": 400, "message": "los riegos no encontraron"})
+        else:
+            print("*"*20)
+            print(registros)
+            tipos_dispositivos_result = []
+            for tipodispositivo in registros:
+                tipodispositivo = tipodispositivo.replace("_","")
+                tipodispositivo = json.loads(tipodispositivo)
+                tipodispositivo['value'] = tipodispositivo['id']
+                tipodispositivo['label'] = tipodispositivo['categoria']
+                tipos_dispositivos_result.append(tipodispositivo)
+            return dict({"code": 200, "message": "riegos encontrados", "riegos": tipos_dispositivos_result})
     

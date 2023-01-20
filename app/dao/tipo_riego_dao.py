@@ -7,7 +7,8 @@ import json
 class TipoRiegoDao:
 
 
-    _SELELCT = 'SELECT * FROM tipo_riego ORDER BY id'    
+    _SELELCT = 'SELECT * FROM tipo_riego ORDER BY id'   
+    _SELELCT_BY_ID = 'SELECT * FROM tipo_riego WHERE id = %s'    
     _INSERT = 'INSERT INTO tipo_riego (nombre, efectividad, descripcion) VALUES (%(str)s,%(int)s,%(str)s)'
     _UPDATE = 'UPDATE tipo_riego SET  nombre=%s, efectividad=%s, descripcion=%s WHERE id=%s'
     _DELETE = 'DELETE FROM tipo_riego WHERE id=%s'
@@ -24,6 +25,16 @@ class TipoRiegoDao:
                 tiposRiego.append(tipoRiego)
                 print(registro)
             return tiposRiego
+    @classmethod
+    def seleccionarById(cls):
+        with CursorPool() as cursor:
+            cursor.execute(cls._SELELCT_BY_ID)
+            registro = cursor.fetchone()            
+            if registro is None:
+                return None
+            else:
+                tipoRiego = TipoRiego(registro[0], registro[1], registro[2], registro[3])
+                return tipoRiego
     
     
     
