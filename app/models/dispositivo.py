@@ -1,6 +1,6 @@
 
 class Dispositivo:
-    def __init__(self,id, disNombre, disTipo,disModelo, disSectores, disEstado ) -> None:
+    def __init__(self,id=None, disNombre=None, disTipo=None,disModelo=None, disSectores=None, disEstado =None) -> None:
         self._id = id
         self._disNombre = disNombre
         self._disTipo = disTipo

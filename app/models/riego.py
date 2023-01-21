@@ -1,7 +1,7 @@
 
 
 class Riego:
-    def __init__(self, id, canLiqCalendario, canLiqAplicada, fechaInicio, fechaFinal, estado, canLiqCalculado, sector,cultivo) -> None:
+    def __init__(self, id=None, canLiqCalendario=None, canLiqAplicada=None, fechaInicio=None, fechaFinal=None, estado=None, canLiqCalculado=None, sector=None,cultivo=None) -> None:
         self._id = id
         self._cultivo = cultivo
         self._sector = sector

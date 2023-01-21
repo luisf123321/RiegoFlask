@@ -1,7 +1,7 @@
 
 
 class Sector:
-    def __init__(self, id, nombre, area, lote, latitud, longitud, altitud,  suelo,cultivo) -> None:
+    def __init__(self, id=None, nombre=None, area=None, lote=None, latitud=None, longitud=None, altitud=None,  suelo=None,cultivo=None) -> None:
         self._id = id
         self._nombre = nombre
         self._area = area
