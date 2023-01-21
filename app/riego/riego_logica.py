@@ -87,7 +87,7 @@ class Riegologica:
         tipoRiego = data.get("tipoRiego", None)
         tipo_riego = TipoRiegoDao.seleccionarById(id=tipoRiego)
         tipoSector = data.get("tipoSector", None)
-        admin = AdminRiego(caudal=caudal, distancia=distancia, efectividad=65,
+        admin = AdminRiego(caudal=caudal, distancia=distancia, efectividad=tipo_riego.efectividad,
                            nad=65, radio=radio, tipoRiego=tipoRiego, sector=tipoSector)
         print(tipo_riego)
         print("admin", admin)
