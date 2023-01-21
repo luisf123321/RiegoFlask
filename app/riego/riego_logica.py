@@ -87,12 +87,12 @@ class Riegologica:
         tipoRiego = data.get("tipoRiego", None)
         tipo_riego =  TipoRiegoDao.seleccionarById(id=tipoRiego)        
         tipoSector = data.get("tipoSector", None)
-        dispositivo = AdminRiego(caudal=caudal,distancia=distancia,efectividad=tipo_riego.efectividad,nad=65, radio= radio,tipoRiego = tipoRiego,sector = tipoSector)
-        rows = AdminRiegoDao.insertar()
+        admin = AdminRiego(caudal=caudal,distancia=distancia,efectividad=tipo_riego.efectividad,nad=65, radio= radio,tipoRiego = tipoRiego,sector = tipoSector)
+        rows = AdminRiegoDao.insertar(adminRiego=admin)
         if rows is not None:
-            dispositivo = json.dumps(dispositivo.__dict__)
-            dispositivo = dispositivo.replace("_", "")
-            return dict({"code": 200, "message": "Riego creada", "riego": json.loads(dispositivo)})
+            admin = json.dumps(admin.__dict__)
+            admin = admin.replace("_", "")
+            return dict({"code": 200, "message": "Riego creada", "riego": json.loads(admin)})
         else:
             return dict({"code": 400, "message": "Riego no se creo"})
         

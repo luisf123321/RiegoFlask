@@ -97,16 +97,23 @@ class CultivoLogica:
     def crearCultivo(cls, data):
         nombre = data.get("nombre", None)
         tipo_cultivo = data.get("tipoCultivo", None)
-        fecha_inicio = data.get("fechaInicio", None)
+
+        tipoCultivo = TipoCultivoDao.buscarPorId(tipo_cultivo)
+        fecha_siembra = data.get("fechaInicio", None)
+        print("fecha siembra", fecha_siembra)
         fecha_final = data.get("fechaFinal", None)
-        fecha_desarrollo = data.get("fechaDesarollo", None)
-        fecha_maduracion = data.get("fechaMaduracion", None)
-        estado = data.get("estado", None)
+        print("fecha final", fecha_final)
+        fecha_inicio = fecha_siembra + timedelta(tipoCultivo.inicial)
+        fecha_desarrollo = fecha_inicio + timedelta(tipoCultivo.desarrollo)
+        fecha_maduracion = fecha_desarrollo + timedelta(tipoCultivo.maduracion)
+        #fecha_desarrollo = data.get("fechaDesarollo", None)
+        #fecha_maduracion = data.get("fechaMaduracion", None)
+        #estado = data.get("estado", None)
         user_id = data.get("user_id", None)
         cultivo = Cultivo(cultivoNombre=nombre, tipoCultivo=tipo_cultivo,
-                          fechaInicio=fecha_inicio, fechaFinal=fecha_final, 
-                          cultivoEstado=estado, user=user_id, fechaMaduracion=fecha_maduracion, 
-                          fechaDesarrollo=fecha_desarrollo)
+                          fechaSiembra=fecha_siembra, fechaFinal=fecha_final, 
+                          cultivoEstado=1, user=user_id, fechaMaduracion=fecha_maduracion, 
+                          fechaDesarrollo=fecha_desarrollo, fechaInicio=fecha_inicio)
         result = CultivoDao.insertar(cultivo=cultivo)
         if result is not None:            
             htmlCultivo = BodyEmail.bodyToCrearCultivo(cultivo=cultivo)

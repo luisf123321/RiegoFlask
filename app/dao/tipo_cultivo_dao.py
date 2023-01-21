@@ -10,6 +10,7 @@ class TipoCultivoDao:
     '''
 
     _SELELCT = 'SELECT * FROM tipo_cultivo ORDER BY id'
+    _SELECT_BY_ID = 'SELECT * FROM tipo_cultivo WHERE id = %s'
     _INSERT = 'INSERT INTO tipo_cultivo (tip_cul_nombre, tip_cul_variedad, tip_cul_referencia) VALUES (%s,%s,%s)'
     _UPDATE = 'UPDATE tipo_cultivo SET  tip_cul_nombre=%s, tip_cul_variedad=%s, tip_cul_referencia=%s WHERE id=%s'
     _DELETE = 'DELETE FROM tipo_cultivo WHERE id=%s'
@@ -28,6 +29,19 @@ class TipoCultivoDao:
                     tipoCultivo = TipoCultivo(registro[0], registro[1], registro[2], registro[3],registro[4], registro[5], registro[6], registro[7], registro[8])
                     tipoCultivos.append(tipoCultivo)
                 return tipoCultivos
+    
+    @classmethod
+    def buscarPorId(cls,id):
+        with CursorPool() as cursor:
+            valores = (id,)
+            cursor.execute(cls._SELECT_BY_ID,valores)
+            registro = cursor.fetchone()
+            if registro is None:
+                return None
+            else:
+                tipoCultivo = TipoCultivo(registro[0], registro[1], registro[2], registro[3],registro[4], registro[5], registro[6], registro[7], registro[8])
+                return tipoCultivo
+    
     
     @classmethod
     def eliminar(cls, tipoCultivo):
