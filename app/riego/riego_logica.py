@@ -87,8 +87,10 @@ class Riegologica:
         tipoRiego = data.get("tipoRiego", None)
         tipo_riego = TipoRiegoDao.seleccionarById(id=tipoRiego)
         tipoSector = data.get("tipoSector", None)
-        admin = AdminRiego(caudal=caudal, distancia=distancia, efectividad=tipo_riego.efectividad,
+        admin = AdminRiego(caudal=caudal, distancia=distancia, efectividad=65,
                            nad=65, radio=radio, tipoRiego=tipoRiego, sector=tipoSector)
+        print(tipo_riego)
+        print("admin", admin)
         rows = AdminRiegoDao.insertar(adminRiego=admin)
         if rows is not None:
             admin = json.dumps(admin.__dict__)
