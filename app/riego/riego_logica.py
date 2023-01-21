@@ -85,7 +85,7 @@ class Riegologica:
         distancia = data.get("distancia", None)
         radio = data.get("radio", None)
         tipoRiego = data.get("tipoRiego", None)
-        tipo_riego =  TipoRiegoDao.seleccionarById(tipoRiego)        
+        tipo_riego =  TipoRiegoDao.seleccionarById(id=tipoRiego)        
         tipoSector = data.get("tipoSector", None)
         dispositivo = AdminRiego(caudal=caudal,distancia=distancia,efectividad=tipo_riego.efectividad,nad=65, radio= radio,tipoRiego = tipoRiego,sector = tipoSector)
         rows = AdminRiegoDao.insertar()
@@ -137,7 +137,6 @@ class Riegologica:
             print(registros)
             admin_riego_result = []
             for adminriego in registros:
-                adminriego = json.dumps(adminriego.__dict__)
                 adminriego = adminriego.replace("_","")
                 adminriego = json.loads(adminriego)
                 admin_riego_result.append(adminriego)

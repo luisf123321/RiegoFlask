@@ -26,9 +26,10 @@ class TipoRiegoDao:
                 print(registro)
             return tiposRiego
     @classmethod
-    def seleccionarById(cls):
+    def seleccionarById(cls,id):
         with CursorPool() as cursor:
-            cursor.execute(cls._SELELCT_BY_ID)
+            valores = (id,)
+            cursor.execute(cls._SELELCT_BY_ID,valores)
             registro = cursor.fetchone()            
             if registro is None:
                 return None
