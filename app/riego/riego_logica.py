@@ -104,14 +104,13 @@ class Riegologica:
         else:
             print("*"*20)
             print(registros)
-            tipos_dispositivos_result = []
-            for tipodispositivo in registros:
-                tipodispositivo = tipodispositivo.replace("_","")
-                tipodispositivo = json.loads(tipodispositivo)
-                tipodispositivo['value'] = tipodispositivo['id']
-                tipodispositivo['label'] = tipodispositivo['categoria']
-                tipos_dispositivos_result.append(tipodispositivo)
-            return dict({"code": 200, "message": "dispositivos encontrados", "dispositivos": tipos_dispositivos_result})
+            dispositivos_result = []
+            for dispositivos in registros:
+                dispositivos = json.dumps(dispositivos.__dict__)
+                dispositivos = dispositivos.replace("_","")
+                dispositivos = json.loads(dispositivos)
+                dispositivos_result.append(dispositivos)
+            return dict({"code": 200, "message": "dispositivos encontrados", "dispositivos": dispositivos_result})
     
     @classmethod
     def obtenerDispositivoBysectore(cls,sector):
@@ -121,14 +120,13 @@ class Riegologica:
         else:
             print("*"*20)
             print(registros)
-            tipos_dispositivos_result = []
-            for tipodispositivo in registros:
-                tipodispositivo = tipodispositivo.replace("_","")
-                tipodispositivo = json.loads(tipodispositivo)
-                tipodispositivo['value'] = tipodispositivo['id']
-                tipodispositivo['label'] = tipodispositivo['categoria']
-                tipos_dispositivos_result.append(tipodispositivo)
-            return dict({"code": 200, "message": "dispositivos encontrados", "dispositivos": tipos_dispositivos_result})
+            dispositivos_result = []
+            for dispositivos in registros:
+                dispositivos = json.dumps(dispositivos.__dict__)
+                dispositivos = dispositivos.replace("_","")
+                dispositivos = json.loads(dispositivos)
+                dispositivos_result.append(dispositivos)
+            return dict({"code": 200, "message": "dispositivos encontrados", "dispositivos": dispositivos_result})
     @classmethod
     def obtenerAdminRiegoByUsuario(cls,usuario):
         registros = AdminRiegoDao.buscarByUsuario(usuario=usuario)
@@ -137,12 +135,11 @@ class Riegologica:
         else:
             print("*"*20)
             print(registros)
-            tipos_dispositivos_result = []
-            for tipodispositivo in registros:
-                tipodispositivo = tipodispositivo.replace("_","")
-                tipodispositivo = json.loads(tipodispositivo)
-                tipodispositivo['value'] = tipodispositivo['id']
-                tipodispositivo['label'] = tipodispositivo['categoria']
-                tipos_dispositivos_result.append(tipodispositivo)
-            return dict({"code": 200, "message": "riegos encontrados", "riegos": tipos_dispositivos_result})
+            admin_riego_result = []
+            for adminriego in registros:
+                adminriego = json.dumps(adminriego.__dict__)
+                adminriego = adminriego.replace("_","")
+                adminriego = json.loads(adminriego)
+                admin_riego_result.append(adminriego)
+            return dict({"code": 200, "message": "riegos encontrados", "riegos": admin_riego_result})
     
