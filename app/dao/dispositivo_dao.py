@@ -27,7 +27,7 @@ class DispositivoDao:
                 print(registro)
             return dispositivos
     
-    classmethod
+    @classmethod
     def seleccionarBySectores(cls,sector):
         with CursorPool() as cursor:
             valores = (sector,)
@@ -40,7 +40,7 @@ class DispositivoDao:
                 print(registro)
             return dispositivos
     
-    classmethod
+    @classmethod
     def seleccionarByUsuario(cls,usuario):
         with CursorPool() as cursor:
             valores = (usuario,)
