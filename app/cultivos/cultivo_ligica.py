@@ -7,6 +7,7 @@ from app.email.body import BodyEmail
 from app.email.send import SendEmail
 from datetime import date, timedelta
 
+
 class CultivoLogica:
     @classmethod
     def eliminarCultivo(cls, id):
@@ -30,24 +31,23 @@ class CultivoLogica:
             return dict({"code": 400, "message": "Cultivo no encontrado"})
         else:
             fecha_siembra = cultivo.fechaSiembra
-            fecha_inicio = cultivo.fechaInicio            
-            fecha_fin = cultivo.fechaFinal         
-            fecha_desarrollo = cultivo.fechaDesarrollo            
+            fecha_inicio = cultivo.fechaInicio
+            fecha_fin = cultivo.fechaFinal
+            fecha_desarrollo = cultivo.fechaDesarrollo
             fecha_maduracion = cultivo.fechaMaduracion
 
             dias_inicio = (fecha_inicio - fecha_siembra).days
-            dias_desarrollo = (fecha_desarrollo - fecha_inicio ).days
-            dias_maduracion = (fecha_maduracion - fecha_desarrollo ).days
-            dias_final = (fecha_fin - fecha_maduracion ).days
+            dias_desarrollo = (fecha_desarrollo - fecha_inicio).days
+            dias_maduracion = (fecha_maduracion - fecha_desarrollo).days
+            dias_final = (fecha_fin - fecha_maduracion).days
 
-            fecha_inicio = fecha_inicio.strftime('%Y-%m-%d')  
-            fecha_desarrollo=fecha_desarrollo.strftime('%Y-%m-%d') 
-            fecha_maduracion=fecha_maduracion.strftime('%Y-%m-%d')
-            fecha_fin=fecha_fin.strftime('%Y-%m-%d') 
-            fecha_siembra = fecha_siembra.strftime('%Y-%m-%d') 
-
+            fecha_inicio = fecha_inicio.strftime('%Y-%m-%d')
+            fecha_desarrollo = fecha_desarrollo.strftime('%Y-%m-%d')
+            fecha_maduracion = fecha_maduracion.strftime('%Y-%m-%d')
+            fecha_fin = fecha_fin.strftime('%Y-%m-%d')
+            fecha_siembra = fecha_siembra.strftime('%Y-%m-%d')
             cultivo.fechaSiembra = fecha_siembra
-            cultivo.fechaInicio  = fecha_inicio
+            cultivo.fechaInicio = fecha_inicio
             cultivo.fechaFinal = fecha_fin
             cultivo.fechaDesarrollo = fecha_desarrollo
             cultivo.fechaMaduracion = fecha_maduracion
@@ -77,7 +77,7 @@ class CultivoLogica:
             return dict({"code": 200, "message": "Cultivo encontrado", "cultivo": cultivos_result})
 
     @classmethod
-    def tipocultivos(cls):       
+    def tipocultivos(cls):
         tipos = TipoCultivoDao.seleccionarTodos()
         if tipos is None:
             return dict({"code": 400, "message": "No hay tipos de cultivos para el usuario"})
@@ -89,7 +89,8 @@ class CultivoLogica:
                 print(type(tipo))
                 tipo = json.loads(tipo)
                 tipo['value'] = tipo['id']
-                tipo['label'] = tipo['nombre'] + ' - ' + tipo['variedad'] + '-' + tipo['referencia']
+                tipo['label'] = tipo['nombre'] + ' - ' + \
+                    tipo['variedad'] + '-' + tipo['referencia']
                 tipos_cultivos_result.append(tipo)
             return dict({"code": 200, "message": "Tipos cultivo encontrado", "tipos": tipos_cultivos_result})
 
@@ -111,11 +112,11 @@ class CultivoLogica:
         #estado = data.get("estado", None)
         user_id = data.get("user_id", None)
         cultivo = Cultivo(cultivoNombre=nombre, tipoCultivo=tipo_cultivo,
-                          fechaSiembra=fecha_siembra, fechaFinal=fecha_final, 
-                          cultivoEstado=1, user=user_id, fechaMaduracion=fecha_maduracion, 
+                          fechaSiembra=fecha_siembra, fechaFinal=fecha_final,
+                          cultivoEstado=1, user=user_id, fechaMaduracion=fecha_maduracion,
                           fechaDesarrollo=fecha_desarrollo, fechaInicio=fecha_inicio)
         result = CultivoDao.insertar(cultivo=cultivo)
-        if result is not None:            
+        if result is not None:
             htmlCultivo = BodyEmail.bodyToCrearCultivo(cultivo=cultivo)
             html = BodyEmail.body(bodyTempleate=htmlCultivo)
             SendEmail.send(html, 'encisolf901@gmail.com',
@@ -142,8 +143,8 @@ class CultivoLogica:
             estado = data.get("estado", None)
             user_id = data.get("user_id", None)
             cultivo = Cultivo(cultivoNombre=nombre, tipoCultivo=tipo_cultivo, fechaInicio=fecha_inicio,
-                              fechaFinal=fecha_final, cultivoEstado=estado, 
-                              user=user_id, id=idCultivo,fechaMaduracion=fecha_maduracion, 
+                              fechaFinal=fecha_final, cultivoEstado=estado,
+                              user=user_id, id=idCultivo, fechaMaduracion=fecha_maduracion,
                               fechaDesarrollo=fecha_desarrollo)
             CultivoDao.actualizar(cultivo=cultivo)
             cultivo = json.dumps(cultivo.__dict__)
