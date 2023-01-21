@@ -124,6 +124,13 @@ class CultivoLogica:
             html = BodyEmail.body(bodyTempleate=htmlCultivo)
             SendEmail.send(html, 'encisolf901@gmail.com',
                            "Welcome to riego application")
+            cultivo.fechaSiembra = cultivo.fechaSiembra.strftime('%Y-%m-%d')
+            cultivo.fechaInicio = cultivo.fechaInicio.strftime('%Y-%m-%d')
+            cultivo.fechaDesarrollo = cultivo.fechaDesarrollo.strftime(
+                '%Y-%m-%d')
+            cultivo.fechaMaduracion = cultivo.fechaMaduracion.strftime(
+                '%Y-%m-%d')
+            cultivo.fechaFinal = cultivo.fechaFinal.strftime('%Y-%m-%d')
             cultivo = json.dumps(cultivo.__dict__)
             cultivo = cultivo.replace("_", "")
             return dict({"code": 200, "message": "Cultivo creado", "cultivo": json.loads(cultivo)})
