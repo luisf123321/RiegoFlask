@@ -6,6 +6,7 @@ import json
 from app.email.body import BodyEmail
 from app.email.send import SendEmail
 from datetime import date, timedelta, datetime
+import maya
 
 
 class CultivoLogica:
@@ -101,10 +102,10 @@ class CultivoLogica:
 
         tipoCultivo = TipoCultivoDao.buscarPorId(tipo_cultivo)
         fecha_siembra = data.get("fechaInicio", None)
-        fecha_siembra = datetime.strptime(fecha_siembra, '%m/%d/%yT%H:%M:%S')
+        fecha_siembra = maya.parse(fecha_siembra).datetime()
         print("fecha siembra", fecha_siembra)
         fecha_final = data.get("fechaFinal", None)
-        fecha_final = datetime.strptime(fecha_final, '%m/%d/%yT%H:%M:%S')
+        fecha_final = maya.parse(fecha_final).datetime()
         print("fecha final", fecha_final)
         fecha_inicio = fecha_siembra + timedelta(tipoCultivo.inicial)
         fecha_desarrollo = fecha_inicio + timedelta(tipoCultivo.desarrollo)
