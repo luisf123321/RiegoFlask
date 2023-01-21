@@ -67,7 +67,7 @@ class CultivoLogica:
         cultivo = Cultivo(user=idUser)
         cultivos = CultivoDao.buscarPorUsuario(cultivo=cultivo)
         if cultivos is None:
-            return dict({"code": 400, "message": "No hay cultivos para el usuario"})
+            return dict({"code": 400, "message": "No hay cultivos   para el usuario"})
         else:
             cultivos_result = []
             for cultivo in cultivos:
