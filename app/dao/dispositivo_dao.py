@@ -10,7 +10,7 @@ class DispositivoDao:
 
     _SELELCT = 'SELECT * FROM dispositivo ORDER BY id'
     _SELELCT_BY_SECTOR = 'SELECT * FROM dispositivo WHERE dis_sectores = %s ORDER BY id'
-    _SELELCT_BY_USUARIO = 'SELECT dis_sectores.id, dis.dis_nombre, dis.dis_tipo,dis.dis_modelo,dis.dis_sectores,dis.dis_estado  FROM dispositivo as dis INNER JOIN sectores as sec ON sec.id = dis.dis_sectores INNER JOIN lotes as lot ON sec.sec_lotes = lot.id INNER JOIN finca as fin ON fin.id = lot.lot_finca  WHERE fin.fin_usuario=%s  ORDER BY dis.id'
+    _SELELCT_BY_USUARIO = 'SELECT dis.id, dis.dis_nombre, dis.dis_tipo,dis.dis_modelo,dis.dis_sectores,dis.dis_estado  FROM dispositivo as dis INNER JOIN sectores as sec ON sec.id = dis.dis_sectores INNER JOIN lotes as lot ON sec.sec_lotes = lot.id INNER JOIN finca as fin ON fin.id = lot.lot_finca  WHERE fin.fin_usuario=%s  ORDER BY dis.id'
     _INSERT = 'INSERT INTO dispositivo (dis_nombre, dis_tipo, dis_modelo, dis_sectores, dis_estado) VALUES (%s,%s,%s,%s,%s)'
     _UPDATE = 'UPDATE dispositivo SET  dis_nombre=%s, dis_tipo=%s, dis_modelo=%s, dis_sectores=%s, dis_estado=%s WHERE id=%s'
     _DELETE = 'DELETE FROM dispositivo WHERE id=%s'
