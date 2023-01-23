@@ -6,6 +6,8 @@ import json
 from app.email.body import BodyEmail
 from app.email.send import SendEmail
 from datetime import date, timedelta, datetime
+from app.models.notificaciones import Notificaciones
+from app.dao.notificaciones_dao import NotificacionesDao
 import maya
 
 
@@ -74,9 +76,9 @@ class CultivoLogica:
             for cultivo in cultivos:
                 cultivo = json.dumps(cultivo.__dict__)
                 cultivo = cultivo.replace("_", "")
+                cultivos_result.append(json.loads(cultivo))
                 cultivo['value'] = cultivo['id']
                 cultivo['label'] = cultivo['cultivoNombre']
-                cultivos_result.append(json.loads(cultivo))
             return dict({"code": 200, "message": "Cultivo encontrado", "cultivo": cultivos_result})
 
     @classmethod
@@ -126,6 +128,10 @@ class CultivoLogica:
             html = BodyEmail.body(bodyTempleate=htmlCultivo)
             SendEmail.send(html, 'encisolf901@gmail.com',
                            "Welcome to riego application")
+            notificacion = Notificaciones(usuario=user_id, mensaje="Cultivo Creado exitosamente",
+                                          titulo="Cultivo creado", estado=False, fechaOrigen=datetime.now(), fechaVista=datetime.now())
+            NotificacionesDao.insertar(notificacion)
+
             cultivo.fechaSiembra = cultivo.fechaSiembra.strftime('%Y-%m-%d')
             cultivo.fechaInicio = cultivo.fechaInicio.strftime('%Y-%m-%d')
             cultivo.fechaDesarrollo = cultivo.fechaDesarrollo.strftime(
