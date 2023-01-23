@@ -25,7 +25,7 @@ class NotificacionesDao:
             notificaciones = []
             for registro in registros:
                 notificacion = Notificaciones(registro[0], registro[1], registro[2],
-                                              registro[3], registro[4], registro[5])
+                                              registro[3], registro[4], registro[5], registro[6])
                 notificaciones.append(notificacion)
             return notificaciones
 
@@ -39,7 +39,7 @@ class NotificacionesDao:
                 return None
             else:
                 notificacion = Notificaciones(registro[0], registro[1], registro[2],
-                                              registro[3], registro[4], registro[5])
+                                              registro[3], registro[4], registro[5], registro[6])
                 return notificacion
 
     @classmethod

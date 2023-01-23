@@ -99,3 +99,17 @@ def suelos():
     except Exception as ex:
         print(ex)
         return jsonify(dict({"code": 500, "message": "No se pudo realizar cambios, vuelva intentar"})), 500
+
+
+@prediction.route('/', methods=['POST'])
+def crear():
+    try:
+        data = request.json
+        response = PredictionLogica.crearMuestra(data=data)
+        if response['code'] == 200:
+            return jsonify(response), 200
+        else:
+            return jsonify(response), 400
+    except Exception as ex:
+        print(ex)
+        return jsonify(dict({"code": 500, "message": "No se pudo realizar cambios, vuelva intentar"})), 500

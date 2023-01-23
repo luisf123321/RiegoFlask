@@ -44,7 +44,7 @@ class PredictionLogica:
             return dict({"code": 200, "message": "Muestras encontradas", "suelos": tipo_suelos_result})
 
     @classmethod
-    def crearSector(cls, data):
+    def crearMuestra(cls, data):
         arena = data.get("arena", None)
         limo = data.get("limo", None)
         arcilla = data.get("arcilla", None)
