@@ -93,7 +93,9 @@ class SectoresDao:
     @classmethod
     def insertar(cls, sector):
         with CursorPool() as cursor:
-            print("valores sector", sector)
+            print("valores sector", sector.nombre, sector.lote, sector.area, sector.latitud,
+                  sector.longitud, sector.altitud, sector.suelo, sector.cultivo,
+                  sector.nodo)
             valores = (sector.nombre, sector.lote, sector.area, sector.latitud,
                        sector.longitud, sector.altitud, sector.suelo, sector.cultivo,
                        sector.nodo)

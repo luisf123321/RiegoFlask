@@ -131,7 +131,8 @@ class CultivoLogica:
             SendEmail.send(html, 'encisolf901@gmail.com',
                            "Welcome to riego application")
             notificacion = Notificaciones(usuario=user_id, mensaje="Cultivo Creado exitosamente",
-                                          titulo="Cultivo creado", estado=False, fechaOrigen=datetime.now(), fechaVista=datetime.now())
+                                          titulo="Cultivo creado", estado=False,
+                                          fechaOrigen=datetime.now(), fechaVista=datetime.now())
             NotificacionesDao.insertar(notificacion)
 
             cultivo.fechaSiembra = cultivo.fechaSiembra.strftime('%Y-%m-%d')

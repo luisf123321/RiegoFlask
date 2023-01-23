@@ -12,7 +12,7 @@ class NotificacionesDao:
     '''
     _SELECT_BY_USER = 'SELECT * FROM notificaciones WHERE usuario=%s '
     _SELECT_BY_ID = 'SELECT * FROM notificaciones WHERE id=%s '
-    _INSERT = 'INSERT INTO notificaciones (usuario, mensaje, estado, fecha_origen, fecha_vista,titulo) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)'
+    _INSERT = 'INSERT INTO notificaciones (usuario, mensaje, estado, fecha_origen, fecha_vista, titulo) VALUES (%s,%s,%s,%s,%s,%s)'
     _UPDATE = 'UPDATE notificaciones SET  usuario=%s, mensaje=%s, estado=%s, fecha_origen=%s, fecha_vista=%s,titulo=%s WHERE id=%s'
     _DELETE = 'DELETE FROM notificaciones WHERE id=%s'
 
@@ -25,7 +25,7 @@ class NotificacionesDao:
             notificaciones = []
             for registro in registros:
                 notificacion = Notificaciones(registro[0], registro[1], registro[2],
-                                              registro[3], registro[4], registro[5], registro[6])
+                                              registro[3], registro[4], registro[5])
                 notificaciones.append(notificacion)
             return notificaciones
 
@@ -39,7 +39,7 @@ class NotificacionesDao:
                 return None
             else:
                 notificacion = Notificaciones(registro[0], registro[1], registro[2],
-                                              registro[3], registro[4], registro[5], registro[6])
+                                              registro[3], registro[4], registro[5])
                 return notificacion
 
     @classmethod
@@ -54,7 +54,9 @@ class NotificacionesDao:
     def insertar(cls, notificacion):
         with CursorPool() as cursor:
             valores = (notificacion.usuario,
-                       notificacion.mensaje, notificacion.estado, notificacion.fechaOrigen, notificacion.fechaVista, notificacion.titulo)
+                       notificacion.mensaje, notificacion.estado,
+                       notificacion.fechaOrigen, notificacion.fechaVista,
+                       notificacion.titulo)
             cursor.execute(cls._INSERT, valores)
             log.debug(f'insertar notificacion, {notificacion}')
             return cursor.rowcount
