@@ -13,7 +13,7 @@ class SectoresDao:
     _SELELCT_BY_LOTE = 'SELECT * FROM sectores WHERE sec_lotes=%s  ORDER BY id'
     _SELELCT_BY_CULTIVO = 'SELECT * FROM sectores WHERE sec_cultivo=%s  ORDER BY id'
     _SELELCT_BY_USUARIO = 'SELECT sec.id,sec.sec_nombre,sec.sec_lotes, sec.sec_area, sec.sec_latitud, sec.sec_longitud, sec.sec_altitud, sec.sec_tipo_suelo, sec.sec_cultivo FROM sectores as sec INNER JOIN lotes as lot ON sec.sec_lotes = lot.id INNER JOIN finca as fin ON fin.id = lot.lot_finca  WHERE fin.fin_usuario=%s  ORDER BY sec.id'
-    _INSERT = 'INSERT INTO sectores (sec_nombre, sec_lotes, sec_area, sec_latitud, sec_longitug, sec_altitud, sec_tipo_suelo,sec_cultivo,nodo) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s)'
+    _INSERT = 'INSERT INTO sectores (sec_nombre, sec_lotes, sec_area, sec_latitud, sec_longitug, sec_altitud, sec_tipo_suelo, sec_cultivo, nodo) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s)'
     _UPDATE = 'UPDATE sectores SET  sec_nombre=%s, sec_lotes=%s, sec_area=%s, sec_latitud=%s, sec_longitug=%s, sec_altitud=%s, sec_tipo_suelo=%s, sec_cultivo=%s,nodo=%s WHERE id=%s'
     _DELETE = 'DELETE FROM sectores WHERE id=%s'
 
@@ -94,7 +94,9 @@ class SectoresDao:
     def insertar(cls, sector):
         with CursorPool() as cursor:
             valores = (sector.nombre, sector.lote, sector.area, sector.latitud,
-                       sector.longitud, sector.altitud, sector.suelo, sector.cultivo, sector.nodo)
+                       sector.longitud, sector.altitud, sector.suelo, sector.cultivo,
+                       sector.nodo)
+            print("valores sector", valores)
             cursor.execute(cls._INSERT, valores)
             log.debug(f'insertar sector, {sector}')
             return cursor.rowcount
