@@ -53,10 +53,11 @@ class PredictionLogica:
         muestra = MuestraSuelo(arcilla=arcilla, arena=arena, limo=limo,
                                usuario=usuario, tipoSuelo=tipoSuelo, fecha=datetime.now())
         print("muestra", muestra)
-        result = MuestraSueloDao.insertar(sector=sector)
+        result = MuestraSueloDao.insertar(muestra=muestra)
         if result is not None:
-            sector = json.dumps(sector.__dict__)
-            sector = sector.replace("_", "")
-            return dict({"code": 200, "message": "Sector creado", "sector": json.loads(sector)})
+            muestra.fecha = muestra.fecha.strftime('%Y-%m-%d')
+            muestra = json.dumps(muestra.__dict__)
+            muestra = muestra.replace("_", "")
+            return dict({"code": 200, "message": "muestra creado", "muestra": json.loads(muestra)})
         else:
-            return dict({"code": 400, "message": "No se creo sector"})
+            return dict({"code": 400, "message": "No se creo muestra"})
