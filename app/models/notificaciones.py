@@ -66,4 +66,4 @@ class Notificaciones:
 
     @fechaVista.setter
     def fechaVista(self, fechaVista):
-        self._fechaVista
+        self._fechaVista = fechaVista

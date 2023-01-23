@@ -25,7 +25,7 @@ class Sector:
 
     @property
     def nombre(self):
-        return self.nombre
+        return self._nombre
 
     @nombre.setter
     def nombre(self, nombre):
