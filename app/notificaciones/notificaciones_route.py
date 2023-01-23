@@ -5,7 +5,7 @@ import json
 from app.notificaciones.notificaciones_logica import NotificacionesLogica
 
 
-@notificaciones.route('/lote/<int:lote_id>', methods=['GET'])
+@notificaciones.route('/usuario/<int:user_id>', methods=['GET'])
 @jwt_required()
 def buscarPorUsuario(user_id):
     try:
