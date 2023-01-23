@@ -1,13 +1,16 @@
 
 
 class Notificaciones:
-    def __init__(self, id=None, usuario=None, mensaje=None, estado=None, fechaOrigen=None, fechaVista=None) -> None:
+    def __init__(self, id=None, usuario=None, mensaje=None,
+                 estado=None, fechaOrigen=None,
+                 fechaVista=None, titulo=None) -> None:
         self._id = id
         self._usuario = usuario
         self._mensaje = mensaje
         self._estado = estado
         self._fechaOrigen = fechaOrigen
         self._fechaVista = fechaVista
+        self._titulo = titulo
 
     @property
     def id(self):
@@ -52,6 +55,14 @@ class Notificaciones:
     @property
     def fechaVista(self):
         return self._fechaVista
+
+    @property
+    def titulo(self):
+        return self._titulo
+
+    @titulo.setter
+    def titulo(self, titulo):
+        self._titulo = titulo
 
     @fechaVista.setter
     def fechaVista(self, fechaVista):
