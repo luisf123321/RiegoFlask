@@ -11,34 +11,33 @@ class SectoresLogica:
         sectores = SectoresDao.seleccionarByLotes(lote=lote)
         if sectores is None:
             return dict({"code": 400, "message": "Sectores no encontrado"})
-        else:            
+        else:
             sectores_result = []
             for sector in sectores:
                 sector = json.dumps(sector.__dict__)
                 sector = sector.replace("_", "")
                 sectores_result.append(json.loads(sector))
             return dict({"code": 200, "message": "sectores encontrados", "sectores": sectores_result})
-    
 
     @classmethod
     def obtenerSectoresByCultivo(cls, cultivo):
         sectores = SectoresDao.seleccionarByCultivo(cultivo=cultivo)
         if sectores is None:
             return dict({"code": 400, "message": "Sectores no encontrado"})
-        else:            
+        else:
             sectores_result = []
             for sector in sectores:
                 sector = json.dumps(sector.__dict__)
                 sector = sector.replace("_", "")
                 sectores_result.append(json.loads(sector))
             return dict({"code": 200, "message": "sectores encontrados", "sectores": sectores_result})
-    
+
     @classmethod
     def obtenerSectoresByUsuario(cls, usuario):
         sectores = SectoresDao.seleccionarByUsuario(usuario=usuario)
         if sectores is None:
             return dict({"code": 400, "message": "Sectores no encontrado"})
-        else:            
+        else:
             sectores_result = []
             for sector in sectores:
                 sector = json.dumps(sector.__dict__)
@@ -48,3 +47,25 @@ class SectoresLogica:
                 sector['label'] = sector['nombre']
                 sectores_result.append(sector)
             return dict({"code": 200, "message": "sectores encontrados", "sectores": sectores_result})
+
+    @classmethod
+    def crearSector(cls, data):
+        nombre = data.get("nombre", None)
+        lat = data.get("latitud", None)
+        long = data.get("longitud", None)
+        area = data.get("area", None)
+        lote_id = data.get("lote", None)
+        cultivo = data.get("cultivo", None)
+        tipo_suelo = data.get("tipoSuelo", None)
+        altitud = data.get("altitud", None)
+        nodo = data.get("nodo", None)
+        sector = Sector(altitud=altitud, longitud=long,
+                        latitud=lat, area=area, cultivo=cultivo,
+                        lote=lote_id, nodo=nodo, nombre=nombre, suelo=tipo_suelo)
+        result = SectoresDao.insertar(sector=sector)
+        if result is not None:
+            sector = json.dumps(sector.__dict__)
+            sector = sector.replace("_", "")
+            return dict({"code": 200, "message": "Sector creado", "sector": json.loads(sector)})
+        else:
+            return dict({"code": 400, "message": "No se creo sector"})

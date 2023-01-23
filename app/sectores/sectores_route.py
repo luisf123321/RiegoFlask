@@ -4,6 +4,7 @@ from flask import request, jsonify
 import json
 from app.sectores.sectores_logica import SectoresLogica
 
+
 @sectores.route('/lote/<int:lote_id>', methods=['GET'])
 @jwt_required()
 def buscarPorLote(lote_id):
@@ -16,6 +17,7 @@ def buscarPorLote(lote_id):
     except Exception as ex:
         print(ex)
         return jsonify(dict({"code": 500, "message": "No se pudo realizar cambios, vuelva intentar"})), 500
+
 
 @sectores.route('/cultivo/<int:cultivo_id>', methods=['GET'])
 @jwt_required()
@@ -38,6 +40,21 @@ def buscarPorUsuario(usuario_id):
     try:
         print(usuario_id)
         response = SectoresLogica.obtenerSectoresByUsuario(usuario=usuario_id)
+        if response['code'] == 200:
+            return jsonify(response), 200
+        else:
+            return jsonify(response), 400
+    except Exception as ex:
+        print(ex)
+        return jsonify(dict({"code": 500, "message": "No se pudo realizar cambios, vuelva intentar"})), 500
+
+
+@sectores.route('/', methods=['POST'])
+@jwt_required()
+def crear():
+    try:
+        data = request.json
+        response = SectoresLogica.crearSector(data=data)
         if response['code'] == 200:
             return jsonify(response), 200
         else:
