@@ -51,7 +51,7 @@ class CultivoDao:
                     fecha_desarrollo = fecha_desarrollo.strftime('%Y-%m-%d')
                     fecha_maduracion = registro[8]
                     fecha_maduracion = fecha_maduracion.strftime('%Y-%m-%d')
-                    fecha_siembra = registro[6]
+                    fecha_siembra = registro[9]
                     fecha_siembra = fecha_siembra.strftime('%Y-%m-%d')
                     cultivo = Cultivo(registro[0], registro[1], registro[2], fecha_inicio,
                                       fecha_fin, registro[5], registro[6], fecha_desarrollo, fecha_maduracion, fecha_siembra)

@@ -5,7 +5,7 @@ from app.models.notificaciones import Notificaciones
 from app.utilites.logger_base import log
 
 
-class CultivoDao:
+class NotificacionesDao:
 
     '''
     DAO --> Data Access Object

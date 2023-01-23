@@ -10,14 +10,17 @@ from .prediccion import prediction
 from .clima import clima
 from .riego import riego
 from .sectores import sectores
+from .notificaciones import notificaciones
+
+
 def create_app():
     app = Flask(__name__)
     app.config.from_object(Config)
-    #login_manager.init_app(app)
-    #Conection.conect()
+    # login_manager.init_app(app)
+    # Conection.conect()
     #cor = Conection.conect().cursor()
     jwt.init_app(app)
-    #app.register_blueprint(mod1)
+    # app.register_blueprint(mod1)
     app.register_blueprint(auth)
     app.register_blueprint(cultivo)
     app.register_blueprint(finca)
@@ -26,4 +29,5 @@ def create_app():
     app.register_blueprint(clima)
     app.register_blueprint(riego)
     app.register_blueprint(sectores)
+    app.register_blueprint(notificaciones)
     return app
