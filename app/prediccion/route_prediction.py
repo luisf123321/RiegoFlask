@@ -10,28 +10,30 @@ import skimage.io
 import base64
 from .suelo_10 import SoilClassifier
 
+
 @prediction.route("/upload", methods=['POST'])
 def uploader():
     if request.method == 'POST':
         json_data = request.json
         filename = json_data["filename"]
         image_base64 = json_data["image"]
-        #print(image_base64)
-        
+        # print(image_base64)
+
         base64_img = image_base64[22:]
-        #print(base64_img)
+        # print(base64_img)
         base64_img_bytes = base64_img.encode('utf-8')
         image_np = decode(base64_img_bytes)
-        #plt.imshow(image_np)
-        #plt.show()
-        
-        
+        # plt.imshow(image_np)
+        # plt.show()
+
         soil_classifier = SoilClassifier()
         # soil_class = soil_classifier.get_soil_class(image_filename)
         soil_class = soil_classifier.get_soil_class_np(image_np)
         print(type(soil_class))
-        print(soil_class)    
+        print(soil_class)
         return jsonify(soil_class)
+
+
 """
 opencv-python
 tensorflow
@@ -72,10 +74,24 @@ def decode(base64_string):
     img = skimage.io.imread(imgdata, plugin='imageio')
     return img
 
+
 @prediction.route("/muestras/<usuario>", methods=['GET'])
 def muestras(usuario):
     try:
         response = PredictionLogica.obtenerMuestrasSuelo(usuario=usuario)
+        if response['code'] == 200:
+            return jsonify(response), 200
+        else:
+            return jsonify(response), 400
+    except Exception as ex:
+        print(ex)
+        return jsonify(dict({"code": 500, "message": "No se pudo realizar cambios, vuelva intentar"})), 500
+
+
+@prediction.route("/suelos", methods=['GET'])
+def suelos():
+    try:
+        response = PredictionLogica.obtenerMuestrasSuelo()
         if response['code'] == 200:
             return jsonify(response), 200
         else:

@@ -1,8 +1,9 @@
 
 
-from utilites.cursor_pool import CursorPool
-from models.tipo_suelo import TipoSuelo
-from utilites.logger_base import log
+from app.utilites.cursor_pool import CursorPool
+from app.models.tipo_suelo import TipoSuelo
+from app.utilites.logger_base import log
+
 
 class TipoSueloDao:
     '''
@@ -21,16 +22,17 @@ class TipoSueloDao:
             registros = cursor.fetchall()
             tiposSuelos = []
             for registro in registros:
-                tipoSuelo = TipoSuelo(registro[0], registro[1], registro[2], registro[3], registro[4])
+                tipoSuelo = TipoSuelo(
+                    registro[0], registro[1], registro[2], registro[3], registro[4])
                 tiposSuelos.append(tipoSuelo)
                 print(tipoSuelo)
             return tiposSuelos
-    
-        
+
     @classmethod
-    def insertar(cls,tipoSuelo):
+    def insertar(cls, tipoSuelo):
         with CursorPool() as cursor:
-            valores = (tipoSuelo.nombre, tipoSuelo.velovidad, tipoSuelo.pmp,tipoSuelo.cp )
+            valores = (tipoSuelo.nombre, tipoSuelo.velovidad,
+                       tipoSuelo.pmp, tipoSuelo.cp)
             cursor.execute(cls._INSERT, valores)
             log.debug(f'insertar tipo suelo, {tipoSuelo}')
             return cursor.rowcount
@@ -38,7 +40,8 @@ class TipoSueloDao:
     @classmethod
     def actualizar(cls, tipoSuelo):
         with CursorPool() as cursor:
-            valores = (tipoSuelo.nombre, tipoSuelo.velovidad, tipoSuelo.pmp,tipoSuelo.cp , tipoSuelo.id)
+            valores = (tipoSuelo.nombre, tipoSuelo.velovidad,
+                       tipoSuelo.pmp, tipoSuelo.cp, tipoSuelo.id)
             cursor.execute(cls._UPDATE, valores)
             log.debug(f'actualizar tipo suelo, {tipoSuelo}')
             return cursor.rowcount
