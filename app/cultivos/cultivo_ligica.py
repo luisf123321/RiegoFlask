@@ -76,9 +76,11 @@ class CultivoLogica:
             for cultivo in cultivos:
                 cultivo = json.dumps(cultivo.__dict__)
                 cultivo = cultivo.replace("_", "")
-                cultivos_result.append(json.loads(cultivo))
+                cultivo = json.loads(cultivo)
                 cultivo['value'] = cultivo['id']
                 cultivo['label'] = cultivo['cultivoNombre']
+                cultivos_result.append(cultivo)
+
             return dict({"code": 200, "message": "Cultivo encontrado", "cultivo": cultivos_result})
 
     @classmethod
