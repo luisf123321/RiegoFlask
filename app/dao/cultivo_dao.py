@@ -16,8 +16,8 @@ class CultivoDao:
     _SELELCT = 'SELECT * FROM cultivo ORDER BY id'
     _SELECT_BY_USER = 'SELECT * FROM cultivo WHERE cul_user=%s '
     _SELECT_BY_ID = 'SELECT * FROM cultivo WHERE id=%s '
-    _INSERT = 'INSERT INTO cultivo (cul_nombre, cul_tipo_cul, cul_fecha_inicio, cul_fecha_final, cul_estado,cul_user, cul_fecha_desarrollo, cul_fecha_maduracion,cul_fecha_siembre) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s)'
-    _UPDATE = 'UPDATE cultivo SET  cul_nombre=%s, cul_tipo_cul=%s, cul_fecha_inicio=%s, cul_fecha_final=%s, cul_estado=%s,cul_user=%s, cul_fecha_desarrollo=%s, cul_fecha_maduracion=%s, cul_fecha_siembre = %s WHERE id=%s'
+    _INSERT = 'INSERT INTO cultivo (cul_nombre, cul_tipo_cul, cul_fecha_inicio, cul_fecha_final, cul_estado,cul_user, cul_fecha_desarrollo, cul_fecha_maduracion,cul_fecha_siembra) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s)'
+    _UPDATE = 'UPDATE cultivo SET  cul_nombre=%s, cul_tipo_cul=%s, cul_fecha_inicio=%s, cul_fecha_final=%s, cul_estado=%s,cul_user=%s, cul_fecha_desarrollo=%s, cul_fecha_maduracion=%s, cul_fecha_siembra = %s WHERE id=%s'
     _DELETE = 'DELETE FROM cultivo WHERE id=%s'
 
     @classmethod
