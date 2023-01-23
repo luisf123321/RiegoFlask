@@ -13,10 +13,10 @@ class NotificacionesLogica:
         else:
             notificaciones_result = []
             for notificacion in notificaciones:
-                notificacion.fechaVista = notificacion.fechaVista.strftime(
-                    '%Y-%m-%d')
-                notificacion.fechaOrigen = notificacion.fechaOrigen.strftime(
-                    '%Y-%m-%d')
+                fechaVista = notificacion.fechaVista
+                notificacion.fechaVista = fechaVista.strftime('%Y-%m-%d')
+                fechaOrigen = notificacion.fechaOrigen
+                notificacion.fechaOrigen = fechaOrigen.strftime('%Y-%m-%d')
                 notificacion = json.dumps(notificacion.__dict__)
                 notificacion = notificacion.replace("_", "")
                 notificaciones_result.append(json.loads(notificacion))

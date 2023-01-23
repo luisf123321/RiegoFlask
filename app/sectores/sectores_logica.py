@@ -62,7 +62,15 @@ class SectoresLogica:
         sector = Sector(altitud=altitud, longitud=long,
                         latitud=lat, area=area, cultivo=cultivo,
                         lote=lote_id, nodo=nodo, nombre=nombre, suelo=tipo_suelo)
-        print("secotr",  sector.nodo)
+        print("secotr", sector.altitud)
+        print("secotr", sector.longitud)
+        print("secotr", sector.latitud)
+        print("secotr", sector.area)
+        print("secotr", sector.cultivo)
+        print("secotr", sector.lote)
+        print("secotr", sector.nodo)
+        print("secotr", sector.nombre)
+        print("secotr", sector.suelo)
         result = SectoresDao.insertar(sector=sector)
         if result is not None:
             sector = json.dumps(sector.__dict__)
