@@ -8,7 +8,7 @@ from app.prediccion.prediction_logica import PredictionLogica
 
 import skimage.io
 import base64
-from .suelo_10 import SoilClassifier
+from .suelo_classifier import SoilClassifier
 
 
 @prediction.route("/upload", methods=['POST'])
